@@ -121,17 +121,20 @@ df_com_exptrans = df_mp_lkp_loc
 # STEP 3: WRITE TO TARGETS
 # ============================================================================
 
-# Write to target: TARGET_EMP (simulated as CSV for testing)
-df_com_exptrans.select(
+# Write to target: TARGET_EMP (Oracle - simulated as CSV for testing)
+# Columns: NAME, DNAME, EMPID, EMAIL, PHONENO, SALARY, DEPID, LOC
+# Source: COM_EXPTRANS (PHONENO comes from O_PHONENO)
+df_target_emp = df_com_exptrans.select(
     "NAME", "DNAME", "EMPID", "EMAIL", "PHONENO", "SALARY", "DEPID", "LOC"
-).write \
+)
+df_target_emp.write \
     .mode("overwrite") \
     .option("header", "true") \
-    .csv("generated/outputs/target_emp")
+    .csv("generated/outputs/TARGET_EMP")
 
 print("ETL completed successfully!")
 print(f"Records processed from EMPLOYEEDETAILS: {df_employeedetails.count()}")
-print(f"Records written to TARGET_EMP: {df_com_exptrans.count()}")
+print(f"Records written to TARGET_EMP: {df_target_emp.count()}")
 
 # Stop Spark session
 spark.stop()

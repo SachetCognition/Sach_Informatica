@@ -131,34 +131,43 @@ df_aggtrans = df_exptrans.join(
 # ============================================================================
 
 # Write to target: TGT_FLT (Flat File)
-df_exptrans1.select(
+# Columns: EMPNO, ENAME, JOB, MGR, SAL, COMM, DEPTNO, DEPTNAME, LOC
+# Source: EXPTRANS1
+df_tgt_flt = df_exptrans1.select(
     "EMPNO", "ENAME", "JOB", "MGR", "SAL", "COMM", "DEPTNO", "DEPTNAME", "LOC"
-).write \
+)
+df_tgt_flt.write \
     .mode("overwrite") \
     .option("header", "true") \
-    .csv("generated/outputs/tgt_flt")
+    .csv("generated/outputs/TGT_FLT")
 
 # Write to target: TARGET_AGG (Flat File)
-df_aggtrans.select(
+# Columns: EMPNO, ENAME, JOB, MGR, SAL, MAXSAL, MINSAL, LOC
+# Source: AGGTRANS
+df_target_agg = df_aggtrans.select(
     "EMPNO", "ENAME", "JOB", "MGR", "SAL", "MAXSAL", "MINSAL", "LOC"
-).write \
+)
+df_target_agg.write \
     .mode("overwrite") \
     .option("header", "true") \
-    .csv("generated/outputs/target_agg")
+    .csv("generated/outputs/TARGET_AGG")
 
-# Write to target: UL_TGT_EMP (simulated as CSV for testing)
-df_exptrans.select(
+# Write to target: UL_TGT_EMP (Oracle - simulated as CSV for testing)
+# Columns: EMPNO, ENAME, JOB, MGR, SAL, COMM, DEPTNO, DEPTNAME
+# Source: EXPTRANS
+df_ul_tgt_emp = df_exptrans.select(
     "EMPNO", "ENAME", "JOB", "MGR", "SAL", "COMM", "DEPTNO", "DEPTNAME"
-).write \
+)
+df_ul_tgt_emp.write \
     .mode("overwrite") \
     .option("header", "true") \
-    .csv("generated/outputs/ul_tgt_emp")
+    .csv("generated/outputs/UL_TGT_EMP")
 
 print("ETL completed successfully!")
 print(f"Records processed from EMPLOYEE: {df_employee.count()}")
-print(f"Records written to TGT_FLT: {df_exptrans1.count()}")
-print(f"Records written to TARGET_AGG: {df_aggtrans.count()}")
-print(f"Records written to UL_TGT_EMP: {df_exptrans.count()}")
+print(f"Records written to TGT_FLT: {df_tgt_flt.count()}")
+print(f"Records written to TARGET_AGG: {df_target_agg.count()}")
+print(f"Records written to UL_TGT_EMP: {df_ul_tgt_emp.count()}")
 
 # Stop Spark session
 spark.stop()

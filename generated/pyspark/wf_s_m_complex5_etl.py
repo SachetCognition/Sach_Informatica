@@ -246,52 +246,72 @@ df_filtrans_update = df_exptrans2.filter(F.col("DEPID") == 30)
 # STEP 3: WRITE TO TARGETS
 # ============================================================================
 
-# Write to target: EMP_MAX_MIN (Aggregator output)
-df_aggtrans.select(
-    "EMPID", "EMAIL", "PHONENO", "SALARY", "DEPID", "DNAME", "ENAME", "MAXSAL", "MINSAL"
-).write \
+# Write to target: EMP_MAX_MIN (Oracle - simulated as CSV)
+# Columns: EMPID, EMAIL, PHONENO, SALARY, DEPID, DNAME, NAME, MAXSAL, MINSAL
+# Source: AGGTRANS (NAME comes from ENAME)
+df_emp_max_min = df_aggtrans.select(
+    "EMPID", "EMAIL", "PHONENO", "SALARY", "DEPID", "DNAME", 
+    F.col("ENAME").alias("NAME"), "MAXSAL", "MINSAL"
+)
+df_emp_max_min.write \
     .mode("overwrite") \
     .option("header", "true") \
-    .csv("generated/outputs/emp_max_min")
+    .csv("generated/outputs/EMP_MAX_MIN")
 
-# Write to target: T_EMP_DEP10 (Router output for DEPID=10)
-df_router_dep10.write \
+# Write to target: T_EMP_DEP10 (Oracle - simulated as CSV)
+# Columns: EMPID1, EMAIL1, PHONENO1, SALARY1, DEPID1, DNAME1, NAME1
+# Source: RTRTRANS (Router output for DEPID=10)
+df_t_emp_dep10 = df_router_dep10.select(
+    "EMPID1", "EMAIL1", "PHONENO1", "SALARY1", "DEPID1", "DNAME1", "NAME1"
+)
+df_t_emp_dep10.write \
     .mode("overwrite") \
     .option("header", "true") \
-    .csv("generated/outputs/t_emp_dep10")
+    .csv("generated/outputs/T_EMP_DEP10")
 
-# Write to target: T_DEFAULT (Router default output)
-df_router_default.write \
+# Write to target: T_DEFAULT (Oracle - simulated as CSV)
+# Columns: EMPID2, EMAIL2, PHONENO2, SALARY2, DEPID2, DNAME2, NAME2
+# Source: RTRTRANS (Router default output)
+df_t_default = df_router_default.select(
+    "EMPID2", "EMAIL2", "PHONENO2", "SALARY2", "DEPID2", "DNAME2", "NAME2"
+)
+df_t_default.write \
     .mode("overwrite") \
     .option("header", "true") \
-    .csv("generated/outputs/t_default")
+    .csv("generated/outputs/T_DEFAULT")
 
-# Write to target: TARGET_INSERT (Insert records with DEPID=20)
-df_filtrans_insert.select(
+# Write to target: TARGET_INSERT (Flat File)
+# Columns: T_EMPID, EMAIL, PHONENO, SALARY, DEPID, DNAME, ENAME, ELOC
+# Source: FILTRANS_INSERT (Insert records with DEPID=20)
+df_target_insert = df_filtrans_insert.select(
     F.col("EMPID").alias("T_EMPID"),
     "EMAIL", "PHONENO", "SALARY", "DEPID", "DNAME", "ENAME", "ELOC"
-).write \
+)
+df_target_insert.write \
     .mode("overwrite") \
     .option("header", "true") \
-    .csv("generated/outputs/target_insert")
+    .csv("generated/outputs/TARGET_INSERT")
 
-# Write to target: TARGET_UPDATE (Update records with DEPID=30)
-df_filtrans_update.select(
+# Write to target: TARGET_UPDATE (Flat File)
+# Columns: T_EMPID, EMAIL, PHONENO, SALARY, DEPID, DNAME, ENAME, ELOC
+# Source: UPDTRANS (Update records with DEPID=30)
+df_target_update = df_filtrans_update.select(
     F.col("EMPID").alias("T_EMPID"),
     "EMAIL", "PHONENO", "SALARY", "DEPID", "DNAME", "ENAME", "ELOC"
-).write \
+)
+df_target_update.write \
     .mode("overwrite") \
     .option("header", "true") \
-    .csv("generated/outputs/target_update")
+    .csv("generated/outputs/TARGET_UPDATE")
 
 print("ETL completed successfully!")
 print(f"Records from Union: {df_union.count()}")
 print(f"Records after Join: {df_jnrtrans.count()}")
-print(f"Records to EMP_MAX_MIN: {df_aggtrans.count()}")
-print(f"Records to T_EMP_DEP10: {df_router_dep10.count()}")
-print(f"Records to T_DEFAULT: {df_router_default.count()}")
-print(f"Records to TARGET_INSERT: {df_filtrans_insert.count()}")
-print(f"Records to TARGET_UPDATE: {df_filtrans_update.count()}")
+print(f"Records to EMP_MAX_MIN: {df_emp_max_min.count()}")
+print(f"Records to T_EMP_DEP10: {df_t_emp_dep10.count()}")
+print(f"Records to T_DEFAULT: {df_t_default.count()}")
+print(f"Records to TARGET_INSERT: {df_target_insert.count()}")
+print(f"Records to TARGET_UPDATE: {df_target_update.count()}")
 
 # Stop Spark session
 spark.stop()

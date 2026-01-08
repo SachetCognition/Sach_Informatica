@@ -136,14 +136,19 @@ df_exptrans1 = df_mp_exptrans1.select(
 # ============================================================================
 
 # Write to target: TGT_FLT (Flat File - simulated as CSV for testing)
-df_exptrans1.write \
+# Columns: EMPNO, ENAME, JOB, MGR, SAL, COMM, DEPTNO, DEPTNAME, LOC
+# Source: EXPTRANS1
+df_tgt_flt = df_exptrans1.select(
+    "EMPNO", "ENAME", "JOB", "MGR", "SAL", "COMM", "DEPTNO", "DEPTNAME", "LOC"
+)
+df_tgt_flt.write \
     .mode("overwrite") \
     .option("header", "true") \
-    .csv("generated/outputs/tgt_flt_mapplet_unc")
+    .csv("generated/outputs/TGT_FLT_MAPPLET")
 
 print("ETL completed successfully!")
 print(f"Records processed from EMPLOYEE: {df_employee.count()}")
-print(f"Records written to TGT_FLT: {df_exptrans1.count()}")
+print(f"Records written to TGT_FLT: {df_tgt_flt.count()}")
 
 # Stop Spark session
 spark.stop()
