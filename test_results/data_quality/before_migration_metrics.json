@@ -1,0 +1,347 @@
+{
+  "churndata": {
+    "table_name": "churndata",
+    "row_count": 100,
+    "column_count": 21,
+    "columns": [
+      "customerID",
+      "gender",
+      "SeniorCitizen",
+      "Partner",
+      "Dependents",
+      "tenure",
+      "PhoneService",
+      "MultipleLines",
+      "InternetService",
+      "OnlineSecurity",
+      "OnlineBackup",
+      "DeviceProtection",
+      "TechSupport",
+      "StreamingTV",
+      "StreamingMovies",
+      "Contract",
+      "PaperlessBilling",
+      "PaymentMethod",
+      "MonthlyCharges",
+      "TotalCharges",
+      "Churn"
+    ],
+    "null_counts": {
+      "customerID": 0,
+      "gender": 0,
+      "SeniorCitizen": 0,
+      "Partner": 0,
+      "Dependents": 0,
+      "tenure": 0,
+      "PhoneService": 0,
+      "MultipleLines": 0,
+      "InternetService": 0,
+      "OnlineSecurity": 0,
+      "OnlineBackup": 0,
+      "DeviceProtection": 0,
+      "TechSupport": 0,
+      "StreamingTV": 0,
+      "StreamingMovies": 0,
+      "Contract": 0,
+      "PaperlessBilling": 0,
+      "PaymentMethod": 0,
+      "MonthlyCharges": 0,
+      "TotalCharges": 0,
+      "Churn": 0
+    },
+    "data_types": {
+      "customerID": "StringType()",
+      "gender": "StringType()",
+      "SeniorCitizen": "IntegerType()",
+      "Partner": "StringType()",
+      "Dependents": "StringType()",
+      "tenure": "IntegerType()",
+      "PhoneService": "StringType()",
+      "MultipleLines": "StringType()",
+      "InternetService": "StringType()",
+      "OnlineSecurity": "StringType()",
+      "OnlineBackup": "StringType()",
+      "DeviceProtection": "StringType()",
+      "TechSupport": "StringType()",
+      "StreamingTV": "StringType()",
+      "StreamingMovies": "StringType()",
+      "Contract": "StringType()",
+      "PaperlessBilling": "StringType()",
+      "PaymentMethod": "StringType()",
+      "MonthlyCharges": "DoubleType()",
+      "TotalCharges": "DoubleType()",
+      "Churn": "StringType()"
+    }
+  },
+  "gender": {
+    "table_name": "gender",
+    "row_count": 2,
+    "column_count": 2,
+    "columns": [
+      "Gender",
+      "Type"
+    ],
+    "null_counts": {
+      "Gender": 0,
+      "Type": 0
+    },
+    "data_types": {
+      "Gender": "StringType()",
+      "Type": "StringType()"
+    }
+  },
+  "employee": {
+    "table_name": "employee",
+    "row_count": 100,
+    "column_count": 7,
+    "columns": [
+      "EMPNO",
+      "ENAME",
+      "JOB",
+      "MGR",
+      "SAL",
+      "COMM",
+      "DEPTNO"
+    ],
+    "null_counts": {
+      "EMPNO": 0,
+      "ENAME": 0,
+      "JOB": 0,
+      "MGR": 22,
+      "SAL": 0,
+      "COMM": 85,
+      "DEPTNO": 0
+    },
+    "data_types": {
+      "EMPNO": "IntegerType()",
+      "ENAME": "StringType()",
+      "JOB": "StringType()",
+      "MGR": "IntegerType()",
+      "SAL": "IntegerType()",
+      "COMM": "IntegerType()",
+      "DEPTNO": "IntegerType()"
+    }
+  },
+  "ddept": {
+    "table_name": "ddept",
+    "row_count": 4,
+    "column_count": 3,
+    "columns": [
+      "D_DEPTNO",
+      "DNAME",
+      "LOC"
+    ],
+    "null_counts": {
+      "D_DEPTNO": 0,
+      "DNAME": 0,
+      "LOC": 0
+    },
+    "data_types": {
+      "D_DEPTNO": "IntegerType()",
+      "DNAME": "StringType()",
+      "LOC": "StringType()"
+    }
+  },
+  "emp_loc_empid": {
+    "table_name": "emp_loc_empid",
+    "row_count": 100,
+    "column_count": 2,
+    "columns": [
+      "EMPID",
+      "LOC"
+    ],
+    "null_counts": {
+      "EMPID": 0,
+      "LOC": 0
+    },
+    "data_types": {
+      "EMPID": "IntegerType()",
+      "LOC": "StringType()"
+    }
+  },
+  "employeedetails": {
+    "table_name": "employeedetails",
+    "row_count": 100,
+    "column_count": 7,
+    "columns": [
+      "EMPID",
+      "FIRSTNAME",
+      "LASTNAME",
+      "EMAIL",
+      "PHONENO",
+      "SALARY",
+      "DEPID"
+    ],
+    "null_counts": {
+      "EMPID": 0,
+      "FIRSTNAME": 0,
+      "LASTNAME": 0,
+      "EMAIL": 0,
+      "PHONENO": 0,
+      "SALARY": 0,
+      "DEPID": 0
+    },
+    "data_types": {
+      "EMPID": "IntegerType()",
+      "FIRSTNAME": "StringType()",
+      "LASTNAME": "StringType()",
+      "EMAIL": "StringType()",
+      "PHONENO": "StringType()",
+      "SALARY": "IntegerType()",
+      "DEPID": "IntegerType()"
+    }
+  },
+  "dept": {
+    "table_name": "dept",
+    "row_count": 4,
+    "column_count": 3,
+    "columns": [
+      "DEPTNO",
+      "DNAME",
+      "LOC"
+    ],
+    "null_counts": {
+      "DEPTNO": 0,
+      "DNAME": 0,
+      "LOC": 0
+    },
+    "data_types": {
+      "DEPTNO": "IntegerType()",
+      "DNAME": "StringType()",
+      "LOC": "StringType()"
+    }
+  },
+  "emp_loc": {
+    "table_name": "emp_loc",
+    "row_count": 4,
+    "column_count": 2,
+    "columns": [
+      "DEPID",
+      "LOC"
+    ],
+    "null_counts": {
+      "DEPID": 0,
+      "LOC": 0
+    },
+    "data_types": {
+      "DEPID": "IntegerType()",
+      "LOC": "StringType()"
+    }
+  },
+  "emp_dept": {
+    "table_name": "emp_dept",
+    "row_count": 4,
+    "column_count": 3,
+    "columns": [
+      "DEPTNO",
+      "DNAME",
+      "LOC"
+    ],
+    "null_counts": {
+      "DEPTNO": 0,
+      "DNAME": 0,
+      "LOC": 0
+    },
+    "data_types": {
+      "DEPTNO": "IntegerType()",
+      "DNAME": "StringType()",
+      "LOC": "StringType()"
+    }
+  },
+  "employee_details1": {
+    "table_name": "employee_details1",
+    "row_count": 25,
+    "column_count": 7,
+    "columns": [
+      "EMPID",
+      "FIRSTNAME",
+      "LASTNAME",
+      "EMAIL",
+      "PHONENO",
+      "SALARY",
+      "DEPID"
+    ],
+    "null_counts": {
+      "EMPID": 0,
+      "FIRSTNAME": 0,
+      "LASTNAME": 0,
+      "EMAIL": 0,
+      "PHONENO": 0,
+      "SALARY": 0,
+      "DEPID": 0
+    },
+    "data_types": {
+      "EMPID": "IntegerType()",
+      "FIRSTNAME": "StringType()",
+      "LASTNAME": "StringType()",
+      "EMAIL": "StringType()",
+      "PHONENO": "StringType()",
+      "SALARY": "IntegerType()",
+      "DEPID": "IntegerType()"
+    }
+  },
+  "employee_details2": {
+    "table_name": "employee_details2",
+    "row_count": 25,
+    "column_count": 7,
+    "columns": [
+      "EMPID",
+      "FIRSTNAME",
+      "LASTNAME",
+      "EMAIL",
+      "PHONENO",
+      "SALARY",
+      "DEPID"
+    ],
+    "null_counts": {
+      "EMPID": 0,
+      "FIRSTNAME": 0,
+      "LASTNAME": 0,
+      "EMAIL": 0,
+      "PHONENO": 0,
+      "SALARY": 0,
+      "DEPID": 0
+    },
+    "data_types": {
+      "EMPID": "IntegerType()",
+      "FIRSTNAME": "StringType()",
+      "LASTNAME": "StringType()",
+      "EMAIL": "StringType()",
+      "PHONENO": "StringType()",
+      "SALARY": "IntegerType()",
+      "DEPID": "IntegerType()"
+    }
+  },
+  "employee_details_flat": {
+    "table_name": "employee_details_flat",
+    "row_count": 25,
+    "column_count": 7,
+    "columns": [
+      "EMPID",
+      "FIRSTNAME",
+      "LASTNAME",
+      "EMAIL",
+      "PHONENO",
+      "SALARY",
+      "DEPID"
+    ],
+    "null_counts": {
+      "EMPID": 0,
+      "FIRSTNAME": 0,
+      "LASTNAME": 0,
+      "EMAIL": 0,
+      "PHONENO": 0,
+      "SALARY": 0,
+      "DEPID": 0
+    },
+    "data_types": {
+      "EMPID": "IntegerType()",
+      "FIRSTNAME": "StringType()",
+      "LASTNAME": "StringType()",
+      "EMAIL": "StringType()",
+      "PHONENO": "StringType()",
+      "SALARY": "IntegerType()",
+      "DEPID": "IntegerType()"
+    }
+  }
+}

@@ -1,0 +1,28 @@
+Job_Name,Transformation_Type,Count,Description
+wf_m_PatternForChurnData,Source Qualifier,2,"SQ_Churndata, SQ_Gender"
+wf_m_PatternForChurnData,Expression,2,"EXPTRANS, EXPTRANS1"
+wf_m_PatternForChurnData,Joiner,1,JNRTRANS1
+wf_m_PatternForChurnData,Sorter,1,SRTTRANS
+wf_m_PatternForChurnData,Aggregator,1,AGGTRANS
+wf_s_m_multiple_unc11,Source Qualifier,1,SQ_EMPLOYEE
+wf_s_m_multiple_unc11,Lookup (Unconnected),2,"LKPTRANS, LKPTRANS1"
+wf_s_m_multiple_unc11,Expression,2,"EXPTRANS, EXPTRANS1"
+wf_s_m_multiple_unc11,Filter,1,FILTRANS
+wf_s_m_multiple_unc11,Aggregator,1,AGGTRANS
+wf_s_m_multiple_mapplet,Source Qualifier,1,SQ_EMPLOYEEDETAILS
+wf_s_m_multiple_mapplet,Mapplet,2,"mp_emp, mp_lkp_loc"
+wf_s_m_multiple_mapplet,Expression,2,"EXPTRANS_1, COM_EXPTRANS"
+wf_m_mapplet_multiple_unconnected,Source Qualifier,1,SQ_EMPLOYEE
+wf_m_mapplet_multiple_unconnected,Mapplet,1,mp_mutiple_unc
+wf_m_mapplet_multiple_unconnected,Expression,2,"EXPTRANS, EXPTRANS1"
+wf_s_m_complex5,Source Qualifier,5,Multiple source qualifiers
+wf_s_m_complex5,Union,1,UNTRANS
+wf_s_m_complex5,Sorter,2,"SRTTRANS, SRTTRANS1"
+wf_s_m_complex5,Joiner,1,JNRTRANS
+wf_s_m_complex5,Mapplet,1,mp_name
+wf_s_m_complex5,Expression,2,"EXPTRANS, EXPTRANS2"
+wf_s_m_complex5,Aggregator,1,AGGTRANS
+wf_s_m_complex5,Router,1,RTRTRANS
+wf_s_m_complex5,Lookup,2,"LKPTRANS, LKPTRANS1"
+wf_s_m_complex5,Filter,2,"FILTRANS_INSERT, FILTRANS_UPDATE"
+wf_s_m_complex5,Update Strategy,1,UPDTRANS

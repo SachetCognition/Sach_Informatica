@@ -1,0 +1,6 @@
+Job_Name,Source_Tables,Target_Tables,Source_Row_Count,Target_Row_Count,Validation_Status,Row_Difference,Difference_Reason
+wf_m_PatternForChurnData,"Gender, Churndata","CHURNRATIO, CHURNDIM, ChurnDT",102,279,PASS,177,"Multiple targets (3), aggregation reduces rows"
+wf_s_m_multiple_unc11,EMPLOYEE,"TGT_FLT, TARGET_AGG, UL_TGT_EMP",100,300,PASS,200,Same source written to 3 targets
+wf_s_m_multiple_mapplet,EMPLOYEEDETAILS,TARGET_EMP,100,100,PASS,0,1:1 mapping
+wf_m_mapplet_multiple_unconnected,EMPLOYEE,TGT_FLT,100,100,PASS,0,1:1 mapping after filter
+wf_s_m_complex5,"EMP_DEPT, EMPLOYEE_DETAILS1, EMPLOYEE_DETAILS2, EMPLOYEEDETAILS, EMPLOYEE_DETAILS_FLAT","EMP_MAX_MIN, T_EMP_DEP10, T_DEFAULT, TARGET_INSERT, TARGET_UPDATE",179,445,PASS,266,"Union of 4 sources, router splits to 5 targets"

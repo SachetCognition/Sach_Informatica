@@ -1,0 +1,431 @@
+{
+  "churnratio": {
+    "table_name": "churnratio",
+    "row_count": 79,
+    "column_count": 7,
+    "columns": [
+      "gender",
+      "Contract",
+      "InternetService",
+      "PaymentMethod",
+      "Churn",
+      "TotalCharges",
+      "MonthlyCharges"
+    ],
+    "null_counts": {
+      "gender": 0,
+      "Contract": 0,
+      "InternetService": 0,
+      "PaymentMethod": 0,
+      "Churn": 0,
+      "TotalCharges": 0,
+      "MonthlyCharges": 0
+    },
+    "data_types": {
+      "gender": "StringType()",
+      "Contract": "StringType()",
+      "InternetService": "StringType()",
+      "PaymentMethod": "StringType()",
+      "Churn": "StringType()",
+      "TotalCharges": "DoubleType()",
+      "MonthlyCharges": "DoubleType()"
+    }
+  },
+  "churndim": {
+    "table_name": "churndim",
+    "row_count": 100,
+    "column_count": 17,
+    "columns": [
+      "gender",
+      "SeniorCitizen",
+      "Partner",
+      "Dependents",
+      "tenure",
+      "PhoneService",
+      "MultipleLines",
+      "InternetService",
+      "OnlineSecurity",
+      "OnlineBackup",
+      "DeviceProtection",
+      "Contract",
+      "PaperlessBilling",
+      "PaymentMethod",
+      "MonthlyCharges",
+      "TotalCharges",
+      "Churn"
+    ],
+    "null_counts": {
+      "gender": 0,
+      "SeniorCitizen": 0,
+      "Partner": 0,
+      "Dependents": 0,
+      "tenure": 0,
+      "PhoneService": 0,
+      "MultipleLines": 0,
+      "InternetService": 0,
+      "OnlineSecurity": 0,
+      "OnlineBackup": 0,
+      "DeviceProtection": 0,
+      "Contract": 0,
+      "PaperlessBilling": 0,
+      "PaymentMethod": 0,
+      "MonthlyCharges": 0,
+      "TotalCharges": 0,
+      "Churn": 0
+    },
+    "data_types": {
+      "gender": "StringType()",
+      "SeniorCitizen": "IntegerType()",
+      "Partner": "StringType()",
+      "Dependents": "StringType()",
+      "tenure": "IntegerType()",
+      "PhoneService": "StringType()",
+      "MultipleLines": "StringType()",
+      "InternetService": "StringType()",
+      "OnlineSecurity": "StringType()",
+      "OnlineBackup": "StringType()",
+      "DeviceProtection": "StringType()",
+      "Contract": "StringType()",
+      "PaperlessBilling": "StringType()",
+      "PaymentMethod": "StringType()",
+      "MonthlyCharges": "DoubleType()",
+      "TotalCharges": "DoubleType()",
+      "Churn": "StringType()"
+    }
+  },
+  "churndt": {
+    "table_name": "churndt",
+    "row_count": 100,
+    "column_count": 3,
+    "columns": [
+      "gender",
+      "SeniorCitizen",
+      "TotalCharges"
+    ],
+    "null_counts": {
+      "gender": 0,
+      "SeniorCitizen": 0,
+      "TotalCharges": 0
+    },
+    "data_types": {
+      "gender": "StringType()",
+      "SeniorCitizen": "IntegerType()",
+      "TotalCharges": "DoubleType()"
+    }
+  },
+  "tgt_flt": {
+    "table_name": "tgt_flt",
+    "row_count": 100,
+    "column_count": 9,
+    "columns": [
+      "EMPNO",
+      "ENAME",
+      "JOB",
+      "MGR",
+      "SAL",
+      "COMM",
+      "DEPTNO",
+      "DEPTNAME",
+      "LOC"
+    ],
+    "null_counts": {
+      "EMPNO": 0,
+      "ENAME": 0,
+      "JOB": 0,
+      "MGR": 22,
+      "SAL": 0,
+      "COMM": 85,
+      "DEPTNO": 0,
+      "DEPTNAME": 0,
+      "LOC": 100
+    },
+    "data_types": {
+      "EMPNO": "IntegerType()",
+      "ENAME": "StringType()",
+      "JOB": "StringType()",
+      "MGR": "IntegerType()",
+      "SAL": "IntegerType()",
+      "COMM": "IntegerType()",
+      "DEPTNO": "IntegerType()",
+      "DEPTNAME": "StringType()",
+      "LOC": "StringType()"
+    }
+  },
+  "target_agg": {
+    "table_name": "target_agg",
+    "row_count": 100,
+    "column_count": 8,
+    "columns": [
+      "EMPNO",
+      "ENAME",
+      "JOB",
+      "MGR",
+      "SAL",
+      "MAXSAL",
+      "MINSAL",
+      "LOC"
+    ],
+    "null_counts": {
+      "EMPNO": 0,
+      "ENAME": 0,
+      "JOB": 0,
+      "MGR": 22,
+      "SAL": 0,
+      "MAXSAL": 0,
+      "MINSAL": 0,
+      "LOC": 100
+    },
+    "data_types": {
+      "EMPNO": "IntegerType()",
+      "ENAME": "StringType()",
+      "JOB": "StringType()",
+      "MGR": "IntegerType()",
+      "SAL": "IntegerType()",
+      "MAXSAL": "IntegerType()",
+      "MINSAL": "IntegerType()",
+      "LOC": "StringType()"
+    }
+  },
+  "ul_tgt_emp": {
+    "table_name": "ul_tgt_emp",
+    "row_count": 100,
+    "column_count": 8,
+    "columns": [
+      "EMPNO",
+      "ENAME",
+      "JOB",
+      "MGR",
+      "SAL",
+      "COMM",
+      "DEPTNO",
+      "DEPTNAME"
+    ],
+    "null_counts": {
+      "EMPNO": 0,
+      "ENAME": 0,
+      "JOB": 0,
+      "MGR": 22,
+      "SAL": 0,
+      "COMM": 85,
+      "DEPTNO": 0,
+      "DEPTNAME": 0
+    },
+    "data_types": {
+      "EMPNO": "IntegerType()",
+      "ENAME": "StringType()",
+      "JOB": "StringType()",
+      "MGR": "IntegerType()",
+      "SAL": "IntegerType()",
+      "COMM": "IntegerType()",
+      "DEPTNO": "IntegerType()",
+      "DEPTNAME": "StringType()"
+    }
+  },
+  "target_emp": {
+    "table_name": "target_emp",
+    "row_count": 100,
+    "column_count": 8,
+    "columns": [
+      "NAME",
+      "DNAME",
+      "EMPID",
+      "EMAIL",
+      "PHONENO",
+      "SALARY",
+      "DEPID",
+      "LOC"
+    ],
+    "null_counts": {
+      "NAME": 0,
+      "DNAME": 0,
+      "EMPID": 0,
+      "EMAIL": 0,
+      "PHONENO": 0,
+      "SALARY": 0,
+      "DEPID": 0,
+      "LOC": 0
+    },
+    "data_types": {
+      "NAME": "StringType()",
+      "DNAME": "StringType()",
+      "EMPID": "IntegerType()",
+      "EMAIL": "StringType()",
+      "PHONENO": "StringType()",
+      "SALARY": "IntegerType()",
+      "DEPID": "IntegerType()",
+      "LOC": "StringType()"
+    }
+  },
+  "emp_max_min": {
+    "table_name": "emp_max_min",
+    "row_count": 175,
+    "column_count": 9,
+    "columns": [
+      "EMPID",
+      "EMAIL",
+      "PHONENO",
+      "SALARY",
+      "DEPID",
+      "DNAME",
+      "ENAME",
+      "MAXSAL",
+      "MINSAL"
+    ],
+    "null_counts": {
+      "EMPID": 0,
+      "EMAIL": 0,
+      "PHONENO": 0,
+      "SALARY": 0,
+      "DEPID": 0,
+      "DNAME": 0,
+      "ENAME": 0,
+      "MAXSAL": 0,
+      "MINSAL": 0
+    },
+    "data_types": {
+      "EMPID": "IntegerType()",
+      "EMAIL": "StringType()",
+      "PHONENO": "StringType()",
+      "SALARY": "IntegerType()",
+      "DEPID": "IntegerType()",
+      "DNAME": "StringType()",
+      "ENAME": "StringType()",
+      "MAXSAL": "IntegerType()",
+      "MINSAL": "IntegerType()"
+    }
+  },
+  "t_emp_dep10": {
+    "table_name": "t_emp_dep10",
+    "row_count": 38,
+    "column_count": 7,
+    "columns": [
+      "EMPID1",
+      "EMAIL1",
+      "PHONENO1",
+      "SALARY1",
+      "DEPID1",
+      "DNAME1",
+      "NAME1"
+    ],
+    "null_counts": {
+      "EMPID1": 0,
+      "EMAIL1": 0,
+      "PHONENO1": 0,
+      "SALARY1": 0,
+      "DEPID1": 0,
+      "DNAME1": 0,
+      "NAME1": 0
+    },
+    "data_types": {
+      "EMPID1": "IntegerType()",
+      "EMAIL1": "StringType()",
+      "PHONENO1": "StringType()",
+      "SALARY1": "IntegerType()",
+      "DEPID1": "IntegerType()",
+      "DNAME1": "StringType()",
+      "NAME1": "StringType()"
+    }
+  },
+  "t_default": {
+    "table_name": "t_default",
+    "row_count": 137,
+    "column_count": 7,
+    "columns": [
+      "EMPID2",
+      "EMAIL2",
+      "PHONENO2",
+      "SALARY2",
+      "DEPID2",
+      "DNAME2",
+      "NAME2"
+    ],
+    "null_counts": {
+      "EMPID2": 0,
+      "EMAIL2": 0,
+      "PHONENO2": 0,
+      "SALARY2": 0,
+      "DEPID2": 0,
+      "DNAME2": 0,
+      "NAME2": 0
+    },
+    "data_types": {
+      "EMPID2": "IntegerType()",
+      "EMAIL2": "StringType()",
+      "PHONENO2": "StringType()",
+      "SALARY2": "IntegerType()",
+      "DEPID2": "IntegerType()",
+      "DNAME2": "StringType()",
+      "NAME2": "StringType()"
+    }
+  },
+  "target_insert": {
+    "table_name": "target_insert",
+    "row_count": 49,
+    "column_count": 8,
+    "columns": [
+      "T_EMPID",
+      "EMAIL",
+      "PHONENO",
+      "SALARY",
+      "DEPID",
+      "DNAME",
+      "ENAME",
+      "ELOC"
+    ],
+    "null_counts": {
+      "T_EMPID": 0,
+      "EMAIL": 0,
+      "PHONENO": 0,
+      "SALARY": 0,
+      "DEPID": 0,
+      "DNAME": 0,
+      "ENAME": 0,
+      "ELOC": 0
+    },
+    "data_types": {
+      "T_EMPID": "IntegerType()",
+      "EMAIL": "StringType()",
+      "PHONENO": "StringType()",
+      "SALARY": "IntegerType()",
+      "DEPID": "IntegerType()",
+      "DNAME": "StringType()",
+      "ENAME": "StringType()",
+      "ELOC": "StringType()"
+    }
+  },
+  "target_update": {
+    "table_name": "target_update",
+    "row_count": 46,
+    "column_count": 8,
+    "columns": [
+      "T_EMPID",
+      "EMAIL",
+      "PHONENO",
+      "SALARY",
+      "DEPID",
+      "DNAME",
+      "ENAME",
+      "ELOC"
+    ],
+    "null_counts": {
+      "T_EMPID": 0,
+      "EMAIL": 0,
+      "PHONENO": 0,
+      "SALARY": 0,
+      "DEPID": 0,
+      "DNAME": 0,
+      "ENAME": 0,
+      "ELOC": 0
+    },
+    "data_types": {
+      "T_EMPID": "IntegerType()",
+      "EMAIL": "StringType()",
+      "PHONENO": "StringType()",
+      "SALARY": "IntegerType()",
+      "DEPID": "IntegerType()",
+      "DNAME": "StringType()",
+      "ENAME": "StringType()",
+      "ELOC": "StringType()"
+    }
+  }
+}

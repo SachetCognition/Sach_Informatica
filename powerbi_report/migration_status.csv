@@ -1,0 +1,8 @@
+Metric,Value,Status
+Total Jobs Migrated,5,COMPLETE
+Total Source Tables,10,COMPLETE
+Total Target Tables,12,COMPLETE
+Total Transformations,18,COMPLETE
+Jobs with Exact Row Match,2,PASS
+Jobs with Expected Differences,3,PASS
+Migration Validation,100%,PASS
