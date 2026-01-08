@@ -1,0 +1,13 @@
+26/01/08 12:07:15 WARN Utils: Your hostname, devin-box resolves to a loopback address: 127.0.0.1; using 172.16.13.2 instead (on interface eth0)
+26/01/08 12:07:15 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+Setting default log level to "WARN".
+To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+26/01/08 12:07:15 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+ETL completed successfully!
+Records from Union: 175
+Records after Join: 175
+Records to EMP_MAX_MIN: 175
+Records to T_EMP_DEP10: 38
+Records to T_DEFAULT: 137
+Records to TARGET_INSERT: 49
+Records to TARGET_UPDATE: 46

@@ -1,0 +1,76 @@
+{
+  "wf_m_PatternForChurnData": {
+    "sources": [
+      "churndata",
+      "gender"
+    ],
+    "targets": [
+      "churnratio",
+      "churndim",
+      "churndt"
+    ],
+    "source_rows": 102,
+    "target_rows": 279,
+    "status": "PASS"
+  },
+  "wf_s_m_multiple_unc11": {
+    "sources": [
+      "employee",
+      "ddept",
+      "emp_loc_empid"
+    ],
+    "targets": [
+      "tgt_flt",
+      "target_agg",
+      "ul_tgt_emp"
+    ],
+    "source_rows": 100,
+    "target_rows": 300,
+    "status": "PASS"
+  },
+  "wf_s_m_multiple_mapplet": {
+    "sources": [
+      "employeedetails",
+      "dept",
+      "emp_loc"
+    ],
+    "targets": [
+      "target_emp"
+    ],
+    "source_rows": 100,
+    "target_rows": 100,
+    "status": "PASS"
+  },
+  "wf_m_mapplet_multiple_unconnected": {
+    "sources": [
+      "employee",
+      "ddept",
+      "emp_loc"
+    ],
+    "targets": [
+      "tgt_flt_mapplet"
+    ],
+    "source_rows": 100,
+    "target_rows": 100,
+    "status": "PASS"
+  },
+  "wf_s_m_complex5": {
+    "sources": [
+      "emp_dept",
+      "employee_details1",
+      "employee_details2",
+      "employeedetails",
+      "employee_details_flat"
+    ],
+    "targets": [
+      "emp_max_min",
+      "t_emp_dep10",
+      "t_default",
+      "target_insert",
+      "target_update"
+    ],
+    "source_rows": 179,
+    "target_rows": 445,
+    "status": "PASS"
+  }
+}

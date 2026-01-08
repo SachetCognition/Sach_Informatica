@@ -60,7 +60,7 @@ df_ddept = spark.read \
 df_emp_loc = spark.read \
     .option("header", "true") \
     .option("inferSchema", "true") \
-    .csv("generated/sample_data/emp_loc.csv")
+    .csv("generated/sample_data/emp_loc_empid.csv")
 
 # ============================================================================
 # STEP 2: TRANSFORMATIONS

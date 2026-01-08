@@ -68,15 +68,17 @@ df_exptrans = df_churndata \
 
 # Joiner transformation: JNRTRANS1
 # Join churn data with gender lookup table on gender field
+# Note: gender column in churndata is lowercase, Gender in gender.csv is uppercase
+df_gender_renamed = df_gender.withColumnRenamed("Gender", "Gender1")
 df_jnrtrans1 = df_exptrans.join(
-    df_gender.withColumnRenamed("Gender", "Gender1"),
-    df_exptrans["gender"] == df_gender["Gender"],
+    df_gender_renamed,
+    F.upper(df_exptrans["gender"]) == F.upper(df_gender_renamed["Gender1"]),
     "inner"
 ).select(
     df_exptrans["gender"],
     df_exptrans["SeniorCitizen"],
     df_exptrans["TotalCharges_Calc"].alias("TotalCharges"),
-    df_gender["Type"]
+    df_gender_renamed["Type"]
 )
 
 # Sorter transformation: SRTTRANS
