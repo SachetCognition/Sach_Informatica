@@ -1,0 +1,10 @@
+Metric,Value,Status
+Total Jobs Migrated,5,Complete
+Total Source Tables,12,Processed
+Total Target Tables,12,Generated
+Total Transformations,18,Converted
+Unconnected Lookups,6,Converted to Broadcast Joins
+Router Transformations,1,Converted to Filter Branches
+Union Transformations,1,Converted to union()
+Mapplets,3,Inlined
+Validation Status,5,All PASS

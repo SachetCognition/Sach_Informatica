@@ -1,0 +1,17 @@
+Job_Name,Transformation_Type,Count,Description
+wf_m_PatternForChurnData,Expression,2,"IIF logic for contract charges, UPPER transformation"
+wf_m_PatternForChurnData,Joiner,1,Join churn data with gender lookup
+wf_m_PatternForChurnData,Sorter,1,"Sort by gender, SeniorCitizen, Partner"
+wf_m_PatternForChurnData,Aggregator,1,"Group by gender, Contract, calculate totals"
+wf_s_m_multiple_unc11,Unconnected Lookup,2,DDEPT and EMP_LOC lookups converted to broadcast joins
+wf_s_m_multiple_unc11,Filter,1,Filter based on lookup result
+wf_s_m_multiple_unc11,Aggregator,1,MAX/MIN salary calculations
+wf_s_m_multiple_mapplet,Mapplet,2,mp_emp and mp_lkp_loc inlined
+wf_s_m_multiple_mapplet,Expression,1,Concatenate FIRSTNAME and LASTNAME
+wf_m_mapplet_multiple_unconnected,Mapplet,1,mp_mutiple_unc with unconnected lookups
+wf_m_mapplet_multiple_unconnected,Unconnected Lookup,2,DEPTNO->DNAME and DEPTNO->LOC lookups
+wf_s_m_complex5,Union,1,Combine 4 employee sources
+wf_s_m_complex5,Router,1,Route by DEPID (10 vs DEFAULT)
+wf_s_m_complex5,Joiner,1,Join employee with department
+wf_s_m_complex5,Aggregator,1,MAX/MIN salary by department
+wf_s_m_complex5,Update Strategy,1,Flag-based insert/update logic

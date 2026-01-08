@@ -1,0 +1,6 @@
+Job_Name,Source_Tables,Target_Tables,Source_Row_Count,Target_Row_Count,Validation_Status,Row_Difference,Difference_Reason
+wf_m_PatternForChurnData,"churndata, gender","churnratio, churndim, churndt",102,279,PASS,177,Multiple targets
+wf_s_m_multiple_unc11,"employee, ddept, emp_loc_empid","tgt_flt, target_agg, ul_tgt_emp",100,300,PASS,200,Multiple targets
+wf_s_m_multiple_mapplet,"employeedetails, dept, emp_loc",target_emp,100,100,PASS,0,1:1 mapping
+wf_m_mapplet_multiple_unconnected,"employee, ddept, emp_loc",tgt_flt_mapplet,100,100,PASS,0,1:1 mapping
+wf_s_m_complex5,"emp_dept, employee_details1, employee_details2, employeedetails, employee_details_flat","emp_max_min, t_emp_dep10, t_default, target_insert, target_update",179,445,PASS,266,Multiple targets
