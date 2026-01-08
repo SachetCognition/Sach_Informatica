@@ -1,0 +1,18 @@
+Jan 08, 2026 11:54:12 AM org.apache.spark.launcher.Log4jHotPatchOption staticJavaAgentOption
+WARNING: spark.log4jHotPatch.enabled is set to true, but /usr/share/log4j-cve-2021-44228-hotpatch/jdk17/Log4jHotPatchFat.jar does not exist at the configured location
+
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/home/ubuntu/spark/jars/slf4j-reload4j-1.7.36.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/home/ubuntu/spark/jars/log4j-slf4j-impl-2.17.2.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.slf4j.impl.Reload4jLoggerFactory]
+Traceback (most recent call last):
+  File "/home/ubuntu/repos/Sach_Informatica/generated/pyspark/wf_m_PatternForChurnData_etl.py", line 30, in <module>
+    .getOrCreate()
+     ~~~~~~~~~~~^^
+  File "/home/ubuntu/repos/Sach_Informatica/.venv/lib/python3.13/site-packages/pyspark/sql/session.py", line 559, in getOrCreate
+    session = SparkSession(sc, options=self._options)
+  File "/home/ubuntu/repos/Sach_Informatica/.venv/lib/python3.13/site-packages/pyspark/sql/session.py", line 635, in __init__
+    jSparkSessionClass.getDefaultSession().isDefined()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+TypeError: 'JavaPackage' object is not callable

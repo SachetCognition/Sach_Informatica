@@ -1,0 +1,11 @@
+T_EMPID,EMAIL,PHONENO,SALARY,DEPID,DNAME,ENAME,ELOC
+1,grace.rodriguez1@company.com,263-852-3701,101309,40,OPERATIONS,Grace Rodriguez,DALLAS
+5,bob.smith5@company.com,741-128-7618,40410,10,ACCOUNTING,Bob Smith,BOSTON
+10,bob.garcia10@company.com,521-992-4318,120788,10,ACCOUNTING,Bob Garcia,DALLAS
+15,alice.miller15@company.com,753-982-2405,118659,30,SALES,Alice Miller,BOSTON
+20,jane.davis20@company.com,885-569-9732,54574,30,SALES,Jane Davis,DALLAS
+25,jane.johnson25@company.com,452-115-6965,124215,40,OPERATIONS,Jane Johnson,BOSTON
+30,charlie.brown30@company.com,627-302-5498,38098,40,OPERATIONS,Charlie Brown,BOSTON
+35,grace.martinez35@company.com,600-693-3672,119979,20,RESEARCH,Grace Martinez,BOSTON
+40,eve.martinez40@company.com,561-124-7522,44339,30,SALES,Eve Martinez,DALLAS
+45,grace.miller45@company.com,996-230-9565,89823,40,OPERATIONS,Grace Miller,CHICAGO
