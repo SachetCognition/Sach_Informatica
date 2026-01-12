@@ -32,7 +32,9 @@ ENV/
 *~
 
 # Generated files from conversion scripts
-generated/
+# Note: generated/pyspark/ is tracked for migrated ETL scripts
+generated/outputs/
+generated/sample_data/
 sample_data/
 *.json
 !package.json

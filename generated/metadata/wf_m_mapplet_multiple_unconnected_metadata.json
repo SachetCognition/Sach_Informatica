@@ -1,0 +1,1044 @@
+{
+  "file": "Informatica PC Samples/wf_m_mapplet_multiple_unconnected.XML",
+  "sources": [
+    {
+      "name": "EMPLOYEE",
+      "type": "Oracle",
+      "is_flat_file": false,
+      "fields": [
+        {
+          "name": "EMPNO",
+          "datatype": "number(p,s)",
+          "precision": "4",
+          "scale": "0"
+        },
+        {
+          "name": "ENAME",
+          "datatype": "varchar2",
+          "precision": "10",
+          "scale": "0"
+        },
+        {
+          "name": "JOB",
+          "datatype": "varchar2",
+          "precision": "9",
+          "scale": "0"
+        },
+        {
+          "name": "MGR",
+          "datatype": "number(p,s)",
+          "precision": "4",
+          "scale": "0"
+        },
+        {
+          "name": "SAL",
+          "datatype": "number(p,s)",
+          "precision": "7",
+          "scale": "2"
+        },
+        {
+          "name": "COMM",
+          "datatype": "number(p,s)",
+          "precision": "7",
+          "scale": "2"
+        },
+        {
+          "name": "DEPTNO",
+          "datatype": "number(p,s)",
+          "precision": "2",
+          "scale": "0"
+        }
+      ]
+    }
+  ],
+  "targets": [
+    {
+      "name": "TGT_FLT",
+      "type": "Flat File",
+      "is_flat_file": true,
+      "fields": [
+        {
+          "name": "EMPNO",
+          "datatype": "number",
+          "precision": "4",
+          "scale": "0"
+        },
+        {
+          "name": "ENAME",
+          "datatype": "string",
+          "precision": "10",
+          "scale": "0"
+        },
+        {
+          "name": "JOB",
+          "datatype": "string",
+          "precision": "9",
+          "scale": "0"
+        },
+        {
+          "name": "MGR",
+          "datatype": "number",
+          "precision": "4",
+          "scale": "0"
+        },
+        {
+          "name": "SAL",
+          "datatype": "number",
+          "precision": "7",
+          "scale": "2"
+        },
+        {
+          "name": "COMM",
+          "datatype": "number",
+          "precision": "7",
+          "scale": "2"
+        },
+        {
+          "name": "DEPTNO",
+          "datatype": "number",
+          "precision": "2",
+          "scale": "0"
+        },
+        {
+          "name": "DEPTNAME",
+          "datatype": "string",
+          "precision": "10",
+          "scale": "0"
+        },
+        {
+          "name": "LOC",
+          "datatype": "string",
+          "precision": "10",
+          "scale": "0"
+        }
+      ]
+    }
+  ],
+  "mappings": [
+    {
+      "name": "m_mapplet_multiple_unconnected",
+      "transformations": [
+        {
+          "name": "SQ_EMPLOYEE",
+          "type": "Source Qualifier",
+          "fields": [
+            {
+              "name": "EMPNO",
+              "datatype": "decimal",
+              "expression": null,
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "ENAME",
+              "datatype": "string",
+              "expression": null,
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "JOB",
+              "datatype": "string",
+              "expression": null,
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "MGR",
+              "datatype": "decimal",
+              "expression": null,
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "SAL",
+              "datatype": "decimal",
+              "expression": null,
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "COMM",
+              "datatype": "decimal",
+              "expression": null,
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "DEPTNO",
+              "datatype": "decimal",
+              "expression": null,
+              "port_type": "INPUT/OUTPUT"
+            }
+          ],
+          "attributes": {
+            "Sql Query": "",
+            "User Defined Join": "",
+            "Source Filter": "",
+            "Number Of Sorted Ports": "0",
+            "Tracing Level": "Normal",
+            "Select Distinct": "NO",
+            "Is Partitionable": "NO",
+            "Pre SQL": "",
+            "Post SQL": "",
+            "Output is deterministic": "NO",
+            "Output is repeatable": "Never"
+          }
+        },
+        {
+          "name": "EXPTRANS",
+          "type": "Expression",
+          "fields": [
+            {
+              "name": "EMPNO",
+              "datatype": "decimal",
+              "expression": "EMPNO",
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "ENAME",
+              "datatype": "string",
+              "expression": "ENAME",
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "JOB",
+              "datatype": "string",
+              "expression": "JOB",
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "MGR",
+              "datatype": "decimal",
+              "expression": "MGR",
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "SAL",
+              "datatype": "decimal",
+              "expression": "SAL",
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "COMM",
+              "datatype": "decimal",
+              "expression": "COMM",
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "DEPTNO",
+              "datatype": "decimal",
+              "expression": "DEPTNO",
+              "port_type": "INPUT/OUTPUT"
+            }
+          ],
+          "attributes": {
+            "Tracing Level": "Normal"
+          }
+        },
+        {
+          "name": "EXPTRANS1",
+          "type": "Expression",
+          "fields": [
+            {
+              "name": "EMPNO",
+              "datatype": "decimal",
+              "expression": "EMPNO",
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "ENAME",
+              "datatype": "string",
+              "expression": "ENAME",
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "JOB",
+              "datatype": "string",
+              "expression": "JOB",
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "MGR",
+              "datatype": "decimal",
+              "expression": "MGR",
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "SAL",
+              "datatype": "decimal",
+              "expression": "SAL",
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "COMM",
+              "datatype": "decimal",
+              "expression": "COMM",
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "DEPTNO",
+              "datatype": "decimal",
+              "expression": "DEPTNO",
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "DEPTNAME",
+              "datatype": "string",
+              "expression": "DEPTNAME",
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "LOC",
+              "datatype": "string",
+              "expression": "LOC",
+              "port_type": "INPUT/OUTPUT"
+            }
+          ],
+          "attributes": {
+            "Tracing Level": "Normal"
+          }
+        }
+      ],
+      "data_flow": [
+        [
+          "SQ_EMPLOYEE",
+          "EXPTRANS",
+          "mp_mutiple_unc",
+          "EXPTRANS1",
+          "TGT_FLT"
+        ],
+        [
+          "SQ_EMPLOYEE",
+          "EXPTRANS",
+          "mp_mutiple_unc",
+          "EXPTRANS1",
+          "TGT_FLT"
+        ],
+        [
+          "SQ_EMPLOYEE",
+          "EXPTRANS",
+          "mp_mutiple_unc",
+          "EXPTRANS1",
+          "TGT_FLT"
+        ],
+        [
+          "SQ_EMPLOYEE",
+          "EXPTRANS",
+          "mp_mutiple_unc",
+          "EXPTRANS1",
+          "TGT_FLT"
+        ],
+        [
+          "SQ_EMPLOYEE",
+          "EXPTRANS",
+          "mp_mutiple_unc",
+          "EXPTRANS1",
+          "TGT_FLT"
+        ],
+        [
+          "SQ_EMPLOYEE",
+          "EXPTRANS",
+          "mp_mutiple_unc",
+          "EXPTRANS1",
+          "TGT_FLT"
+        ],
+        [
+          "SQ_EMPLOYEE",
+          "EXPTRANS",
+          "mp_mutiple_unc",
+          "EXPTRANS1",
+          "TGT_FLT"
+        ],
+        [
+          "SQ_EMPLOYEE",
+          "EXPTRANS",
+          "mp_mutiple_unc",
+          "EXPTRANS1",
+          "TGT_FLT"
+        ],
+        [
+          "SQ_EMPLOYEE",
+          "EXPTRANS",
+          "mp_mutiple_unc",
+          "EXPTRANS1",
+          "TGT_FLT"
+        ],
+        [
+          "SQ_EMPLOYEE",
+          "EXPTRANS",
+          "mp_mutiple_unc",
+          "EXPTRANS1",
+          "TGT_FLT"
+        ],
+        [
+          "SQ_EMPLOYEE",
+          "EXPTRANS",
+          "mp_mutiple_unc",
+          "EXPTRANS1",
+          "TGT_FLT"
+        ],
+        [
+          "SQ_EMPLOYEE",
+          "EXPTRANS",
+          "mp_mutiple_unc",
+          "EXPTRANS1",
+          "TGT_FLT"
+        ],
+        [
+          "SQ_EMPLOYEE",
+          "EXPTRANS",
+          "mp_mutiple_unc",
+          "EXPTRANS1",
+          "TGT_FLT"
+        ],
+        [
+          "SQ_EMPLOYEE",
+          "EXPTRANS",
+          "mp_mutiple_unc",
+          "EXPTRANS1",
+          "TGT_FLT"
+        ],
+        [
+          "SQ_EMPLOYEE",
+          "EXPTRANS",
+          "mp_mutiple_unc",
+          "EXPTRANS1",
+          "TGT_FLT"
+        ],
+        [
+          "SQ_EMPLOYEE",
+          "EXPTRANS",
+          "mp_mutiple_unc",
+          "EXPTRANS1",
+          "TGT_FLT"
+        ],
+        [
+          "SQ_EMPLOYEE",
+          "EXPTRANS",
+          "mp_mutiple_unc",
+          "EXPTRANS1",
+          "TGT_FLT"
+        ],
+        [
+          "SQ_EMPLOYEE",
+          "EXPTRANS",
+          "mp_mutiple_unc",
+          "EXPTRANS1",
+          "TGT_FLT"
+        ],
+        [
+          "SQ_EMPLOYEE",
+          "EXPTRANS",
+          "mp_mutiple_unc",
+          "EXPTRANS1",
+          "TGT_FLT"
+        ],
+        [
+          "SQ_EMPLOYEE",
+          "EXPTRANS",
+          "mp_mutiple_unc",
+          "EXPTRANS1",
+          "TGT_FLT"
+        ],
+        [
+          "SQ_EMPLOYEE",
+          "EXPTRANS",
+          "mp_mutiple_unc",
+          "EXPTRANS1",
+          "TGT_FLT"
+        ],
+        [
+          "SQ_EMPLOYEE",
+          "EXPTRANS",
+          "mp_mutiple_unc",
+          "EXPTRANS1",
+          "TGT_FLT"
+        ],
+        [
+          "SQ_EMPLOYEE",
+          "EXPTRANS",
+          "mp_mutiple_unc",
+          "EXPTRANS1",
+          "TGT_FLT"
+        ],
+        [
+          "SQ_EMPLOYEE",
+          "EXPTRANS",
+          "mp_mutiple_unc",
+          "EXPTRANS1",
+          "TGT_FLT"
+        ],
+        [
+          "SQ_EMPLOYEE",
+          "EXPTRANS",
+          "mp_mutiple_unc",
+          "EXPTRANS1",
+          "TGT_FLT"
+        ],
+        [
+          "SQ_EMPLOYEE",
+          "EXPTRANS",
+          "mp_mutiple_unc",
+          "EXPTRANS1",
+          "TGT_FLT"
+        ],
+        [
+          "SQ_EMPLOYEE",
+          "EXPTRANS",
+          "mp_mutiple_unc",
+          "EXPTRANS1",
+          "TGT_FLT"
+        ],
+        [
+          "SQ_EMPLOYEE",
+          "EXPTRANS",
+          "mp_mutiple_unc",
+          "EXPTRANS1",
+          "TGT_FLT"
+        ],
+        [
+          "SQ_EMPLOYEE",
+          "EXPTRANS",
+          "mp_mutiple_unc",
+          "EXPTRANS1",
+          "TGT_FLT"
+        ],
+        [
+          "SQ_EMPLOYEE",
+          "EXPTRANS",
+          "mp_mutiple_unc",
+          "EXPTRANS1",
+          "TGT_FLT"
+        ],
+        [
+          "SQ_EMPLOYEE",
+          "EXPTRANS",
+          "mp_mutiple_unc",
+          "EXPTRANS1",
+          "TGT_FLT"
+        ],
+        [
+          "SQ_EMPLOYEE",
+          "EXPTRANS",
+          "mp_mutiple_unc",
+          "EXPTRANS1",
+          "TGT_FLT"
+        ],
+        [
+          "SQ_EMPLOYEE",
+          "EXPTRANS",
+          "mp_mutiple_unc",
+          "EXPTRANS1",
+          "TGT_FLT"
+        ],
+        [
+          "SQ_EMPLOYEE",
+          "EXPTRANS",
+          "mp_mutiple_unc",
+          "EXPTRANS1",
+          "TGT_FLT"
+        ],
+        [
+          "SQ_EMPLOYEE",
+          "EXPTRANS",
+          "mp_mutiple_unc",
+          "EXPTRANS1",
+          "TGT_FLT"
+        ],
+        [
+          "SQ_EMPLOYEE",
+          "EXPTRANS",
+          "mp_mutiple_unc",
+          "EXPTRANS1",
+          "TGT_FLT"
+        ],
+        [
+          "SQ_EMPLOYEE",
+          "EXPTRANS",
+          "mp_mutiple_unc",
+          "EXPTRANS1",
+          "TGT_FLT"
+        ],
+        [
+          "SQ_EMPLOYEE",
+          "EXPTRANS",
+          "mp_mutiple_unc",
+          "EXPTRANS1",
+          "TGT_FLT"
+        ],
+        [
+          "SQ_EMPLOYEE",
+          "EXPTRANS",
+          "mp_mutiple_unc",
+          "EXPTRANS1",
+          "TGT_FLT"
+        ],
+        [
+          "SQ_EMPLOYEE",
+          "EXPTRANS",
+          "mp_mutiple_unc",
+          "EXPTRANS1",
+          "TGT_FLT"
+        ],
+        [
+          "SQ_EMPLOYEE",
+          "EXPTRANS",
+          "mp_mutiple_unc",
+          "EXPTRANS1",
+          "TGT_FLT"
+        ],
+        [
+          "SQ_EMPLOYEE",
+          "EXPTRANS",
+          "mp_mutiple_unc",
+          "EXPTRANS1",
+          "TGT_FLT"
+        ],
+        [
+          "SQ_EMPLOYEE",
+          "EXPTRANS",
+          "mp_mutiple_unc",
+          "EXPTRANS1",
+          "TGT_FLT"
+        ],
+        [
+          "SQ_EMPLOYEE",
+          "EXPTRANS",
+          "mp_mutiple_unc",
+          "EXPTRANS1",
+          "TGT_FLT"
+        ],
+        [
+          "SQ_EMPLOYEE",
+          "EXPTRANS",
+          "mp_mutiple_unc",
+          "EXPTRANS1",
+          "TGT_FLT"
+        ],
+        [
+          "SQ_EMPLOYEE",
+          "EXPTRANS",
+          "mp_mutiple_unc",
+          "EXPTRANS1",
+          "TGT_FLT"
+        ],
+        [
+          "SQ_EMPLOYEE",
+          "EXPTRANS",
+          "mp_mutiple_unc",
+          "EXPTRANS1",
+          "TGT_FLT"
+        ],
+        [
+          "SQ_EMPLOYEE",
+          "EXPTRANS",
+          "mp_mutiple_unc",
+          "EXPTRANS1",
+          "TGT_FLT"
+        ],
+        [
+          "SQ_EMPLOYEE",
+          "EXPTRANS",
+          "mp_mutiple_unc",
+          "EXPTRANS1",
+          "TGT_FLT"
+        ],
+        [
+          "SQ_EMPLOYEE",
+          "EXPTRANS",
+          "mp_mutiple_unc",
+          "EXPTRANS1",
+          "TGT_FLT"
+        ],
+        [
+          "SQ_EMPLOYEE",
+          "EXPTRANS",
+          "mp_mutiple_unc",
+          "EXPTRANS1",
+          "TGT_FLT"
+        ],
+        [
+          "SQ_EMPLOYEE",
+          "EXPTRANS",
+          "mp_mutiple_unc",
+          "EXPTRANS1",
+          "TGT_FLT"
+        ],
+        [
+          "SQ_EMPLOYEE",
+          "EXPTRANS",
+          "mp_mutiple_unc",
+          "EXPTRANS1",
+          "TGT_FLT"
+        ],
+        [
+          "SQ_EMPLOYEE",
+          "EXPTRANS",
+          "mp_mutiple_unc",
+          "EXPTRANS1",
+          "TGT_FLT"
+        ],
+        [
+          "SQ_EMPLOYEE",
+          "EXPTRANS",
+          "mp_mutiple_unc",
+          "EXPTRANS1",
+          "TGT_FLT"
+        ],
+        [
+          "SQ_EMPLOYEE",
+          "EXPTRANS",
+          "mp_mutiple_unc",
+          "EXPTRANS1",
+          "TGT_FLT"
+        ],
+        [
+          "SQ_EMPLOYEE",
+          "EXPTRANS",
+          "mp_mutiple_unc",
+          "EXPTRANS1",
+          "TGT_FLT"
+        ],
+        [
+          "SQ_EMPLOYEE",
+          "EXPTRANS",
+          "mp_mutiple_unc",
+          "EXPTRANS1",
+          "TGT_FLT"
+        ],
+        [
+          "SQ_EMPLOYEE",
+          "EXPTRANS",
+          "mp_mutiple_unc",
+          "EXPTRANS1",
+          "TGT_FLT"
+        ],
+        [
+          "SQ_EMPLOYEE",
+          "EXPTRANS",
+          "mp_mutiple_unc",
+          "EXPTRANS1",
+          "TGT_FLT"
+        ],
+        [
+          "SQ_EMPLOYEE",
+          "EXPTRANS",
+          "mp_mutiple_unc",
+          "EXPTRANS1",
+          "TGT_FLT"
+        ],
+        [
+          "SQ_EMPLOYEE",
+          "EXPTRANS",
+          "mp_mutiple_unc",
+          "EXPTRANS1",
+          "TGT_FLT"
+        ],
+        [
+          "SQ_EMPLOYEE",
+          "EXPTRANS",
+          "mp_mutiple_unc",
+          "EXPTRANS1",
+          "TGT_FLT"
+        ],
+        [
+          "SQ_EMPLOYEE",
+          "EXPTRANS",
+          "mp_mutiple_unc",
+          "EXPTRANS1",
+          "TGT_FLT"
+        ],
+        [
+          "SQ_EMPLOYEE",
+          "EXPTRANS",
+          "mp_mutiple_unc",
+          "EXPTRANS1",
+          "TGT_FLT"
+        ],
+        [
+          "SQ_EMPLOYEE",
+          "EXPTRANS",
+          "mp_mutiple_unc",
+          "EXPTRANS1",
+          "TGT_FLT"
+        ],
+        [
+          "SQ_EMPLOYEE",
+          "EXPTRANS",
+          "mp_mutiple_unc",
+          "EXPTRANS1",
+          "TGT_FLT"
+        ],
+        [
+          "SQ_EMPLOYEE",
+          "EXPTRANS",
+          "mp_mutiple_unc",
+          "EXPTRANS1",
+          "TGT_FLT"
+        ],
+        [
+          "SQ_EMPLOYEE",
+          "EXPTRANS",
+          "mp_mutiple_unc",
+          "EXPTRANS1",
+          "TGT_FLT"
+        ],
+        [
+          "SQ_EMPLOYEE",
+          "EXPTRANS",
+          "mp_mutiple_unc",
+          "EXPTRANS1",
+          "TGT_FLT"
+        ],
+        [
+          "SQ_EMPLOYEE",
+          "EXPTRANS",
+          "mp_mutiple_unc",
+          "EXPTRANS1",
+          "TGT_FLT"
+        ],
+        [
+          "SQ_EMPLOYEE",
+          "EXPTRANS",
+          "mp_mutiple_unc",
+          "EXPTRANS1",
+          "TGT_FLT"
+        ],
+        [
+          "SQ_EMPLOYEE",
+          "EXPTRANS",
+          "mp_mutiple_unc",
+          "EXPTRANS1",
+          "TGT_FLT"
+        ],
+        [
+          "SQ_EMPLOYEE",
+          "EXPTRANS",
+          "mp_mutiple_unc",
+          "EXPTRANS1",
+          "TGT_FLT"
+        ],
+        [
+          "SQ_EMPLOYEE",
+          "EXPTRANS",
+          "mp_mutiple_unc",
+          "EXPTRANS1",
+          "TGT_FLT"
+        ],
+        [
+          "SQ_EMPLOYEE",
+          "EXPTRANS",
+          "mp_mutiple_unc",
+          "EXPTRANS1",
+          "TGT_FLT"
+        ],
+        [
+          "SQ_EMPLOYEE",
+          "EXPTRANS",
+          "mp_mutiple_unc",
+          "EXPTRANS1",
+          "TGT_FLT"
+        ],
+        [
+          "SQ_EMPLOYEE",
+          "EXPTRANS",
+          "mp_mutiple_unc",
+          "EXPTRANS1",
+          "TGT_FLT"
+        ],
+        [
+          "SQ_EMPLOYEE",
+          "EXPTRANS",
+          "mp_mutiple_unc",
+          "EXPTRANS1",
+          "TGT_FLT"
+        ],
+        [
+          "SQ_EMPLOYEE",
+          "EXPTRANS",
+          "mp_mutiple_unc",
+          "EXPTRANS1",
+          "TGT_FLT"
+        ],
+        [
+          "SQ_EMPLOYEE",
+          "EXPTRANS",
+          "mp_mutiple_unc",
+          "EXPTRANS1",
+          "TGT_FLT"
+        ],
+        [
+          "SQ_EMPLOYEE",
+          "EXPTRANS",
+          "mp_mutiple_unc",
+          "EXPTRANS1",
+          "TGT_FLT"
+        ],
+        [
+          "SQ_EMPLOYEE",
+          "EXPTRANS",
+          "mp_mutiple_unc",
+          "EXPTRANS1",
+          "TGT_FLT"
+        ],
+        [
+          "SQ_EMPLOYEE",
+          "EXPTRANS",
+          "mp_mutiple_unc",
+          "EXPTRANS1",
+          "TGT_FLT"
+        ],
+        [
+          "SQ_EMPLOYEE",
+          "EXPTRANS",
+          "mp_mutiple_unc",
+          "EXPTRANS1",
+          "TGT_FLT"
+        ],
+        [
+          "SQ_EMPLOYEE",
+          "EXPTRANS",
+          "mp_mutiple_unc",
+          "EXPTRANS1",
+          "TGT_FLT"
+        ],
+        [
+          "SQ_EMPLOYEE",
+          "EXPTRANS",
+          "mp_mutiple_unc",
+          "EXPTRANS1",
+          "TGT_FLT"
+        ],
+        [
+          "SQ_EMPLOYEE",
+          "EXPTRANS",
+          "mp_mutiple_unc",
+          "EXPTRANS1",
+          "TGT_FLT"
+        ],
+        [
+          "SQ_EMPLOYEE",
+          "EXPTRANS",
+          "mp_mutiple_unc",
+          "EXPTRANS1",
+          "TGT_FLT"
+        ],
+        [
+          "SQ_EMPLOYEE",
+          "EXPTRANS",
+          "mp_mutiple_unc",
+          "EXPTRANS1",
+          "TGT_FLT"
+        ],
+        [
+          "SQ_EMPLOYEE",
+          "EXPTRANS",
+          "mp_mutiple_unc",
+          "EXPTRANS1",
+          "TGT_FLT"
+        ],
+        [
+          "SQ_EMPLOYEE",
+          "EXPTRANS",
+          "mp_mutiple_unc",
+          "EXPTRANS1",
+          "TGT_FLT"
+        ],
+        [
+          "SQ_EMPLOYEE",
+          "EXPTRANS",
+          "mp_mutiple_unc",
+          "EXPTRANS1",
+          "TGT_FLT"
+        ],
+        [
+          "SQ_EMPLOYEE",
+          "EXPTRANS",
+          "mp_mutiple_unc",
+          "EXPTRANS1",
+          "TGT_FLT"
+        ],
+        [
+          "SQ_EMPLOYEE",
+          "EXPTRANS",
+          "mp_mutiple_unc",
+          "EXPTRANS1",
+          "TGT_FLT"
+        ],
+        [
+          "SQ_EMPLOYEE",
+          "EXPTRANS",
+          "mp_mutiple_unc",
+          "EXPTRANS1",
+          "TGT_FLT"
+        ],
+        [
+          "SQ_EMPLOYEE",
+          "EXPTRANS",
+          "mp_mutiple_unc",
+          "EXPTRANS1",
+          "TGT_FLT"
+        ],
+        [
+          "SQ_EMPLOYEE",
+          "EXPTRANS",
+          "mp_mutiple_unc",
+          "EXPTRANS1",
+          "TGT_FLT"
+        ],
+        [
+          "SQ_EMPLOYEE",
+          "EXPTRANS",
+          "mp_mutiple_unc",
+          "EXPTRANS1",
+          "TGT_FLT"
+        ],
+        [
+          "SQ_EMPLOYEE",
+          "EXPTRANS",
+          "mp_mutiple_unc",
+          "EXPTRANS1",
+          "TGT_FLT"
+        ],
+        [
+          "SQ_EMPLOYEE",
+          "EXPTRANS",
+          "mp_mutiple_unc",
+          "EXPTRANS1",
+          "TGT_FLT"
+        ]
+      ],
+      "lookup_calls": {}
+    }
+  ],
+  "mapplets": [
+    {
+      "name": "mp_mutiple_unc",
+      "input_fields": [
+        "EMPNO",
+        "ENAME",
+        "JOB",
+        "MGR",
+        "SAL",
+        "COMM",
+        "DEPTNO"
+      ],
+      "output_fields": [
+        "EMPNO",
+        "ENAME",
+        "JOB",
+        "MGR",
+        "SAL",
+        "COMM",
+        "DEPTNO",
+        "DEPTNAME",
+        "LOC"
+      ],
+      "transformations": [
+        "MP_EXPTRANS1",
+        "FILTRANS",
+        "MP_EXPTRANS",
+        "LKPTRANS",
+        "LKPTRANS1",
+        "INPUT",
+        "OUTPUT",
+        "mp_mutiple_unc"
+      ]
+    }
+  ]
+}
