@@ -1,0 +1,1162 @@
+{
+  "file": "Informatica PC Samples/wf_s_m_multiple_mapplet.XML",
+  "sources": [
+    {
+      "name": "EMPLOYEEDETAILS",
+      "type": "Oracle",
+      "is_flat_file": false,
+      "fields": [
+        {
+          "name": "EMPID",
+          "datatype": "number(p,s)",
+          "precision": "38",
+          "scale": "0"
+        },
+        {
+          "name": "FIRSTNAME",
+          "datatype": "varchar2",
+          "precision": "20",
+          "scale": "0"
+        },
+        {
+          "name": "LASTNAME",
+          "datatype": "varchar2",
+          "precision": "20",
+          "scale": "0"
+        },
+        {
+          "name": "EMAIL",
+          "datatype": "varchar2",
+          "precision": "25",
+          "scale": "0"
+        },
+        {
+          "name": "PHONENO",
+          "datatype": "varchar2",
+          "precision": "25",
+          "scale": "0"
+        },
+        {
+          "name": "SALARY",
+          "datatype": "number(p,s)",
+          "precision": "38",
+          "scale": "0"
+        },
+        {
+          "name": "DEPID",
+          "datatype": "number(p,s)",
+          "precision": "38",
+          "scale": "0"
+        }
+      ]
+    }
+  ],
+  "targets": [
+    {
+      "name": "TARGET_EMP",
+      "type": "Oracle",
+      "is_flat_file": false,
+      "fields": [
+        {
+          "name": "NAME",
+          "datatype": "varchar2",
+          "precision": "50",
+          "scale": "0"
+        },
+        {
+          "name": "DNAME",
+          "datatype": "varchar2",
+          "precision": "14",
+          "scale": "0"
+        },
+        {
+          "name": "EMPID",
+          "datatype": "number(p,s)",
+          "precision": "15",
+          "scale": "0"
+        },
+        {
+          "name": "EMAIL",
+          "datatype": "varchar2",
+          "precision": "35",
+          "scale": "0"
+        },
+        {
+          "name": "PHONENO",
+          "datatype": "varchar2",
+          "precision": "35",
+          "scale": "0"
+        },
+        {
+          "name": "SALARY",
+          "datatype": "number(p,s)",
+          "precision": "15",
+          "scale": "0"
+        },
+        {
+          "name": "DEPID",
+          "datatype": "number(p,s)",
+          "precision": "15",
+          "scale": "0"
+        },
+        {
+          "name": "LOC",
+          "datatype": "varchar2",
+          "precision": "10",
+          "scale": "0"
+        }
+      ]
+    }
+  ],
+  "mappings": [
+    {
+      "name": "m_multiple_mapplet",
+      "transformations": [
+        {
+          "name": "SQ_EMPLOYEEDETAILS",
+          "type": "Source Qualifier",
+          "fields": [
+            {
+              "name": "EMPID",
+              "datatype": "decimal",
+              "expression": null,
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "FIRSTNAME",
+              "datatype": "string",
+              "expression": null,
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "LASTNAME",
+              "datatype": "string",
+              "expression": null,
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "EMAIL",
+              "datatype": "string",
+              "expression": null,
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "PHONENO",
+              "datatype": "string",
+              "expression": null,
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "SALARY",
+              "datatype": "decimal",
+              "expression": null,
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "DEPID",
+              "datatype": "decimal",
+              "expression": null,
+              "port_type": "INPUT/OUTPUT"
+            }
+          ],
+          "attributes": {
+            "Sql Query": "",
+            "User Defined Join": "",
+            "Source Filter": "",
+            "Number Of Sorted Ports": "0",
+            "Tracing Level": "Normal",
+            "Select Distinct": "NO",
+            "Is Partitionable": "NO",
+            "Pre SQL": "",
+            "Post SQL": "",
+            "Output is deterministic": "NO",
+            "Output is repeatable": "Never"
+          }
+        },
+        {
+          "name": "EXPTRANS_1",
+          "type": "Expression",
+          "fields": [
+            {
+              "name": "EMPID",
+              "datatype": "decimal",
+              "expression": "EMPID",
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "EMAIL",
+              "datatype": "string",
+              "expression": "EMAIL",
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "O_PHONENO",
+              "datatype": "string",
+              "expression": "LTRIM(RTRIM(PHONENO))",
+              "port_type": "OUTPUT"
+            },
+            {
+              "name": "SALARY",
+              "datatype": "decimal",
+              "expression": "SALARY",
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "DEPID",
+              "datatype": "decimal",
+              "expression": "DEPID",
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "DNAME",
+              "datatype": "string",
+              "expression": "DNAME",
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "NAME",
+              "datatype": "string",
+              "expression": "NAME",
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "PHONENO",
+              "datatype": "string",
+              "expression": null,
+              "port_type": "INPUT"
+            }
+          ],
+          "attributes": {
+            "Tracing Level": "Normal"
+          }
+        },
+        {
+          "name": "COM_EXPTRANS",
+          "type": "Expression",
+          "fields": [
+            {
+              "name": "NAME",
+              "datatype": "string",
+              "expression": "NAME",
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "DNAME",
+              "datatype": "string",
+              "expression": "DNAME",
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "EMPID",
+              "datatype": "decimal",
+              "expression": "EMPID",
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "EMAIL",
+              "datatype": "string",
+              "expression": "EMAIL",
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "O_PHONENO",
+              "datatype": "string",
+              "expression": "O_PHONENO",
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "SALARY",
+              "datatype": "decimal",
+              "expression": "SALARY",
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "DEPID",
+              "datatype": "decimal",
+              "expression": "DEPID",
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "LOC",
+              "datatype": "string",
+              "expression": "LOC",
+              "port_type": "INPUT/OUTPUT"
+            }
+          ],
+          "attributes": {
+            "Tracing Level": "Normal"
+          }
+        }
+      ],
+      "data_flow": [
+        [
+          "SQ_EMPLOYEEDETAILS",
+          "mp_emp",
+          "EXPTRANS_1",
+          "mp_lkp_loc",
+          "COM_EXPTRANS",
+          "TARGET_EMP"
+        ],
+        [
+          "SQ_EMPLOYEEDETAILS",
+          "mp_emp",
+          "EXPTRANS_1",
+          "mp_lkp_loc",
+          "COM_EXPTRANS",
+          "TARGET_EMP"
+        ],
+        [
+          "SQ_EMPLOYEEDETAILS",
+          "mp_emp",
+          "EXPTRANS_1",
+          "mp_lkp_loc",
+          "COM_EXPTRANS",
+          "TARGET_EMP"
+        ],
+        [
+          "SQ_EMPLOYEEDETAILS",
+          "mp_emp",
+          "EXPTRANS_1",
+          "mp_lkp_loc",
+          "COM_EXPTRANS",
+          "TARGET_EMP"
+        ],
+        [
+          "SQ_EMPLOYEEDETAILS",
+          "mp_emp",
+          "EXPTRANS_1",
+          "mp_lkp_loc",
+          "COM_EXPTRANS",
+          "TARGET_EMP"
+        ],
+        [
+          "SQ_EMPLOYEEDETAILS",
+          "mp_emp",
+          "EXPTRANS_1",
+          "mp_lkp_loc",
+          "COM_EXPTRANS",
+          "TARGET_EMP"
+        ],
+        [
+          "SQ_EMPLOYEEDETAILS",
+          "mp_emp",
+          "EXPTRANS_1",
+          "mp_lkp_loc",
+          "COM_EXPTRANS",
+          "TARGET_EMP"
+        ],
+        [
+          "SQ_EMPLOYEEDETAILS",
+          "mp_emp",
+          "EXPTRANS_1",
+          "mp_lkp_loc",
+          "COM_EXPTRANS",
+          "TARGET_EMP"
+        ],
+        [
+          "SQ_EMPLOYEEDETAILS",
+          "mp_emp",
+          "EXPTRANS_1",
+          "mp_lkp_loc",
+          "COM_EXPTRANS",
+          "TARGET_EMP"
+        ],
+        [
+          "SQ_EMPLOYEEDETAILS",
+          "mp_emp",
+          "EXPTRANS_1",
+          "mp_lkp_loc",
+          "COM_EXPTRANS",
+          "TARGET_EMP"
+        ],
+        [
+          "SQ_EMPLOYEEDETAILS",
+          "mp_emp",
+          "EXPTRANS_1",
+          "mp_lkp_loc",
+          "COM_EXPTRANS",
+          "TARGET_EMP"
+        ],
+        [
+          "SQ_EMPLOYEEDETAILS",
+          "mp_emp",
+          "EXPTRANS_1",
+          "mp_lkp_loc",
+          "COM_EXPTRANS",
+          "TARGET_EMP"
+        ],
+        [
+          "SQ_EMPLOYEEDETAILS",
+          "mp_emp",
+          "EXPTRANS_1",
+          "mp_lkp_loc",
+          "COM_EXPTRANS",
+          "TARGET_EMP"
+        ],
+        [
+          "SQ_EMPLOYEEDETAILS",
+          "mp_emp",
+          "EXPTRANS_1",
+          "mp_lkp_loc",
+          "COM_EXPTRANS",
+          "TARGET_EMP"
+        ],
+        [
+          "SQ_EMPLOYEEDETAILS",
+          "mp_emp",
+          "EXPTRANS_1",
+          "mp_lkp_loc",
+          "COM_EXPTRANS",
+          "TARGET_EMP"
+        ],
+        [
+          "SQ_EMPLOYEEDETAILS",
+          "mp_emp",
+          "EXPTRANS_1",
+          "mp_lkp_loc",
+          "COM_EXPTRANS",
+          "TARGET_EMP"
+        ],
+        [
+          "SQ_EMPLOYEEDETAILS",
+          "mp_emp",
+          "EXPTRANS_1",
+          "mp_lkp_loc",
+          "COM_EXPTRANS",
+          "TARGET_EMP"
+        ],
+        [
+          "SQ_EMPLOYEEDETAILS",
+          "mp_emp",
+          "EXPTRANS_1",
+          "mp_lkp_loc",
+          "COM_EXPTRANS",
+          "TARGET_EMP"
+        ],
+        [
+          "SQ_EMPLOYEEDETAILS",
+          "mp_emp",
+          "EXPTRANS_1",
+          "mp_lkp_loc",
+          "COM_EXPTRANS",
+          "TARGET_EMP"
+        ],
+        [
+          "SQ_EMPLOYEEDETAILS",
+          "mp_emp",
+          "EXPTRANS_1",
+          "mp_lkp_loc",
+          "COM_EXPTRANS",
+          "TARGET_EMP"
+        ],
+        [
+          "SQ_EMPLOYEEDETAILS",
+          "mp_emp",
+          "EXPTRANS_1",
+          "mp_lkp_loc",
+          "COM_EXPTRANS",
+          "TARGET_EMP"
+        ],
+        [
+          "SQ_EMPLOYEEDETAILS",
+          "mp_emp",
+          "EXPTRANS_1",
+          "mp_lkp_loc",
+          "COM_EXPTRANS",
+          "TARGET_EMP"
+        ],
+        [
+          "SQ_EMPLOYEEDETAILS",
+          "mp_emp",
+          "EXPTRANS_1",
+          "mp_lkp_loc",
+          "COM_EXPTRANS",
+          "TARGET_EMP"
+        ],
+        [
+          "SQ_EMPLOYEEDETAILS",
+          "mp_emp",
+          "EXPTRANS_1",
+          "mp_lkp_loc",
+          "COM_EXPTRANS",
+          "TARGET_EMP"
+        ],
+        [
+          "SQ_EMPLOYEEDETAILS",
+          "mp_emp",
+          "EXPTRANS_1",
+          "mp_lkp_loc",
+          "COM_EXPTRANS",
+          "TARGET_EMP"
+        ],
+        [
+          "SQ_EMPLOYEEDETAILS",
+          "mp_emp",
+          "EXPTRANS_1",
+          "mp_lkp_loc",
+          "COM_EXPTRANS",
+          "TARGET_EMP"
+        ],
+        [
+          "SQ_EMPLOYEEDETAILS",
+          "mp_emp",
+          "EXPTRANS_1",
+          "mp_lkp_loc",
+          "COM_EXPTRANS",
+          "TARGET_EMP"
+        ],
+        [
+          "SQ_EMPLOYEEDETAILS",
+          "mp_emp",
+          "EXPTRANS_1",
+          "mp_lkp_loc",
+          "COM_EXPTRANS",
+          "TARGET_EMP"
+        ],
+        [
+          "SQ_EMPLOYEEDETAILS",
+          "mp_emp",
+          "EXPTRANS_1",
+          "mp_lkp_loc",
+          "COM_EXPTRANS",
+          "TARGET_EMP"
+        ],
+        [
+          "SQ_EMPLOYEEDETAILS",
+          "mp_emp",
+          "EXPTRANS_1",
+          "mp_lkp_loc",
+          "COM_EXPTRANS",
+          "TARGET_EMP"
+        ],
+        [
+          "SQ_EMPLOYEEDETAILS",
+          "mp_emp",
+          "EXPTRANS_1",
+          "mp_lkp_loc",
+          "COM_EXPTRANS",
+          "TARGET_EMP"
+        ],
+        [
+          "SQ_EMPLOYEEDETAILS",
+          "mp_emp",
+          "EXPTRANS_1",
+          "mp_lkp_loc",
+          "COM_EXPTRANS",
+          "TARGET_EMP"
+        ],
+        [
+          "SQ_EMPLOYEEDETAILS",
+          "mp_emp",
+          "EXPTRANS_1",
+          "mp_lkp_loc",
+          "COM_EXPTRANS",
+          "TARGET_EMP"
+        ],
+        [
+          "SQ_EMPLOYEEDETAILS",
+          "mp_emp",
+          "EXPTRANS_1",
+          "mp_lkp_loc",
+          "COM_EXPTRANS",
+          "TARGET_EMP"
+        ],
+        [
+          "SQ_EMPLOYEEDETAILS",
+          "mp_emp",
+          "EXPTRANS_1",
+          "mp_lkp_loc",
+          "COM_EXPTRANS",
+          "TARGET_EMP"
+        ],
+        [
+          "SQ_EMPLOYEEDETAILS",
+          "mp_emp",
+          "EXPTRANS_1",
+          "mp_lkp_loc",
+          "COM_EXPTRANS",
+          "TARGET_EMP"
+        ],
+        [
+          "SQ_EMPLOYEEDETAILS",
+          "mp_emp",
+          "EXPTRANS_1",
+          "mp_lkp_loc",
+          "COM_EXPTRANS",
+          "TARGET_EMP"
+        ],
+        [
+          "SQ_EMPLOYEEDETAILS",
+          "mp_emp",
+          "EXPTRANS_1",
+          "mp_lkp_loc",
+          "COM_EXPTRANS",
+          "TARGET_EMP"
+        ],
+        [
+          "SQ_EMPLOYEEDETAILS",
+          "mp_emp",
+          "EXPTRANS_1",
+          "mp_lkp_loc",
+          "COM_EXPTRANS",
+          "TARGET_EMP"
+        ],
+        [
+          "SQ_EMPLOYEEDETAILS",
+          "mp_emp",
+          "EXPTRANS_1",
+          "mp_lkp_loc",
+          "COM_EXPTRANS",
+          "TARGET_EMP"
+        ],
+        [
+          "SQ_EMPLOYEEDETAILS",
+          "mp_emp",
+          "EXPTRANS_1",
+          "mp_lkp_loc",
+          "COM_EXPTRANS",
+          "TARGET_EMP"
+        ],
+        [
+          "SQ_EMPLOYEEDETAILS",
+          "mp_emp",
+          "EXPTRANS_1",
+          "mp_lkp_loc",
+          "COM_EXPTRANS",
+          "TARGET_EMP"
+        ],
+        [
+          "SQ_EMPLOYEEDETAILS",
+          "mp_emp",
+          "EXPTRANS_1",
+          "mp_lkp_loc",
+          "COM_EXPTRANS",
+          "TARGET_EMP"
+        ],
+        [
+          "SQ_EMPLOYEEDETAILS",
+          "mp_emp",
+          "EXPTRANS_1",
+          "mp_lkp_loc",
+          "COM_EXPTRANS",
+          "TARGET_EMP"
+        ],
+        [
+          "SQ_EMPLOYEEDETAILS",
+          "mp_emp",
+          "EXPTRANS_1",
+          "mp_lkp_loc",
+          "COM_EXPTRANS",
+          "TARGET_EMP"
+        ],
+        [
+          "SQ_EMPLOYEEDETAILS",
+          "mp_emp",
+          "EXPTRANS_1",
+          "mp_lkp_loc",
+          "COM_EXPTRANS",
+          "TARGET_EMP"
+        ],
+        [
+          "SQ_EMPLOYEEDETAILS",
+          "mp_emp",
+          "EXPTRANS_1",
+          "mp_lkp_loc",
+          "COM_EXPTRANS",
+          "TARGET_EMP"
+        ],
+        [
+          "SQ_EMPLOYEEDETAILS",
+          "mp_emp",
+          "EXPTRANS_1",
+          "mp_lkp_loc",
+          "COM_EXPTRANS",
+          "TARGET_EMP"
+        ],
+        [
+          "SQ_EMPLOYEEDETAILS",
+          "mp_emp",
+          "EXPTRANS_1",
+          "mp_lkp_loc",
+          "COM_EXPTRANS",
+          "TARGET_EMP"
+        ],
+        [
+          "SQ_EMPLOYEEDETAILS",
+          "mp_emp",
+          "EXPTRANS_1",
+          "mp_lkp_loc",
+          "COM_EXPTRANS",
+          "TARGET_EMP"
+        ],
+        [
+          "SQ_EMPLOYEEDETAILS",
+          "mp_emp",
+          "EXPTRANS_1",
+          "mp_lkp_loc",
+          "COM_EXPTRANS",
+          "TARGET_EMP"
+        ],
+        [
+          "SQ_EMPLOYEEDETAILS",
+          "mp_emp",
+          "EXPTRANS_1",
+          "mp_lkp_loc",
+          "COM_EXPTRANS",
+          "TARGET_EMP"
+        ],
+        [
+          "SQ_EMPLOYEEDETAILS",
+          "mp_emp",
+          "EXPTRANS_1",
+          "mp_lkp_loc",
+          "COM_EXPTRANS",
+          "TARGET_EMP"
+        ],
+        [
+          "SQ_EMPLOYEEDETAILS",
+          "mp_emp",
+          "EXPTRANS_1",
+          "mp_lkp_loc",
+          "COM_EXPTRANS",
+          "TARGET_EMP"
+        ],
+        [
+          "SQ_EMPLOYEEDETAILS",
+          "mp_emp",
+          "EXPTRANS_1",
+          "mp_lkp_loc",
+          "COM_EXPTRANS",
+          "TARGET_EMP"
+        ],
+        [
+          "SQ_EMPLOYEEDETAILS",
+          "mp_emp",
+          "EXPTRANS_1",
+          "mp_lkp_loc",
+          "COM_EXPTRANS",
+          "TARGET_EMP"
+        ],
+        [
+          "SQ_EMPLOYEEDETAILS",
+          "mp_emp",
+          "EXPTRANS_1",
+          "mp_lkp_loc",
+          "COM_EXPTRANS",
+          "TARGET_EMP"
+        ],
+        [
+          "SQ_EMPLOYEEDETAILS",
+          "mp_emp",
+          "EXPTRANS_1",
+          "mp_lkp_loc",
+          "COM_EXPTRANS",
+          "TARGET_EMP"
+        ],
+        [
+          "SQ_EMPLOYEEDETAILS",
+          "mp_emp",
+          "EXPTRANS_1",
+          "mp_lkp_loc",
+          "COM_EXPTRANS",
+          "TARGET_EMP"
+        ],
+        [
+          "SQ_EMPLOYEEDETAILS",
+          "mp_emp",
+          "EXPTRANS_1",
+          "mp_lkp_loc",
+          "COM_EXPTRANS",
+          "TARGET_EMP"
+        ],
+        [
+          "SQ_EMPLOYEEDETAILS",
+          "mp_emp",
+          "EXPTRANS_1",
+          "mp_lkp_loc",
+          "COM_EXPTRANS",
+          "TARGET_EMP"
+        ],
+        [
+          "SQ_EMPLOYEEDETAILS",
+          "mp_emp",
+          "EXPTRANS_1",
+          "mp_lkp_loc",
+          "COM_EXPTRANS",
+          "TARGET_EMP"
+        ],
+        [
+          "SQ_EMPLOYEEDETAILS",
+          "mp_emp",
+          "EXPTRANS_1",
+          "mp_lkp_loc",
+          "COM_EXPTRANS",
+          "TARGET_EMP"
+        ],
+        [
+          "SQ_EMPLOYEEDETAILS",
+          "mp_emp",
+          "EXPTRANS_1",
+          "mp_lkp_loc",
+          "COM_EXPTRANS",
+          "TARGET_EMP"
+        ],
+        [
+          "SQ_EMPLOYEEDETAILS",
+          "mp_emp",
+          "EXPTRANS_1",
+          "mp_lkp_loc",
+          "COM_EXPTRANS",
+          "TARGET_EMP"
+        ],
+        [
+          "SQ_EMPLOYEEDETAILS",
+          "mp_emp",
+          "EXPTRANS_1",
+          "mp_lkp_loc",
+          "COM_EXPTRANS",
+          "TARGET_EMP"
+        ],
+        [
+          "SQ_EMPLOYEEDETAILS",
+          "mp_emp",
+          "EXPTRANS_1",
+          "mp_lkp_loc",
+          "COM_EXPTRANS",
+          "TARGET_EMP"
+        ],
+        [
+          "SQ_EMPLOYEEDETAILS",
+          "mp_emp",
+          "EXPTRANS_1",
+          "mp_lkp_loc",
+          "COM_EXPTRANS",
+          "TARGET_EMP"
+        ],
+        [
+          "SQ_EMPLOYEEDETAILS",
+          "mp_emp",
+          "EXPTRANS_1",
+          "mp_lkp_loc",
+          "COM_EXPTRANS",
+          "TARGET_EMP"
+        ],
+        [
+          "SQ_EMPLOYEEDETAILS",
+          "mp_emp",
+          "EXPTRANS_1",
+          "mp_lkp_loc",
+          "COM_EXPTRANS",
+          "TARGET_EMP"
+        ],
+        [
+          "SQ_EMPLOYEEDETAILS",
+          "mp_emp",
+          "EXPTRANS_1",
+          "mp_lkp_loc",
+          "COM_EXPTRANS",
+          "TARGET_EMP"
+        ],
+        [
+          "SQ_EMPLOYEEDETAILS",
+          "mp_emp",
+          "EXPTRANS_1",
+          "mp_lkp_loc",
+          "COM_EXPTRANS",
+          "TARGET_EMP"
+        ],
+        [
+          "SQ_EMPLOYEEDETAILS",
+          "mp_emp",
+          "EXPTRANS_1",
+          "mp_lkp_loc",
+          "COM_EXPTRANS",
+          "TARGET_EMP"
+        ],
+        [
+          "SQ_EMPLOYEEDETAILS",
+          "mp_emp",
+          "EXPTRANS_1",
+          "mp_lkp_loc",
+          "COM_EXPTRANS",
+          "TARGET_EMP"
+        ],
+        [
+          "SQ_EMPLOYEEDETAILS",
+          "mp_emp",
+          "EXPTRANS_1",
+          "mp_lkp_loc",
+          "COM_EXPTRANS",
+          "TARGET_EMP"
+        ],
+        [
+          "SQ_EMPLOYEEDETAILS",
+          "mp_emp",
+          "EXPTRANS_1",
+          "mp_lkp_loc",
+          "COM_EXPTRANS",
+          "TARGET_EMP"
+        ],
+        [
+          "SQ_EMPLOYEEDETAILS",
+          "mp_emp",
+          "EXPTRANS_1",
+          "mp_lkp_loc",
+          "COM_EXPTRANS",
+          "TARGET_EMP"
+        ],
+        [
+          "SQ_EMPLOYEEDETAILS",
+          "mp_emp",
+          "EXPTRANS_1",
+          "mp_lkp_loc",
+          "COM_EXPTRANS",
+          "TARGET_EMP"
+        ],
+        [
+          "SQ_EMPLOYEEDETAILS",
+          "mp_emp",
+          "EXPTRANS_1",
+          "mp_lkp_loc",
+          "COM_EXPTRANS",
+          "TARGET_EMP"
+        ],
+        [
+          "SQ_EMPLOYEEDETAILS",
+          "mp_emp",
+          "EXPTRANS_1",
+          "mp_lkp_loc",
+          "COM_EXPTRANS",
+          "TARGET_EMP"
+        ],
+        [
+          "SQ_EMPLOYEEDETAILS",
+          "mp_emp",
+          "EXPTRANS_1",
+          "mp_lkp_loc",
+          "COM_EXPTRANS",
+          "TARGET_EMP"
+        ],
+        [
+          "SQ_EMPLOYEEDETAILS",
+          "mp_emp",
+          "EXPTRANS_1",
+          "mp_lkp_loc",
+          "COM_EXPTRANS",
+          "TARGET_EMP"
+        ],
+        [
+          "SQ_EMPLOYEEDETAILS",
+          "mp_emp",
+          "EXPTRANS_1",
+          "mp_lkp_loc",
+          "COM_EXPTRANS",
+          "TARGET_EMP"
+        ],
+        [
+          "SQ_EMPLOYEEDETAILS",
+          "mp_emp",
+          "EXPTRANS_1",
+          "mp_lkp_loc",
+          "COM_EXPTRANS",
+          "TARGET_EMP"
+        ],
+        [
+          "SQ_EMPLOYEEDETAILS",
+          "mp_emp",
+          "EXPTRANS_1",
+          "mp_lkp_loc",
+          "COM_EXPTRANS",
+          "TARGET_EMP"
+        ],
+        [
+          "SQ_EMPLOYEEDETAILS",
+          "mp_emp",
+          "EXPTRANS_1",
+          "mp_lkp_loc",
+          "COM_EXPTRANS",
+          "TARGET_EMP"
+        ],
+        [
+          "SQ_EMPLOYEEDETAILS",
+          "mp_emp",
+          "EXPTRANS_1",
+          "mp_lkp_loc",
+          "COM_EXPTRANS",
+          "TARGET_EMP"
+        ],
+        [
+          "SQ_EMPLOYEEDETAILS",
+          "mp_emp",
+          "EXPTRANS_1",
+          "mp_lkp_loc",
+          "COM_EXPTRANS",
+          "TARGET_EMP"
+        ],
+        [
+          "SQ_EMPLOYEEDETAILS",
+          "mp_emp",
+          "EXPTRANS_1",
+          "mp_lkp_loc",
+          "COM_EXPTRANS",
+          "TARGET_EMP"
+        ],
+        [
+          "SQ_EMPLOYEEDETAILS",
+          "mp_emp",
+          "EXPTRANS_1",
+          "mp_lkp_loc",
+          "COM_EXPTRANS",
+          "TARGET_EMP"
+        ],
+        [
+          "SQ_EMPLOYEEDETAILS",
+          "mp_emp",
+          "EXPTRANS_1",
+          "mp_lkp_loc",
+          "COM_EXPTRANS",
+          "TARGET_EMP"
+        ],
+        [
+          "SQ_EMPLOYEEDETAILS",
+          "mp_emp",
+          "EXPTRANS_1",
+          "mp_lkp_loc",
+          "COM_EXPTRANS",
+          "TARGET_EMP"
+        ],
+        [
+          "SQ_EMPLOYEEDETAILS",
+          "mp_emp",
+          "EXPTRANS_1",
+          "mp_lkp_loc",
+          "COM_EXPTRANS",
+          "TARGET_EMP"
+        ],
+        [
+          "SQ_EMPLOYEEDETAILS",
+          "mp_emp",
+          "EXPTRANS_1",
+          "mp_lkp_loc",
+          "COM_EXPTRANS",
+          "TARGET_EMP"
+        ],
+        [
+          "SQ_EMPLOYEEDETAILS",
+          "mp_emp",
+          "EXPTRANS_1",
+          "mp_lkp_loc",
+          "COM_EXPTRANS",
+          "TARGET_EMP"
+        ],
+        [
+          "SQ_EMPLOYEEDETAILS",
+          "mp_emp",
+          "EXPTRANS_1",
+          "mp_lkp_loc",
+          "COM_EXPTRANS",
+          "TARGET_EMP"
+        ],
+        [
+          "SQ_EMPLOYEEDETAILS",
+          "mp_emp",
+          "EXPTRANS_1",
+          "mp_lkp_loc",
+          "COM_EXPTRANS",
+          "TARGET_EMP"
+        ],
+        [
+          "SQ_EMPLOYEEDETAILS",
+          "mp_emp",
+          "EXPTRANS_1",
+          "mp_lkp_loc",
+          "COM_EXPTRANS",
+          "TARGET_EMP"
+        ],
+        [
+          "SQ_EMPLOYEEDETAILS",
+          "mp_emp",
+          "EXPTRANS_1",
+          "mp_lkp_loc",
+          "COM_EXPTRANS",
+          "TARGET_EMP"
+        ],
+        [
+          "SQ_EMPLOYEEDETAILS",
+          "mp_emp",
+          "EXPTRANS_1",
+          "mp_lkp_loc",
+          "COM_EXPTRANS",
+          "TARGET_EMP"
+        ],
+        [
+          "SQ_EMPLOYEEDETAILS",
+          "mp_emp",
+          "EXPTRANS_1",
+          "mp_lkp_loc",
+          "COM_EXPTRANS",
+          "TARGET_EMP"
+        ]
+      ],
+      "lookup_calls": {}
+    }
+  ],
+  "mapplets": [
+    {
+      "name": "mp_lkp_loc",
+      "input_fields": [
+        "EMPID",
+        "EMAIL",
+        "SALARY",
+        "DEPID",
+        "DNAME",
+        "NAME",
+        "PHONENO"
+      ],
+      "output_fields": [
+        "EMPID",
+        "EMAIL",
+        "SALARY",
+        "DEPID",
+        "NAME",
+        "PHONENO",
+        "DNAME",
+        "LOC"
+      ],
+      "transformations": [
+        "LKP_OUTPUT",
+        "LKPTRANS",
+        "LKP_INPUT",
+        "mp_lkp_loc"
+      ]
+    },
+    {
+      "name": "mp_emp",
+      "input_fields": [
+        "EMPID",
+        "FIRSTNAME",
+        "LASTNAME",
+        "EMAIL",
+        "PHONENO",
+        "SALARY",
+        "DEPID"
+      ],
+      "output_fields": [
+        "EMPID",
+        "EMAIL",
+        "PHONENO",
+        "SALARY",
+        "DEPID",
+        "DNAME",
+        "NAME"
+      ],
+      "transformations": [
+        "INPUT",
+        "OUTPUT",
+        "EXPTRANS",
+        "SRTTRANS",
+        "mp_emp"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1841 @@
+{
+  "file": "Informatica PC Samples/wf_m_PatternForChurnData.xml",
+  "sources": [
+    {
+      "name": "Gender",
+      "type": "Flat File",
+      "is_flat_file": true,
+      "fields": [
+        {
+          "name": "Gender",
+          "datatype": "string",
+          "precision": "6",
+          "scale": "0"
+        },
+        {
+          "name": "Type",
+          "datatype": "string",
+          "precision": "1",
+          "scale": "0"
+        }
+      ]
+    },
+    {
+      "name": "Churndata",
+      "type": "Flat File",
+      "is_flat_file": true,
+      "fields": [
+        {
+          "name": "customerID",
+          "datatype": "string",
+          "precision": "10",
+          "scale": "0"
+        },
+        {
+          "name": "gender",
+          "datatype": "string",
+          "precision": "6",
+          "scale": "0"
+        },
+        {
+          "name": "SeniorCitizen",
+          "datatype": "number",
+          "precision": "1",
+          "scale": "0"
+        },
+        {
+          "name": "Partner",
+          "datatype": "string",
+          "precision": "3",
+          "scale": "0"
+        },
+        {
+          "name": "Dependents",
+          "datatype": "string",
+          "precision": "3",
+          "scale": "0"
+        },
+        {
+          "name": "tenure",
+          "datatype": "number",
+          "precision": "2",
+          "scale": "0"
+        },
+        {
+          "name": "PhoneService",
+          "datatype": "string",
+          "precision": "3",
+          "scale": "0"
+        },
+        {
+          "name": "MultipleLines",
+          "datatype": "string",
+          "precision": "16",
+          "scale": "0"
+        },
+        {
+          "name": "InternetService",
+          "datatype": "string",
+          "precision": "11",
+          "scale": "0"
+        },
+        {
+          "name": "OnlineSecurity",
+          "datatype": "string",
+          "precision": "19",
+          "scale": "0"
+        },
+        {
+          "name": "OnlineBackup",
+          "datatype": "string",
+          "precision": "19",
+          "scale": "0"
+        },
+        {
+          "name": "DeviceProtection",
+          "datatype": "string",
+          "precision": "19",
+          "scale": "0"
+        },
+        {
+          "name": "TechSupport",
+          "datatype": "string",
+          "precision": "19",
+          "scale": "0"
+        },
+        {
+          "name": "StreamingTV",
+          "datatype": "string",
+          "precision": "19",
+          "scale": "0"
+        },
+        {
+          "name": "StreamingMovies",
+          "datatype": "string",
+          "precision": "19",
+          "scale": "0"
+        },
+        {
+          "name": "Contract",
+          "datatype": "string",
+          "precision": "14",
+          "scale": "0"
+        },
+        {
+          "name": "PaperlessBilling",
+          "datatype": "string",
+          "precision": "3",
+          "scale": "0"
+        },
+        {
+          "name": "PaymentMethod",
+          "datatype": "string",
+          "precision": "25",
+          "scale": "0"
+        },
+        {
+          "name": "MonthlyCharges",
+          "datatype": "number",
+          "precision": "17",
+          "scale": "3"
+        },
+        {
+          "name": "TotalCharges",
+          "datatype": "number",
+          "precision": "17",
+          "scale": "3"
+        },
+        {
+          "name": "Churn",
+          "datatype": "string",
+          "precision": "3",
+          "scale": "0"
+        }
+      ]
+    }
+  ],
+  "targets": [
+    {
+      "name": "CHURNRATIO",
+      "type": "Flat File",
+      "is_flat_file": true,
+      "fields": [
+        {
+          "name": "gender",
+          "datatype": "string",
+          "precision": "6",
+          "scale": "0"
+        },
+        {
+          "name": "Contract",
+          "datatype": "string",
+          "precision": "14",
+          "scale": "0"
+        },
+        {
+          "name": "InternetService",
+          "datatype": "string",
+          "precision": "11",
+          "scale": "0"
+        },
+        {
+          "name": "PaymentMethod",
+          "datatype": "string",
+          "precision": "25",
+          "scale": "0"
+        },
+        {
+          "name": "Churn",
+          "datatype": "string",
+          "precision": "3",
+          "scale": "0"
+        },
+        {
+          "name": "TotalCharges",
+          "datatype": "number",
+          "precision": "17",
+          "scale": "3"
+        },
+        {
+          "name": "MonthlyCharges",
+          "datatype": "number",
+          "precision": "17",
+          "scale": "3"
+        }
+      ]
+    },
+    {
+      "name": "CHURNDIM",
+      "type": "Flat File",
+      "is_flat_file": true,
+      "fields": [
+        {
+          "name": "gender",
+          "datatype": "string",
+          "precision": "6",
+          "scale": "0"
+        },
+        {
+          "name": "SeniorCitizen",
+          "datatype": "number",
+          "precision": "1",
+          "scale": "0"
+        },
+        {
+          "name": "Partner",
+          "datatype": "string",
+          "precision": "3",
+          "scale": "0"
+        },
+        {
+          "name": "Dependents",
+          "datatype": "string",
+          "precision": "3",
+          "scale": "0"
+        },
+        {
+          "name": "tenure",
+          "datatype": "number",
+          "precision": "2",
+          "scale": "0"
+        },
+        {
+          "name": "PhoneService",
+          "datatype": "string",
+          "precision": "3",
+          "scale": "0"
+        },
+        {
+          "name": "MultipleLines",
+          "datatype": "string",
+          "precision": "16",
+          "scale": "0"
+        },
+        {
+          "name": "InternetService",
+          "datatype": "string",
+          "precision": "11",
+          "scale": "0"
+        },
+        {
+          "name": "OnlineSecurity",
+          "datatype": "string",
+          "precision": "19",
+          "scale": "0"
+        },
+        {
+          "name": "OnlineBackup",
+          "datatype": "string",
+          "precision": "19",
+          "scale": "0"
+        },
+        {
+          "name": "DeviceProtection",
+          "datatype": "string",
+          "precision": "19",
+          "scale": "0"
+        },
+        {
+          "name": "Contract",
+          "datatype": "string",
+          "precision": "14",
+          "scale": "0"
+        },
+        {
+          "name": "PaperlessBilling",
+          "datatype": "string",
+          "precision": "3",
+          "scale": "0"
+        },
+        {
+          "name": "PaymentMethod",
+          "datatype": "string",
+          "precision": "25",
+          "scale": "0"
+        },
+        {
+          "name": "MonthlyCharges",
+          "datatype": "number",
+          "precision": "17",
+          "scale": "3"
+        },
+        {
+          "name": "TotalCharges",
+          "datatype": "number",
+          "precision": "17",
+          "scale": "3"
+        },
+        {
+          "name": "Churn",
+          "datatype": "string",
+          "precision": "3",
+          "scale": "0"
+        }
+      ]
+    },
+    {
+      "name": "ChurnDT",
+      "type": "Flat File",
+      "is_flat_file": true,
+      "fields": [
+        {
+          "name": "gender",
+          "datatype": "string",
+          "precision": "6",
+          "scale": "0"
+        },
+        {
+          "name": "SeniorCitizen",
+          "datatype": "number",
+          "precision": "1",
+          "scale": "0"
+        },
+        {
+          "name": "TotalCharges",
+          "datatype": "number",
+          "precision": "17",
+          "scale": "3"
+        }
+      ]
+    }
+  ],
+  "mappings": [
+    {
+      "name": "m_PatternForChurnData",
+      "transformations": [
+        {
+          "name": "SQ_Churndata",
+          "type": "Source Qualifier",
+          "fields": [
+            {
+              "name": "customerID",
+              "datatype": "string",
+              "expression": null,
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "gender",
+              "datatype": "string",
+              "expression": null,
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "SeniorCitizen",
+              "datatype": "decimal",
+              "expression": null,
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "Partner",
+              "datatype": "string",
+              "expression": null,
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "Dependents",
+              "datatype": "string",
+              "expression": null,
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "tenure",
+              "datatype": "decimal",
+              "expression": null,
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "PhoneService",
+              "datatype": "string",
+              "expression": null,
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "MultipleLines",
+              "datatype": "string",
+              "expression": null,
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "InternetService",
+              "datatype": "string",
+              "expression": null,
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "OnlineSecurity",
+              "datatype": "string",
+              "expression": null,
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "OnlineBackup",
+              "datatype": "string",
+              "expression": null,
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "DeviceProtection",
+              "datatype": "string",
+              "expression": null,
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "TechSupport",
+              "datatype": "string",
+              "expression": null,
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "StreamingTV",
+              "datatype": "string",
+              "expression": null,
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "StreamingMovies",
+              "datatype": "string",
+              "expression": null,
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "Contract",
+              "datatype": "string",
+              "expression": null,
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "PaperlessBilling",
+              "datatype": "string",
+              "expression": null,
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "PaymentMethod",
+              "datatype": "string",
+              "expression": null,
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "MonthlyCharges",
+              "datatype": "decimal",
+              "expression": null,
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "TotalCharges",
+              "datatype": "decimal",
+              "expression": null,
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "Churn",
+              "datatype": "string",
+              "expression": null,
+              "port_type": "INPUT/OUTPUT"
+            }
+          ],
+          "attributes": {
+            "Sql Query": "",
+            "User Defined Join": "",
+            "Source Filter": "",
+            "Number Of Sorted Ports": "0",
+            "Tracing Level": "Normal",
+            "Is Partitionable": "NO",
+            "Pre SQL": "",
+            "Post SQL": "",
+            "Output is deterministic": "NO",
+            "Output is repeatable": "Never"
+          }
+        },
+        {
+          "name": "SQ_Gender",
+          "type": "Source Qualifier",
+          "fields": [
+            {
+              "name": "Gender",
+              "datatype": "string",
+              "expression": null,
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "Type",
+              "datatype": "string",
+              "expression": null,
+              "port_type": "INPUT/OUTPUT"
+            }
+          ],
+          "attributes": {
+            "Sql Query": "",
+            "User Defined Join": "",
+            "Source Filter": "",
+            "Number Of Sorted Ports": "0",
+            "Tracing Level": "Normal",
+            "Select Distinct": "NO",
+            "Is Partitionable": "NO",
+            "Pre SQL": "",
+            "Post SQL": "",
+            "Output is deterministic": "NO",
+            "Output is repeatable": "Never"
+          }
+        },
+        {
+          "name": "EXPTRANS",
+          "type": "Expression",
+          "fields": [
+            {
+              "name": "customerID",
+              "datatype": "string",
+              "expression": "customerID",
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "ContVar1",
+              "datatype": "decimal",
+              "expression": "IIF(Contract='One Year',23,12)",
+              "port_type": "LOCAL VARIABLE"
+            },
+            {
+              "name": "TotChargesVar",
+              "datatype": "decimal",
+              "expression": "ContVar1 + MonthlyCharges",
+              "port_type": "LOCAL VARIABLE"
+            },
+            {
+              "name": "gender",
+              "datatype": "string",
+              "expression": "gender",
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "SeniorCitizen",
+              "datatype": "decimal",
+              "expression": "SeniorCitizen",
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "Partner",
+              "datatype": "string",
+              "expression": "Partner",
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "Dependents",
+              "datatype": "string",
+              "expression": "Dependents",
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "tenure",
+              "datatype": "decimal",
+              "expression": "tenure",
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "PhoneService",
+              "datatype": "string",
+              "expression": "PhoneService",
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "MultipleLines",
+              "datatype": "string",
+              "expression": "MultipleLines",
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "InternetService",
+              "datatype": "string",
+              "expression": "InternetService",
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "OnlineSecurity",
+              "datatype": "string",
+              "expression": "OnlineSecurity",
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "OnlineBackup",
+              "datatype": "string",
+              "expression": "OnlineBackup",
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "DeviceProtection",
+              "datatype": "string",
+              "expression": "DeviceProtection",
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "TechSupport",
+              "datatype": "string",
+              "expression": "TechSupport",
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "StreamingTV",
+              "datatype": "string",
+              "expression": "StreamingTV",
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "StreamingMovies",
+              "datatype": "string",
+              "expression": "StreamingMovies",
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "Contract",
+              "datatype": "string",
+              "expression": "Contract",
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "PaperlessBilling",
+              "datatype": "string",
+              "expression": "PaperlessBilling",
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "PaymentMethod",
+              "datatype": "string",
+              "expression": "PaymentMethod",
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "MonthlyCharges",
+              "datatype": "decimal",
+              "expression": "MonthlyCharges",
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "TotalCharges",
+              "datatype": "decimal",
+              "expression": "TotChargesVar",
+              "port_type": "OUTPUT"
+            },
+            {
+              "name": "Churn",
+              "datatype": "string",
+              "expression": "Churn",
+              "port_type": "INPUT/OUTPUT"
+            }
+          ],
+          "attributes": {
+            "Tracing Level": "Normal"
+          }
+        },
+        {
+          "name": "JNRTRANS1",
+          "type": "Joiner",
+          "fields": [
+            {
+              "name": "gender",
+              "datatype": "string",
+              "expression": null,
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "SeniorCitizen",
+              "datatype": "decimal",
+              "expression": null,
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "TotalCharges",
+              "datatype": "decimal",
+              "expression": null,
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "Type",
+              "datatype": "string",
+              "expression": null,
+              "port_type": "INPUT/OUTPUT/MASTER"
+            },
+            {
+              "name": "Gender1",
+              "datatype": "string",
+              "expression": null,
+              "port_type": "INPUT/OUTPUT/MASTER"
+            }
+          ],
+          "attributes": {
+            "Case Sensitive String Comparison": "YES",
+            "Cache Directory": "$PMCacheDir",
+            "Join Condition": "Gender1 = gender",
+            "Join Type": "Normal Join",
+            "Null ordering in master": "Null Is Highest Value",
+            "Null ordering in detail": "Null Is Highest Value",
+            "Tracing Level": "Normal",
+            "Joiner Data Cache Size": "Auto",
+            "Joiner Index Cache Size": "Auto",
+            "Sorted Input": "NO",
+            "Master Sort Order": "Auto",
+            "Transformation Scope": "All Input"
+          }
+        },
+        {
+          "name": "AGGTRANS",
+          "type": "Aggregator",
+          "fields": [
+            {
+              "name": "gender",
+              "datatype": "string",
+              "expression": "gender",
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "SeniorCitizen",
+              "datatype": "decimal",
+              "expression": "SeniorCitizen",
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "Partner",
+              "datatype": "string",
+              "expression": "Partner",
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "Dependents",
+              "datatype": "string",
+              "expression": "Dependents",
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "tenure",
+              "datatype": "decimal",
+              "expression": "tenure",
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "PhoneService",
+              "datatype": "string",
+              "expression": "PhoneService",
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "MultipleLines",
+              "datatype": "string",
+              "expression": "MultipleLines",
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "InternetService",
+              "datatype": "string",
+              "expression": "InternetService",
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "OnlineSecurity",
+              "datatype": "string",
+              "expression": "OnlineSecurity",
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "OnlineBackup",
+              "datatype": "string",
+              "expression": "OnlineBackup",
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "DeviceProtection",
+              "datatype": "string",
+              "expression": "DeviceProtection",
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "TechSupport",
+              "datatype": "string",
+              "expression": "TechSupport",
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "StreamingTV",
+              "datatype": "string",
+              "expression": "StreamingTV",
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "StreamingMovies",
+              "datatype": "string",
+              "expression": "StreamingMovies",
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "Contract",
+              "datatype": "string",
+              "expression": "Contract",
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "PaperlessBilling",
+              "datatype": "string",
+              "expression": "PaperlessBilling",
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "PaymentMethod",
+              "datatype": "string",
+              "expression": "PaymentMethod",
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "MonthlyCharges",
+              "datatype": "decimal",
+              "expression": "MonthlyCharges",
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "TotalCharges",
+              "datatype": "decimal",
+              "expression": "TotalCharges",
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "Churn",
+              "datatype": "string",
+              "expression": "Churn",
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "TotCharges",
+              "datatype": "decimal",
+              "expression": "SUM(TotalCharges)",
+              "port_type": "OUTPUT"
+            },
+            {
+              "name": "MonCharges",
+              "datatype": "decimal",
+              "expression": "Sum(MonthlyCharges)",
+              "port_type": "OUTPUT"
+            }
+          ],
+          "attributes": {
+            "Cache Directory": "$PMCacheDir",
+            "Tracing Level": "Normal",
+            "Sorted Input": "NO",
+            "Aggregator Data Cache Size": "Auto",
+            "Aggregator Index Cache Size": "Auto",
+            "Transformation Scope": "All Input"
+          }
+        },
+        {
+          "name": "SRTTRANS",
+          "type": "Sorter",
+          "fields": [
+            {
+              "name": "gender",
+              "datatype": "string",
+              "expression": null,
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "SeniorCitizen",
+              "datatype": "decimal",
+              "expression": null,
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "Partner",
+              "datatype": "string",
+              "expression": null,
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "Dependents",
+              "datatype": "string",
+              "expression": null,
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "tenure",
+              "datatype": "decimal",
+              "expression": null,
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "PhoneService",
+              "datatype": "string",
+              "expression": null,
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "MultipleLines",
+              "datatype": "string",
+              "expression": null,
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "InternetService",
+              "datatype": "string",
+              "expression": null,
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "OnlineSecurity",
+              "datatype": "string",
+              "expression": null,
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "OnlineBackup",
+              "datatype": "string",
+              "expression": null,
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "DeviceProtection",
+              "datatype": "string",
+              "expression": null,
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "TechSupport",
+              "datatype": "string",
+              "expression": null,
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "StreamingTV",
+              "datatype": "string",
+              "expression": null,
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "StreamingMovies",
+              "datatype": "string",
+              "expression": null,
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "Contract",
+              "datatype": "string",
+              "expression": null,
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "PaperlessBilling",
+              "datatype": "string",
+              "expression": null,
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "PaymentMethod",
+              "datatype": "string",
+              "expression": null,
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "MonthlyCharges",
+              "datatype": "decimal",
+              "expression": null,
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "TotalCharges",
+              "datatype": "decimal",
+              "expression": null,
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "Churn",
+              "datatype": "string",
+              "expression": null,
+              "port_type": "INPUT/OUTPUT"
+            }
+          ],
+          "attributes": {
+            "Sorter Cache Size": "Auto",
+            "Case Sensitive": "YES",
+            "Work Directory": "$PMTempDir",
+            "Distinct": "NO",
+            "Tracing Level": "Normal",
+            "Null Treated Low": "NO",
+            "Merge Only": "NO",
+            "Partitioning": "Order records for individual partitions",
+            "Transformation Scope": "All Input"
+          }
+        },
+        {
+          "name": "EXPTRANS1",
+          "type": "Expression",
+          "fields": [
+            {
+              "name": "gender",
+              "datatype": "string",
+              "expression": "gender",
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "SeniorCitizen",
+              "datatype": "decimal",
+              "expression": "SeniorCitizen",
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "Partner1",
+              "datatype": "string",
+              "expression": "Partner1",
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "Partner",
+              "datatype": "string",
+              "expression": "UPPER(Partner1)",
+              "port_type": "OUTPUT"
+            },
+            {
+              "name": "Dependents",
+              "datatype": "string",
+              "expression": "Dependents",
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "tenure",
+              "datatype": "decimal",
+              "expression": "tenure",
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "PhoneService",
+              "datatype": "string",
+              "expression": "PhoneService",
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "MultipleLines",
+              "datatype": "string",
+              "expression": "MultipleLines",
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "InternetService",
+              "datatype": "string",
+              "expression": "InternetService",
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "OnlineSecurity",
+              "datatype": "string",
+              "expression": "OnlineSecurity",
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "OnlineBackup",
+              "datatype": "string",
+              "expression": "OnlineBackup",
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "DeviceProtection",
+              "datatype": "string",
+              "expression": "DeviceProtection",
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "TechSupport",
+              "datatype": "string",
+              "expression": "TechSupport",
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "StreamingTV",
+              "datatype": "string",
+              "expression": "StreamingTV",
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "StreamingMovies",
+              "datatype": "string",
+              "expression": "StreamingMovies",
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "Contract",
+              "datatype": "string",
+              "expression": "Contract",
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "PaperlessBilling",
+              "datatype": "string",
+              "expression": "PaperlessBilling",
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "PaymentMethod",
+              "datatype": "string",
+              "expression": "PaymentMethod",
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "MonthlyCharges",
+              "datatype": "decimal",
+              "expression": "MonthlyCharges",
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "TotalCharges",
+              "datatype": "decimal",
+              "expression": "TotalCharges",
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "Churn",
+              "datatype": "string",
+              "expression": "Churn",
+              "port_type": "INPUT/OUTPUT"
+            }
+          ],
+          "attributes": {
+            "Tracing Level": "Normal"
+          }
+        }
+      ],
+      "data_flow": [
+        [
+          "SQ_Churndata",
+          "EXPTRANS",
+          "JNRTRANS1",
+          "ChurnDT"
+        ],
+        [
+          "SQ_Churndata",
+          "EXPTRANS",
+          "JNRTRANS1",
+          "ChurnDT"
+        ],
+        [
+          "SQ_Churndata",
+          "EXPTRANS",
+          "JNRTRANS1",
+          "ChurnDT"
+        ],
+        [
+          "SQ_Churndata",
+          "EXPTRANS",
+          "JNRTRANS1",
+          "ChurnDT"
+        ],
+        [
+          "SQ_Churndata",
+          "EXPTRANS",
+          "JNRTRANS1",
+          "ChurnDT"
+        ],
+        [
+          "SQ_Churndata",
+          "EXPTRANS",
+          "JNRTRANS1",
+          "ChurnDT"
+        ],
+        [
+          "SQ_Churndata",
+          "EXPTRANS",
+          "JNRTRANS1",
+          "ChurnDT"
+        ],
+        [
+          "SQ_Churndata",
+          "EXPTRANS",
+          "JNRTRANS1",
+          "ChurnDT"
+        ],
+        [
+          "SQ_Churndata",
+          "EXPTRANS",
+          "JNRTRANS1",
+          "ChurnDT"
+        ],
+        [
+          "SQ_Churndata",
+          "EXPTRANS",
+          "SRTTRANS",
+          "AGGTRANS",
+          "CHURNRATIO"
+        ],
+        [
+          "SQ_Churndata",
+          "EXPTRANS",
+          "SRTTRANS",
+          "AGGTRANS",
+          "CHURNRATIO"
+        ],
+        [
+          "SQ_Churndata",
+          "EXPTRANS",
+          "SRTTRANS",
+          "AGGTRANS",
+          "CHURNRATIO"
+        ],
+        [
+          "SQ_Churndata",
+          "EXPTRANS",
+          "SRTTRANS",
+          "AGGTRANS",
+          "CHURNRATIO"
+        ],
+        [
+          "SQ_Churndata",
+          "EXPTRANS",
+          "SRTTRANS",
+          "AGGTRANS",
+          "CHURNRATIO"
+        ],
+        [
+          "SQ_Churndata",
+          "EXPTRANS",
+          "SRTTRANS",
+          "AGGTRANS",
+          "CHURNRATIO"
+        ],
+        [
+          "SQ_Churndata",
+          "EXPTRANS",
+          "SRTTRANS",
+          "AGGTRANS",
+          "CHURNRATIO"
+        ],
+        [
+          "SQ_Churndata",
+          "EXPTRANS",
+          "SRTTRANS",
+          "AGGTRANS",
+          "CHURNRATIO"
+        ],
+        [
+          "SQ_Churndata",
+          "EXPTRANS",
+          "SRTTRANS",
+          "AGGTRANS",
+          "CHURNRATIO"
+        ],
+        [
+          "SQ_Churndata",
+          "EXPTRANS",
+          "SRTTRANS",
+          "AGGTRANS",
+          "CHURNRATIO"
+        ],
+        [
+          "SQ_Churndata",
+          "EXPTRANS",
+          "SRTTRANS",
+          "AGGTRANS",
+          "CHURNRATIO"
+        ],
+        [
+          "SQ_Churndata",
+          "EXPTRANS",
+          "SRTTRANS",
+          "AGGTRANS",
+          "CHURNRATIO"
+        ],
+        [
+          "SQ_Churndata",
+          "EXPTRANS",
+          "SRTTRANS",
+          "AGGTRANS",
+          "CHURNRATIO"
+        ],
+        [
+          "SQ_Churndata",
+          "EXPTRANS",
+          "SRTTRANS",
+          "AGGTRANS",
+          "CHURNRATIO"
+        ],
+        [
+          "SQ_Churndata",
+          "EXPTRANS",
+          "SRTTRANS",
+          "AGGTRANS",
+          "CHURNRATIO"
+        ],
+        [
+          "SQ_Churndata",
+          "EXPTRANS",
+          "SRTTRANS",
+          "AGGTRANS",
+          "CHURNRATIO"
+        ],
+        [
+          "SQ_Churndata",
+          "EXPTRANS",
+          "SRTTRANS",
+          "AGGTRANS",
+          "CHURNRATIO"
+        ],
+        [
+          "SQ_Churndata",
+          "EXPTRANS",
+          "SRTTRANS",
+          "AGGTRANS",
+          "CHURNRATIO"
+        ],
+        [
+          "SQ_Churndata",
+          "EXPTRANS",
+          "SRTTRANS",
+          "AGGTRANS",
+          "CHURNRATIO"
+        ],
+        [
+          "SQ_Churndata",
+          "EXPTRANS",
+          "SRTTRANS",
+          "AGGTRANS",
+          "CHURNRATIO"
+        ],
+        [
+          "SQ_Churndata",
+          "EXPTRANS",
+          "SRTTRANS",
+          "AGGTRANS",
+          "CHURNRATIO"
+        ],
+        [
+          "SQ_Churndata",
+          "EXPTRANS",
+          "SRTTRANS",
+          "AGGTRANS",
+          "CHURNRATIO"
+        ],
+        [
+          "SQ_Churndata",
+          "EXPTRANS",
+          "SRTTRANS",
+          "AGGTRANS",
+          "CHURNRATIO"
+        ],
+        [
+          "SQ_Churndata",
+          "EXPTRANS",
+          "SRTTRANS",
+          "AGGTRANS",
+          "CHURNRATIO"
+        ],
+        [
+          "SQ_Churndata",
+          "EXPTRANS",
+          "SRTTRANS",
+          "AGGTRANS",
+          "CHURNRATIO"
+        ],
+        [
+          "SQ_Churndata",
+          "EXPTRANS",
+          "SRTTRANS",
+          "AGGTRANS",
+          "CHURNRATIO"
+        ],
+        [
+          "SQ_Churndata",
+          "EXPTRANS",
+          "SRTTRANS",
+          "AGGTRANS",
+          "CHURNRATIO"
+        ],
+        [
+          "SQ_Churndata",
+          "EXPTRANS",
+          "SRTTRANS",
+          "AGGTRANS",
+          "CHURNRATIO"
+        ],
+        [
+          "SQ_Churndata",
+          "EXPTRANS",
+          "SRTTRANS",
+          "AGGTRANS",
+          "CHURNRATIO"
+        ],
+        [
+          "SQ_Churndata",
+          "EXPTRANS",
+          "SRTTRANS",
+          "AGGTRANS",
+          "CHURNRATIO"
+        ],
+        [
+          "SQ_Churndata",
+          "EXPTRANS",
+          "SRTTRANS",
+          "AGGTRANS",
+          "CHURNRATIO"
+        ],
+        [
+          "SQ_Churndata",
+          "EXPTRANS",
+          "SRTTRANS",
+          "AGGTRANS",
+          "CHURNRATIO"
+        ],
+        [
+          "SQ_Churndata",
+          "EXPTRANS",
+          "SRTTRANS",
+          "AGGTRANS",
+          "CHURNRATIO"
+        ],
+        [
+          "SQ_Churndata",
+          "EXPTRANS",
+          "SRTTRANS",
+          "AGGTRANS",
+          "CHURNRATIO"
+        ],
+        [
+          "SQ_Churndata",
+          "EXPTRANS",
+          "SRTTRANS",
+          "AGGTRANS",
+          "CHURNRATIO"
+        ],
+        [
+          "SQ_Churndata",
+          "EXPTRANS",
+          "SRTTRANS",
+          "AGGTRANS",
+          "CHURNRATIO"
+        ],
+        [
+          "SQ_Churndata",
+          "EXPTRANS",
+          "SRTTRANS",
+          "AGGTRANS",
+          "CHURNRATIO"
+        ],
+        [
+          "SQ_Churndata",
+          "EXPTRANS",
+          "SRTTRANS",
+          "AGGTRANS",
+          "CHURNRATIO"
+        ],
+        [
+          "SQ_Churndata",
+          "EXPTRANS",
+          "SRTTRANS",
+          "AGGTRANS",
+          "CHURNRATIO"
+        ],
+        [
+          "SQ_Churndata",
+          "EXPTRANS",
+          "SRTTRANS",
+          "AGGTRANS",
+          "CHURNRATIO"
+        ],
+        [
+          "SQ_Churndata",
+          "EXPTRANS",
+          "SRTTRANS",
+          "AGGTRANS",
+          "CHURNRATIO"
+        ],
+        [
+          "SQ_Churndata",
+          "EXPTRANS",
+          "SRTTRANS",
+          "AGGTRANS",
+          "CHURNRATIO"
+        ],
+        [
+          "SQ_Churndata",
+          "EXPTRANS",
+          "SRTTRANS",
+          "AGGTRANS",
+          "CHURNRATIO"
+        ],
+        [
+          "SQ_Churndata",
+          "EXPTRANS",
+          "SRTTRANS",
+          "AGGTRANS",
+          "CHURNRATIO"
+        ],
+        [
+          "SQ_Churndata",
+          "EXPTRANS",
+          "SRTTRANS",
+          "AGGTRANS",
+          "CHURNRATIO"
+        ],
+        [
+          "SQ_Churndata",
+          "EXPTRANS",
+          "SRTTRANS",
+          "AGGTRANS",
+          "CHURNRATIO"
+        ],
+        [
+          "SQ_Churndata",
+          "EXPTRANS",
+          "SRTTRANS",
+          "AGGTRANS",
+          "CHURNRATIO"
+        ],
+        [
+          "SQ_Churndata",
+          "EXPTRANS",
+          "SRTTRANS",
+          "AGGTRANS",
+          "CHURNRATIO"
+        ],
+        [
+          "SQ_Churndata",
+          "EXPTRANS",
+          "SRTTRANS",
+          "AGGTRANS",
+          "CHURNRATIO"
+        ],
+        [
+          "SQ_Churndata",
+          "EXPTRANS",
+          "SRTTRANS",
+          "AGGTRANS",
+          "CHURNRATIO"
+        ],
+        [
+          "SQ_Churndata",
+          "EXPTRANS",
+          "SRTTRANS",
+          "AGGTRANS",
+          "CHURNRATIO"
+        ],
+        [
+          "SQ_Churndata",
+          "EXPTRANS",
+          "SRTTRANS",
+          "AGGTRANS",
+          "CHURNRATIO"
+        ],
+        [
+          "SQ_Churndata",
+          "EXPTRANS",
+          "SRTTRANS",
+          "AGGTRANS",
+          "CHURNRATIO"
+        ],
+        [
+          "SQ_Churndata",
+          "EXPTRANS",
+          "SRTTRANS",
+          "AGGTRANS",
+          "CHURNRATIO"
+        ],
+        [
+          "SQ_Churndata",
+          "EXPTRANS",
+          "SRTTRANS",
+          "AGGTRANS",
+          "CHURNRATIO"
+        ],
+        [
+          "SQ_Churndata",
+          "EXPTRANS",
+          "SRTTRANS",
+          "AGGTRANS",
+          "CHURNRATIO"
+        ],
+        [
+          "SQ_Churndata",
+          "EXPTRANS",
+          "SRTTRANS",
+          "AGGTRANS",
+          "CHURNRATIO"
+        ],
+        [
+          "SQ_Churndata",
+          "EXPTRANS",
+          "SRTTRANS",
+          "AGGTRANS",
+          "CHURNRATIO"
+        ],
+        [
+          "SQ_Churndata",
+          "EXPTRANS",
+          "SRTTRANS",
+          "AGGTRANS",
+          "CHURNRATIO"
+        ],
+        [
+          "SQ_Churndata",
+          "EXPTRANS",
+          "SRTTRANS",
+          "AGGTRANS",
+          "CHURNRATIO"
+        ],
+        [
+          "SQ_Churndata",
+          "EXPTRANS",
+          "SRTTRANS",
+          "AGGTRANS",
+          "CHURNRATIO"
+        ],
+        [
+          "SQ_Churndata",
+          "EXPTRANS",
+          "SRTTRANS",
+          "AGGTRANS",
+          "CHURNRATIO"
+        ],
+        [
+          "SQ_Churndata",
+          "EXPTRANS",
+          "SRTTRANS",
+          "AGGTRANS",
+          "CHURNRATIO"
+        ],
+        [
+          "SQ_Churndata",
+          "EXPTRANS",
+          "SRTTRANS",
+          "AGGTRANS",
+          "CHURNRATIO"
+        ],
+        [
+          "SQ_Churndata",
+          "EXPTRANS",
+          "SRTTRANS",
+          "AGGTRANS",
+          "CHURNRATIO"
+        ],
+        [
+          "SQ_Churndata",
+          "EXPTRANS",
+          "SRTTRANS",
+          "AGGTRANS",
+          "CHURNRATIO"
+        ],
+        [
+          "SQ_Churndata",
+          "EXPTRANS",
+          "SRTTRANS",
+          "AGGTRANS",
+          "CHURNRATIO"
+        ],
+        [
+          "SQ_Churndata",
+          "EXPTRANS",
+          "SRTTRANS",
+          "AGGTRANS",
+          "CHURNRATIO"
+        ],
+        [
+          "SQ_Churndata",
+          "EXPTRANS",
+          "SRTTRANS",
+          "AGGTRANS",
+          "CHURNRATIO"
+        ],
+        [
+          "SQ_Churndata",
+          "EXPTRANS",
+          "SRTTRANS",
+          "AGGTRANS",
+          "CHURNRATIO"
+        ],
+        [
+          "SQ_Churndata",
+          "EXPTRANS",
+          "SRTTRANS",
+          "AGGTRANS",
+          "CHURNRATIO"
+        ],
+        [
+          "SQ_Churndata",
+          "EXPTRANS",
+          "SRTTRANS",
+          "AGGTRANS",
+          "CHURNRATIO"
+        ],
+        [
+          "SQ_Churndata",
+          "EXPTRANS",
+          "SRTTRANS",
+          "AGGTRANS",
+          "CHURNRATIO"
+        ],
+        [
+          "SQ_Churndata",
+          "EXPTRANS",
+          "SRTTRANS",
+          "AGGTRANS",
+          "CHURNRATIO"
+        ],
+        [
+          "SQ_Churndata",
+          "EXPTRANS",
+          "SRTTRANS",
+          "AGGTRANS",
+          "CHURNRATIO"
+        ],
+        [
+          "SQ_Churndata",
+          "EXPTRANS",
+          "SRTTRANS",
+          "AGGTRANS",
+          "CHURNRATIO"
+        ],
+        [
+          "SQ_Churndata",
+          "EXPTRANS",
+          "SRTTRANS",
+          "AGGTRANS",
+          "CHURNRATIO"
+        ],
+        [
+          "SQ_Churndata",
+          "EXPTRANS",
+          "SRTTRANS",
+          "AGGTRANS",
+          "CHURNRATIO"
+        ],
+        [
+          "SQ_Churndata",
+          "EXPTRANS",
+          "SRTTRANS",
+          "AGGTRANS",
+          "CHURNRATIO"
+        ],
+        [
+          "SQ_Churndata",
+          "EXPTRANS",
+          "SRTTRANS",
+          "AGGTRANS",
+          "CHURNRATIO"
+        ],
+        [
+          "SQ_Churndata",
+          "EXPTRANS",
+          "SRTTRANS",
+          "AGGTRANS",
+          "CHURNRATIO"
+        ],
+        [
+          "SQ_Churndata",
+          "EXPTRANS",
+          "SRTTRANS",
+          "AGGTRANS",
+          "CHURNRATIO"
+        ],
+        [
+          "SQ_Churndata",
+          "EXPTRANS",
+          "SRTTRANS",
+          "AGGTRANS",
+          "CHURNRATIO"
+        ],
+        [
+          "SQ_Churndata",
+          "EXPTRANS",
+          "SRTTRANS",
+          "AGGTRANS",
+          "CHURNRATIO"
+        ],
+        [
+          "SQ_Churndata",
+          "EXPTRANS",
+          "SRTTRANS",
+          "AGGTRANS",
+          "CHURNRATIO"
+        ],
+        [
+          "SQ_Churndata",
+          "EXPTRANS",
+          "SRTTRANS",
+          "AGGTRANS",
+          "CHURNRATIO"
+        ],
+        [
+          "SQ_Churndata",
+          "EXPTRANS",
+          "SRTTRANS",
+          "AGGTRANS",
+          "CHURNRATIO"
+        ],
+        [
+          "SQ_Churndata",
+          "EXPTRANS",
+          "SRTTRANS",
+          "AGGTRANS",
+          "CHURNRATIO"
+        ],
+        [
+          "SQ_Churndata",
+          "EXPTRANS",
+          "SRTTRANS",
+          "AGGTRANS",
+          "CHURNRATIO"
+        ],
+        [
+          "SQ_Churndata",
+          "EXPTRANS",
+          "SRTTRANS",
+          "AGGTRANS",
+          "CHURNRATIO"
+        ],
+        [
+          "SQ_Churndata",
+          "EXPTRANS",
+          "SRTTRANS",
+          "AGGTRANS",
+          "CHURNRATIO"
+        ],
+        [
+          "SQ_Churndata",
+          "EXPTRANS",
+          "SRTTRANS",
+          "AGGTRANS",
+          "CHURNRATIO"
+        ]
+      ],
+      "lookup_calls": {}
+    }
+  ],
+  "mapplets": []
+}

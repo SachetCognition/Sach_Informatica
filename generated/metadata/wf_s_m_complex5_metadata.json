@@ -1,0 +1,2992 @@
+{
+  "file": "Informatica PC Samples/wf_s_m_complex5.XML",
+  "sources": [
+    {
+      "name": "EMP_DEPT",
+      "type": "Oracle",
+      "is_flat_file": false,
+      "fields": [
+        {
+          "name": "DEPTNO",
+          "datatype": "number(p,s)",
+          "precision": "38",
+          "scale": "0"
+        },
+        {
+          "name": "DNAME",
+          "datatype": "varchar2",
+          "precision": "15",
+          "scale": "0"
+        },
+        {
+          "name": "LOC",
+          "datatype": "varchar2",
+          "precision": "13",
+          "scale": "0"
+        }
+      ]
+    },
+    {
+      "name": "EMPLOYEE_DETAILS1",
+      "type": "Oracle",
+      "is_flat_file": false,
+      "fields": [
+        {
+          "name": "EMPID",
+          "datatype": "number(p,s)",
+          "precision": "38",
+          "scale": "0"
+        },
+        {
+          "name": "FIRSTNAME",
+          "datatype": "varchar2",
+          "precision": "20",
+          "scale": "0"
+        },
+        {
+          "name": "LASTNAME",
+          "datatype": "varchar2",
+          "precision": "20",
+          "scale": "0"
+        },
+        {
+          "name": "EMAIL",
+          "datatype": "varchar2",
+          "precision": "25",
+          "scale": "0"
+        },
+        {
+          "name": "PHONENO",
+          "datatype": "varchar2",
+          "precision": "25",
+          "scale": "0"
+        },
+        {
+          "name": "SALARY",
+          "datatype": "number(p,s)",
+          "precision": "38",
+          "scale": "0"
+        },
+        {
+          "name": "DEPID",
+          "datatype": "number(p,s)",
+          "precision": "38",
+          "scale": "0"
+        }
+      ]
+    },
+    {
+      "name": "EMPLOYEE_DETAILS2",
+      "type": "Oracle",
+      "is_flat_file": false,
+      "fields": [
+        {
+          "name": "EMPID",
+          "datatype": "number(p,s)",
+          "precision": "38",
+          "scale": "0"
+        },
+        {
+          "name": "FIRSTNAME",
+          "datatype": "varchar2",
+          "precision": "20",
+          "scale": "0"
+        },
+        {
+          "name": "LASTNAME",
+          "datatype": "varchar2",
+          "precision": "20",
+          "scale": "0"
+        },
+        {
+          "name": "EMAIL",
+          "datatype": "varchar2",
+          "precision": "25",
+          "scale": "0"
+        },
+        {
+          "name": "PHONENO",
+          "datatype": "varchar2",
+          "precision": "25",
+          "scale": "0"
+        },
+        {
+          "name": "SALARY",
+          "datatype": "number(p,s)",
+          "precision": "38",
+          "scale": "0"
+        },
+        {
+          "name": "DEPID",
+          "datatype": "number(p,s)",
+          "precision": "38",
+          "scale": "0"
+        }
+      ]
+    },
+    {
+      "name": "EMPLOYEEDETAILS",
+      "type": "Oracle",
+      "is_flat_file": false,
+      "fields": [
+        {
+          "name": "EMPID",
+          "datatype": "number(p,s)",
+          "precision": "38",
+          "scale": "0"
+        },
+        {
+          "name": "FIRSTNAME",
+          "datatype": "varchar2",
+          "precision": "20",
+          "scale": "0"
+        },
+        {
+          "name": "LASTNAME",
+          "datatype": "varchar2",
+          "precision": "20",
+          "scale": "0"
+        },
+        {
+          "name": "EMAIL",
+          "datatype": "varchar2",
+          "precision": "25",
+          "scale": "0"
+        },
+        {
+          "name": "PHONENO",
+          "datatype": "varchar2",
+          "precision": "25",
+          "scale": "0"
+        },
+        {
+          "name": "SALARY",
+          "datatype": "number(p,s)",
+          "precision": "38",
+          "scale": "0"
+        },
+        {
+          "name": "DEPID",
+          "datatype": "number(p,s)",
+          "precision": "38",
+          "scale": "0"
+        }
+      ]
+    },
+    {
+      "name": "EMPLOYEE_DETAILS_FLAT",
+      "type": "Flat File",
+      "is_flat_file": true,
+      "fields": [
+        {
+          "name": "EMPID",
+          "datatype": "number",
+          "precision": "38",
+          "scale": "0"
+        },
+        {
+          "name": "FIRSTNAME",
+          "datatype": "string",
+          "precision": "25",
+          "scale": "0"
+        },
+        {
+          "name": "LASTNAME",
+          "datatype": "string",
+          "precision": "25",
+          "scale": "0"
+        },
+        {
+          "name": "EMAIL",
+          "datatype": "string",
+          "precision": "35",
+          "scale": "0"
+        },
+        {
+          "name": "PHONENO",
+          "datatype": "string",
+          "precision": "35",
+          "scale": "0"
+        },
+        {
+          "name": "SALARY",
+          "datatype": "number",
+          "precision": "38",
+          "scale": "0"
+        },
+        {
+          "name": "DEPID",
+          "datatype": "number",
+          "precision": "38",
+          "scale": "0"
+        }
+      ]
+    }
+  ],
+  "targets": [
+    {
+      "name": "TARGET_UPDATE",
+      "type": "Flat File",
+      "is_flat_file": true,
+      "fields": [
+        {
+          "name": "T_EMPID",
+          "datatype": "number",
+          "precision": "15",
+          "scale": "0"
+        },
+        {
+          "name": "EMAIL",
+          "datatype": "string",
+          "precision": "35",
+          "scale": "0"
+        },
+        {
+          "name": "PHONENO",
+          "datatype": "string",
+          "precision": "35",
+          "scale": "0"
+        },
+        {
+          "name": "SALARY",
+          "datatype": "number",
+          "precision": "15",
+          "scale": "0"
+        },
+        {
+          "name": "DEPID",
+          "datatype": "number",
+          "precision": "15",
+          "scale": "0"
+        },
+        {
+          "name": "DNAME",
+          "datatype": "string",
+          "precision": "14",
+          "scale": "0"
+        },
+        {
+          "name": "ENAME",
+          "datatype": "string",
+          "precision": "50",
+          "scale": "0"
+        },
+        {
+          "name": "ELOC",
+          "datatype": "string",
+          "precision": "50",
+          "scale": "0"
+        }
+      ]
+    },
+    {
+      "name": "TARGET_INSERT",
+      "type": "Flat File",
+      "is_flat_file": true,
+      "fields": [
+        {
+          "name": "T_EMPID",
+          "datatype": "number",
+          "precision": "15",
+          "scale": "0"
+        },
+        {
+          "name": "EMAIL",
+          "datatype": "string",
+          "precision": "35",
+          "scale": "0"
+        },
+        {
+          "name": "PHONENO",
+          "datatype": "string",
+          "precision": "35",
+          "scale": "0"
+        },
+        {
+          "name": "SALARY",
+          "datatype": "number",
+          "precision": "15",
+          "scale": "0"
+        },
+        {
+          "name": "DEPID",
+          "datatype": "number",
+          "precision": "15",
+          "scale": "0"
+        },
+        {
+          "name": "DNAME",
+          "datatype": "string",
+          "precision": "14",
+          "scale": "0"
+        },
+        {
+          "name": "ENAME",
+          "datatype": "string",
+          "precision": "50",
+          "scale": "0"
+        },
+        {
+          "name": "ELOC",
+          "datatype": "string",
+          "precision": "50",
+          "scale": "0"
+        }
+      ]
+    },
+    {
+      "name": "T_DEFAULT",
+      "type": "Oracle",
+      "is_flat_file": false,
+      "fields": [
+        {
+          "name": "EMPID2",
+          "datatype": "number",
+          "precision": "15",
+          "scale": "0"
+        },
+        {
+          "name": "EMAIL2",
+          "datatype": "varchar2",
+          "precision": "35",
+          "scale": "0"
+        },
+        {
+          "name": "PHONENO2",
+          "datatype": "varchar2",
+          "precision": "35",
+          "scale": "0"
+        },
+        {
+          "name": "SALARY2",
+          "datatype": "number",
+          "precision": "15",
+          "scale": "0"
+        },
+        {
+          "name": "DEPID2",
+          "datatype": "number",
+          "precision": "15",
+          "scale": "0"
+        },
+        {
+          "name": "DNAME2",
+          "datatype": "varchar2",
+          "precision": "14",
+          "scale": "0"
+        },
+        {
+          "name": "NAME2",
+          "datatype": "varchar2",
+          "precision": "50",
+          "scale": "0"
+        }
+      ]
+    },
+    {
+      "name": "T_EMP_DEP10",
+      "type": "Oracle",
+      "is_flat_file": false,
+      "fields": [
+        {
+          "name": "EMPID1",
+          "datatype": "number",
+          "precision": "15",
+          "scale": "0"
+        },
+        {
+          "name": "EMAIL1",
+          "datatype": "varchar2",
+          "precision": "35",
+          "scale": "0"
+        },
+        {
+          "name": "PHONENO1",
+          "datatype": "varchar2",
+          "precision": "35",
+          "scale": "0"
+        },
+        {
+          "name": "SALARY1",
+          "datatype": "number",
+          "precision": "15",
+          "scale": "0"
+        },
+        {
+          "name": "DEPID1",
+          "datatype": "number",
+          "precision": "15",
+          "scale": "0"
+        },
+        {
+          "name": "DNAME1",
+          "datatype": "varchar2",
+          "precision": "14",
+          "scale": "0"
+        },
+        {
+          "name": "NAME1",
+          "datatype": "varchar2",
+          "precision": "50",
+          "scale": "0"
+        }
+      ]
+    },
+    {
+      "name": "EMP_MAX_MIN",
+      "type": "Oracle",
+      "is_flat_file": false,
+      "fields": [
+        {
+          "name": "EMPID",
+          "datatype": "number",
+          "precision": "15",
+          "scale": "0"
+        },
+        {
+          "name": "EMAIL",
+          "datatype": "varchar2",
+          "precision": "35",
+          "scale": "0"
+        },
+        {
+          "name": "PHONENO",
+          "datatype": "varchar2",
+          "precision": "35",
+          "scale": "0"
+        },
+        {
+          "name": "SALARY",
+          "datatype": "number",
+          "precision": "15",
+          "scale": "0"
+        },
+        {
+          "name": "DEPID",
+          "datatype": "number",
+          "precision": "15",
+          "scale": "0"
+        },
+        {
+          "name": "DNAME",
+          "datatype": "varchar2",
+          "precision": "14",
+          "scale": "0"
+        },
+        {
+          "name": "NAME",
+          "datatype": "varchar2",
+          "precision": "50",
+          "scale": "0"
+        },
+        {
+          "name": "MAXSAL",
+          "datatype": "number",
+          "precision": "15",
+          "scale": "0"
+        },
+        {
+          "name": "MINSAL",
+          "datatype": "number",
+          "precision": "15",
+          "scale": "0"
+        }
+      ]
+    }
+  ],
+  "mappings": [
+    {
+      "name": "m_complex3",
+      "transformations": [
+        {
+          "name": "SQ_EMPLOYEE_DETAILS_FLAT",
+          "type": "Source Qualifier",
+          "fields": [
+            {
+              "name": "EMPID",
+              "datatype": "decimal",
+              "expression": null,
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "FIRSTNAME",
+              "datatype": "string",
+              "expression": null,
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "LASTNAME",
+              "datatype": "string",
+              "expression": null,
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "EMAIL",
+              "datatype": "string",
+              "expression": null,
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "PHONENO",
+              "datatype": "string",
+              "expression": null,
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "SALARY",
+              "datatype": "decimal",
+              "expression": null,
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "DEPID",
+              "datatype": "decimal",
+              "expression": null,
+              "port_type": "INPUT/OUTPUT"
+            }
+          ],
+          "attributes": {
+            "Sql Query": "",
+            "User Defined Join": "",
+            "Source Filter": "",
+            "Number Of Sorted Ports": "0",
+            "Tracing Level": "Normal",
+            "Select Distinct": "NO",
+            "Is Partitionable": "NO",
+            "Pre SQL": "",
+            "Post SQL": "",
+            "Output is deterministic": "NO",
+            "Output is repeatable": "Never"
+          }
+        },
+        {
+          "name": "SQ_EMPLOYEEDETAILS",
+          "type": "Source Qualifier",
+          "fields": [
+            {
+              "name": "EMPID",
+              "datatype": "decimal",
+              "expression": null,
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "FIRSTNAME",
+              "datatype": "string",
+              "expression": null,
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "LASTNAME",
+              "datatype": "string",
+              "expression": null,
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "EMAIL",
+              "datatype": "string",
+              "expression": null,
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "PHONENO",
+              "datatype": "string",
+              "expression": null,
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "SALARY",
+              "datatype": "decimal",
+              "expression": null,
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "DEPID",
+              "datatype": "decimal",
+              "expression": null,
+              "port_type": "INPUT/OUTPUT"
+            }
+          ],
+          "attributes": {
+            "Sql Query": "",
+            "User Defined Join": "",
+            "Source Filter": "",
+            "Number Of Sorted Ports": "0",
+            "Tracing Level": "Normal",
+            "Select Distinct": "NO",
+            "Is Partitionable": "NO",
+            "Pre SQL": "",
+            "Post SQL": "",
+            "Output is deterministic": "NO",
+            "Output is repeatable": "Never"
+          }
+        },
+        {
+          "name": "SQ_EMPLOYEE_DETAILS2",
+          "type": "Source Qualifier",
+          "fields": [
+            {
+              "name": "EMPID",
+              "datatype": "decimal",
+              "expression": null,
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "FIRSTNAME",
+              "datatype": "string",
+              "expression": null,
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "LASTNAME",
+              "datatype": "string",
+              "expression": null,
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "EMAIL",
+              "datatype": "string",
+              "expression": null,
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "PHONENO",
+              "datatype": "string",
+              "expression": null,
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "SALARY",
+              "datatype": "decimal",
+              "expression": null,
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "DEPID",
+              "datatype": "decimal",
+              "expression": null,
+              "port_type": "INPUT/OUTPUT"
+            }
+          ],
+          "attributes": {
+            "Sql Query": "",
+            "User Defined Join": "",
+            "Source Filter": "",
+            "Number Of Sorted Ports": "0",
+            "Tracing Level": "Normal",
+            "Select Distinct": "NO",
+            "Is Partitionable": "NO",
+            "Pre SQL": "",
+            "Post SQL": "",
+            "Output is deterministic": "NO",
+            "Output is repeatable": "Never"
+          }
+        },
+        {
+          "name": "SQ_EMPLOYEE_DETAILS1",
+          "type": "Source Qualifier",
+          "fields": [
+            {
+              "name": "EMPID",
+              "datatype": "decimal",
+              "expression": null,
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "FIRSTNAME",
+              "datatype": "string",
+              "expression": null,
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "LASTNAME",
+              "datatype": "string",
+              "expression": null,
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "EMAIL",
+              "datatype": "string",
+              "expression": null,
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "PHONENO",
+              "datatype": "string",
+              "expression": null,
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "SALARY",
+              "datatype": "decimal",
+              "expression": null,
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "DEPID",
+              "datatype": "decimal",
+              "expression": null,
+              "port_type": "INPUT/OUTPUT"
+            }
+          ],
+          "attributes": {
+            "Sql Query": "",
+            "User Defined Join": "",
+            "Source Filter": "",
+            "Number Of Sorted Ports": "0",
+            "Tracing Level": "Normal",
+            "Select Distinct": "NO",
+            "Is Partitionable": "NO",
+            "Pre SQL": "",
+            "Post SQL": "",
+            "Output is deterministic": "NO",
+            "Output is repeatable": "Never"
+          }
+        },
+        {
+          "name": "Union",
+          "type": "Custom Transformation",
+          "fields": [
+            {
+              "name": "EMPID",
+              "datatype": "double",
+              "expression": null,
+              "port_type": "OUTPUT"
+            },
+            {
+              "name": "FIRSTNAME",
+              "datatype": "string",
+              "expression": null,
+              "port_type": "OUTPUT"
+            },
+            {
+              "name": "LASTNAME",
+              "datatype": "string",
+              "expression": null,
+              "port_type": "OUTPUT"
+            },
+            {
+              "name": "EMAIL",
+              "datatype": "string",
+              "expression": null,
+              "port_type": "OUTPUT"
+            },
+            {
+              "name": "PHONENO",
+              "datatype": "string",
+              "expression": null,
+              "port_type": "OUTPUT"
+            },
+            {
+              "name": "SALARY",
+              "datatype": "double",
+              "expression": null,
+              "port_type": "OUTPUT"
+            },
+            {
+              "name": "DEPID",
+              "datatype": "double",
+              "expression": null,
+              "port_type": "OUTPUT"
+            },
+            {
+              "name": "EMPID1",
+              "datatype": "double",
+              "expression": null,
+              "port_type": "INPUT"
+            },
+            {
+              "name": "FIRSTNAME1",
+              "datatype": "string",
+              "expression": null,
+              "port_type": "INPUT"
+            },
+            {
+              "name": "LASTNAME1",
+              "datatype": "string",
+              "expression": null,
+              "port_type": "INPUT"
+            },
+            {
+              "name": "EMAIL1",
+              "datatype": "string",
+              "expression": null,
+              "port_type": "INPUT"
+            },
+            {
+              "name": "PHONENO1",
+              "datatype": "string",
+              "expression": null,
+              "port_type": "INPUT"
+            },
+            {
+              "name": "SALARY1",
+              "datatype": "double",
+              "expression": null,
+              "port_type": "INPUT"
+            },
+            {
+              "name": "DEPID1",
+              "datatype": "double",
+              "expression": null,
+              "port_type": "INPUT"
+            },
+            {
+              "name": "EMPID2",
+              "datatype": "double",
+              "expression": null,
+              "port_type": "INPUT"
+            },
+            {
+              "name": "FIRSTNAME2",
+              "datatype": "string",
+              "expression": null,
+              "port_type": "INPUT"
+            },
+            {
+              "name": "LASTNAME2",
+              "datatype": "string",
+              "expression": null,
+              "port_type": "INPUT"
+            },
+            {
+              "name": "EMAIL2",
+              "datatype": "string",
+              "expression": null,
+              "port_type": "INPUT"
+            },
+            {
+              "name": "PHONENO2",
+              "datatype": "string",
+              "expression": null,
+              "port_type": "INPUT"
+            },
+            {
+              "name": "SALARY2",
+              "datatype": "double",
+              "expression": null,
+              "port_type": "INPUT"
+            },
+            {
+              "name": "DEPID2",
+              "datatype": "double",
+              "expression": null,
+              "port_type": "INPUT"
+            },
+            {
+              "name": "EMPID3",
+              "datatype": "double",
+              "expression": null,
+              "port_type": "INPUT"
+            },
+            {
+              "name": "FIRSTNAME3",
+              "datatype": "string",
+              "expression": null,
+              "port_type": "INPUT"
+            },
+            {
+              "name": "LASTNAME3",
+              "datatype": "string",
+              "expression": null,
+              "port_type": "INPUT"
+            },
+            {
+              "name": "EMAIL3",
+              "datatype": "string",
+              "expression": null,
+              "port_type": "INPUT"
+            },
+            {
+              "name": "PHONENO3",
+              "datatype": "string",
+              "expression": null,
+              "port_type": "INPUT"
+            },
+            {
+              "name": "SALARY3",
+              "datatype": "double",
+              "expression": null,
+              "port_type": "INPUT"
+            },
+            {
+              "name": "DEPID3",
+              "datatype": "double",
+              "expression": null,
+              "port_type": "INPUT"
+            },
+            {
+              "name": "EMPID4",
+              "datatype": "double",
+              "expression": null,
+              "port_type": "INPUT"
+            },
+            {
+              "name": "FIRSTNAME4",
+              "datatype": "string",
+              "expression": null,
+              "port_type": "INPUT"
+            },
+            {
+              "name": "LASTNAME4",
+              "datatype": "string",
+              "expression": null,
+              "port_type": "INPUT"
+            },
+            {
+              "name": "EMAIL4",
+              "datatype": "string",
+              "expression": null,
+              "port_type": "INPUT"
+            },
+            {
+              "name": "PHONENO4",
+              "datatype": "string",
+              "expression": null,
+              "port_type": "INPUT"
+            },
+            {
+              "name": "SALARY4",
+              "datatype": "double",
+              "expression": null,
+              "port_type": "INPUT"
+            },
+            {
+              "name": "DEPID4",
+              "datatype": "double",
+              "expression": null,
+              "port_type": "INPUT"
+            }
+          ],
+          "attributes": {
+            "Language": "C",
+            "Module Identifier": "pmuniontrans",
+            "Class Name": "",
+            "Function Identifier": "pmunionfunc",
+            "Runtime Location": "",
+            "Tracing Level": "Normal",
+            "Is Partitionable": "Across Grid",
+            "Inputs Must Block": "NO",
+            "Is Active": "YES",
+            "Update Strategy Transformation": "NO",
+            "Transformation Scope": "Row",
+            "Generate Transaction": "NO",
+            "Output Is Repeatable": "Never",
+            "Requires Single Thread Per Partition": "NO",
+            "Output Is Deterministic": "YES",
+            "Preserves Data Set Boundary": "No"
+          }
+        },
+        {
+          "name": "SRTTRANS",
+          "type": "Sorter",
+          "fields": [
+            {
+              "name": "EMPID",
+              "datatype": "double",
+              "expression": null,
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "FIRSTNAME",
+              "datatype": "string",
+              "expression": null,
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "LASTNAME",
+              "datatype": "string",
+              "expression": null,
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "EMAIL",
+              "datatype": "string",
+              "expression": null,
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "PHONENO",
+              "datatype": "string",
+              "expression": null,
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "SALARY",
+              "datatype": "double",
+              "expression": null,
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "DEPID",
+              "datatype": "double",
+              "expression": null,
+              "port_type": "INPUT/OUTPUT"
+            }
+          ],
+          "attributes": {
+            "Sorter Cache Size": "Auto",
+            "Case Sensitive": "YES",
+            "Work Directory": "$PMTempDir",
+            "Distinct": "NO",
+            "Tracing Level": "Normal",
+            "Null Treated Low": "NO",
+            "Merge Only": "NO",
+            "Partitioning": "Order records for individual partitions",
+            "Transformation Scope": "All Input"
+          }
+        },
+        {
+          "name": "SRTTRANS1",
+          "type": "Sorter",
+          "fields": [
+            {
+              "name": "DEPTNO",
+              "datatype": "double",
+              "expression": null,
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "DNAME",
+              "datatype": "string",
+              "expression": null,
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "LOC",
+              "datatype": "string",
+              "expression": null,
+              "port_type": "INPUT/OUTPUT"
+            }
+          ],
+          "attributes": {
+            "Sorter Cache Size": "Auto",
+            "Case Sensitive": "YES",
+            "Work Directory": "$PMTempDir",
+            "Distinct": "NO",
+            "Tracing Level": "Normal",
+            "Null Treated Low": "NO",
+            "Merge Only": "NO",
+            "Partitioning": "Order records for individual partitions",
+            "Transformation Scope": "All Input"
+          }
+        },
+        {
+          "name": "JNRTRANS",
+          "type": "Joiner",
+          "fields": [
+            {
+              "name": "EMPID",
+              "datatype": "double",
+              "expression": null,
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "FIRSTNAME",
+              "datatype": "string",
+              "expression": null,
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "LASTNAME",
+              "datatype": "string",
+              "expression": null,
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "EMAIL",
+              "datatype": "string",
+              "expression": null,
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "PHONENO",
+              "datatype": "string",
+              "expression": null,
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "SALARY",
+              "datatype": "double",
+              "expression": null,
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "DEPID",
+              "datatype": "double",
+              "expression": null,
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "DEPTNO",
+              "datatype": "double",
+              "expression": null,
+              "port_type": "INPUT/MASTER"
+            },
+            {
+              "name": "DNAME",
+              "datatype": "string",
+              "expression": null,
+              "port_type": "INPUT/OUTPUT/MASTER"
+            }
+          ],
+          "attributes": {
+            "Case Sensitive String Comparison": "YES",
+            "Cache Directory": "$PMCacheDir",
+            "Join Condition": "DEPTNO = DEPID",
+            "Join Type": "Normal Join",
+            "Null ordering in master": "Null Is Highest Value",
+            "Null ordering in detail": "Null Is Highest Value",
+            "Tracing Level": "Normal",
+            "Joiner Data Cache Size": "Auto",
+            "Joiner Index Cache Size": "Auto",
+            "Sorted Input": "NO",
+            "Master Sort Order": "Auto",
+            "Transformation Scope": "All Input"
+          }
+        },
+        {
+          "name": "SQ_EMP_DEPT",
+          "type": "Source Qualifier",
+          "fields": [
+            {
+              "name": "DEPTNO",
+              "datatype": "double",
+              "expression": null,
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "DNAME",
+              "datatype": "string",
+              "expression": null,
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "LOC",
+              "datatype": "string",
+              "expression": null,
+              "port_type": "INPUT/OUTPUT"
+            }
+          ],
+          "attributes": {
+            "Sql Query": "",
+            "User Defined Join": "",
+            "Source Filter": "",
+            "Number Of Sorted Ports": "0",
+            "Tracing Level": "Normal",
+            "Select Distinct": "NO",
+            "Is Partitionable": "NO",
+            "Pre SQL": "",
+            "Post SQL": "",
+            "Output is deterministic": "NO",
+            "Output is repeatable": "Never"
+          }
+        },
+        {
+          "name": "AGGTRANS",
+          "type": "Aggregator",
+          "fields": [
+            {
+              "name": "EMPID",
+              "datatype": "double",
+              "expression": "EMPID",
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "EMAIL",
+              "datatype": "string",
+              "expression": "EMAIL",
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "PHONENO",
+              "datatype": "string",
+              "expression": "PHONENO",
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "SALARY",
+              "datatype": "double",
+              "expression": "SALARY",
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "DEPID",
+              "datatype": "double",
+              "expression": "DEPID",
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "DNAME",
+              "datatype": "string",
+              "expression": "DNAME",
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "ENAME",
+              "datatype": "string",
+              "expression": "ENAME",
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "MAXSAL",
+              "datatype": "double",
+              "expression": "MAX(SALARY)",
+              "port_type": "OUTPUT"
+            },
+            {
+              "name": "MINSAL",
+              "datatype": "double",
+              "expression": "MIN(SALARY)",
+              "port_type": "OUTPUT"
+            }
+          ],
+          "attributes": {
+            "Cache Directory": "$PMCacheDir",
+            "Tracing Level": "Normal",
+            "Sorted Input": "NO",
+            "Aggregator Data Cache Size": "Auto",
+            "Aggregator Index Cache Size": "Auto",
+            "Transformation Scope": "All Input"
+          }
+        },
+        {
+          "name": "RTRTRANS",
+          "type": "Router",
+          "fields": [
+            {
+              "name": "EMPID",
+              "datatype": "double",
+              "expression": null,
+              "port_type": "INPUT"
+            },
+            {
+              "name": "EMAIL",
+              "datatype": "string",
+              "expression": null,
+              "port_type": "INPUT"
+            },
+            {
+              "name": "PHONENO",
+              "datatype": "string",
+              "expression": null,
+              "port_type": "INPUT"
+            },
+            {
+              "name": "SALARY",
+              "datatype": "double",
+              "expression": null,
+              "port_type": "INPUT"
+            },
+            {
+              "name": "DEPID",
+              "datatype": "double",
+              "expression": null,
+              "port_type": "INPUT"
+            },
+            {
+              "name": "DNAME",
+              "datatype": "string",
+              "expression": null,
+              "port_type": "INPUT"
+            },
+            {
+              "name": "ENAME",
+              "datatype": "string",
+              "expression": null,
+              "port_type": "INPUT"
+            },
+            {
+              "name": "EMPID1",
+              "datatype": "double",
+              "expression": null,
+              "port_type": "OUTPUT"
+            },
+            {
+              "name": "EMAIL1",
+              "datatype": "string",
+              "expression": null,
+              "port_type": "OUTPUT"
+            },
+            {
+              "name": "PHONENO1",
+              "datatype": "string",
+              "expression": null,
+              "port_type": "OUTPUT"
+            },
+            {
+              "name": "SALARY1",
+              "datatype": "double",
+              "expression": null,
+              "port_type": "OUTPUT"
+            },
+            {
+              "name": "DEPID1",
+              "datatype": "double",
+              "expression": null,
+              "port_type": "OUTPUT"
+            },
+            {
+              "name": "DNAME1",
+              "datatype": "string",
+              "expression": null,
+              "port_type": "OUTPUT"
+            },
+            {
+              "name": "ENAME1",
+              "datatype": "string",
+              "expression": null,
+              "port_type": "OUTPUT"
+            },
+            {
+              "name": "EMPID2",
+              "datatype": "double",
+              "expression": null,
+              "port_type": "OUTPUT"
+            },
+            {
+              "name": "EMAIL2",
+              "datatype": "string",
+              "expression": null,
+              "port_type": "OUTPUT"
+            },
+            {
+              "name": "PHONENO2",
+              "datatype": "string",
+              "expression": null,
+              "port_type": "OUTPUT"
+            },
+            {
+              "name": "SALARY2",
+              "datatype": "double",
+              "expression": null,
+              "port_type": "OUTPUT"
+            },
+            {
+              "name": "DEPID2",
+              "datatype": "double",
+              "expression": null,
+              "port_type": "OUTPUT"
+            },
+            {
+              "name": "DNAME2",
+              "datatype": "string",
+              "expression": null,
+              "port_type": "OUTPUT"
+            },
+            {
+              "name": "ENAME2",
+              "datatype": "string",
+              "expression": null,
+              "port_type": "OUTPUT"
+            }
+          ],
+          "attributes": {
+            "Tracing Level": "Normal"
+          }
+        },
+        {
+          "name": "EXPTRANS",
+          "type": "Expression",
+          "fields": [
+            {
+              "name": "EMPID",
+              "datatype": "double",
+              "expression": "EMPID",
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "EMAIL",
+              "datatype": "string",
+              "expression": "EMAIL",
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "PHONENO",
+              "datatype": "string",
+              "expression": "PHONENO",
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "SALARY",
+              "datatype": "double",
+              "expression": "SALARY",
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "DEPID",
+              "datatype": "double",
+              "expression": "DEPID",
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "DNAME",
+              "datatype": "string",
+              "expression": "DNAME",
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "ENAME",
+              "datatype": "string",
+              "expression": "LTRIM(RTRIM(NAME))",
+              "port_type": "OUTPUT"
+            },
+            {
+              "name": "NAME",
+              "datatype": "string",
+              "expression": null,
+              "port_type": "INPUT"
+            },
+            {
+              "name": "ELOC",
+              "datatype": "string",
+              "expression": ":LKP.LKPTRANS1(EMPID)",
+              "port_type": "OUTPUT"
+            }
+          ],
+          "attributes": {
+            "Tracing Level": "Normal"
+          }
+        },
+        {
+          "name": "LKPTRANS",
+          "type": "Lookup Procedure",
+          "fields": [
+            {
+              "name": "T_EMPID",
+              "datatype": "double",
+              "expression": null,
+              "port_type": "LOOKUP/OUTPUT"
+            },
+            {
+              "name": "LKP_EMAIL",
+              "datatype": "string",
+              "expression": null,
+              "port_type": "LOOKUP/OUTPUT"
+            },
+            {
+              "name": "LKP_PHONENO",
+              "datatype": "string",
+              "expression": null,
+              "port_type": "LOOKUP/OUTPUT"
+            },
+            {
+              "name": "LKP_SALARY",
+              "datatype": "double",
+              "expression": null,
+              "port_type": "LOOKUP/OUTPUT"
+            },
+            {
+              "name": "LKP_DEPID",
+              "datatype": "double",
+              "expression": null,
+              "port_type": "LOOKUP/OUTPUT"
+            },
+            {
+              "name": "LKP_DNAME",
+              "datatype": "string",
+              "expression": null,
+              "port_type": "LOOKUP/OUTPUT"
+            },
+            {
+              "name": "LKP_ENAME",
+              "datatype": "string",
+              "expression": null,
+              "port_type": "LOOKUP/OUTPUT"
+            },
+            {
+              "name": "EMPID",
+              "datatype": "double",
+              "expression": null,
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "EMAIL",
+              "datatype": "string",
+              "expression": null,
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "PHONENO",
+              "datatype": "string",
+              "expression": null,
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "SALARY",
+              "datatype": "double",
+              "expression": null,
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "DEPID",
+              "datatype": "double",
+              "expression": null,
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "DNAME",
+              "datatype": "string",
+              "expression": null,
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "ENAME",
+              "datatype": "string",
+              "expression": null,
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "ELOC",
+              "datatype": "string",
+              "expression": null,
+              "port_type": "INPUT/OUTPUT"
+            }
+          ],
+          "attributes": {
+            "Lookup Sql Override": "",
+            "Lookup table name": "",
+            "Lookup Source Filter": "",
+            "Lookup caching enabled": "YES",
+            "Lookup policy on multiple match": "Use Any Value",
+            "Lookup condition": "T_EMPID = EMPID",
+            "Connection Information": "",
+            "Source Type": "Flat File",
+            "Recache if Stale": "NO",
+            "Tracing Level": "Normal",
+            "Lookup cache directory name": "$PMCacheDir",
+            "Lookup cache initialize": "NO",
+            "Lookup cache persistent": "NO",
+            "Lookup Data Cache Size": "Auto",
+            "Lookup Index Cache Size": "Auto",
+            "Dynamic Lookup Cache": "NO",
+            "Synchronize Dynamic Cache": "NO",
+            "Output Old Value On Update": "NO",
+            "Update Dynamic Cache Condition": "TRUE",
+            "Cache File Name Prefix": "",
+            "Re-cache from lookup source": "NO",
+            "Insert Else Update": "NO",
+            "Update Else Insert": "NO",
+            "Datetime Format": "A  19 mm/dd/yyyy hh24:mi:ss",
+            "Thousand Separator": "None",
+            "Decimal Separator": ".",
+            "Case Sensitive String Comparison": "YES",
+            "Null ordering": "Null Is Highest Value",
+            "Sorted Input": "NO",
+            "Lookup source is static": "YES",
+            "Pre-build lookup cache": "Auto",
+            "Subsecond Precision": "0"
+          }
+        },
+        {
+          "name": "LKPTRANS1",
+          "type": "Lookup Procedure",
+          "fields": [
+            {
+              "name": "EMPID",
+              "datatype": "decimal",
+              "expression": null,
+              "port_type": "LOOKUP/OUTPUT"
+            },
+            {
+              "name": "LOC",
+              "datatype": "string",
+              "expression": null,
+              "port_type": "LOOKUP/RETURN/OUTPUT"
+            },
+            {
+              "name": "IN_EMPID",
+              "datatype": "decimal",
+              "expression": null,
+              "port_type": "INPUT/OUTPUT"
+            }
+          ],
+          "attributes": {
+            "Lookup Sql Override": "",
+            "Lookup table name": "EMP_LOC",
+            "Lookup Source Filter": "",
+            "Lookup caching enabled": "YES",
+            "Lookup policy on multiple match": "Use Any Value",
+            "Lookup condition": "EMPID = IN_EMPID",
+            "Connection Information": "$Source",
+            "Source Type": "Database",
+            "Recache if Stale": "NO",
+            "Tracing Level": "Normal",
+            "Lookup cache directory name": "$PMCacheDir",
+            "Lookup cache initialize": "NO",
+            "Lookup cache persistent": "NO",
+            "Lookup Data Cache Size": "Auto",
+            "Lookup Index Cache Size": "Auto",
+            "Dynamic Lookup Cache": "NO",
+            "Synchronize Dynamic Cache": "NO",
+            "Output Old Value On Update": "NO",
+            "Update Dynamic Cache Condition": "TRUE",
+            "Cache File Name Prefix": "",
+            "Re-cache from lookup source": "NO",
+            "Insert Else Update": "NO",
+            "Update Else Insert": "NO",
+            "Datetime Format": "",
+            "Thousand Separator": "None",
+            "Decimal Separator": ".",
+            "Case Sensitive String Comparison": "NO",
+            "Null ordering": "Null Is Highest Value",
+            "Sorted Input": "NO",
+            "Lookup source is static": "NO",
+            "Pre-build lookup cache": "Auto",
+            "Subsecond Precision": "6"
+          }
+        },
+        {
+          "name": "EXPTRANS2",
+          "type": "Expression",
+          "fields": [
+            {
+              "name": "T_EMPID",
+              "datatype": "double",
+              "expression": "T_EMPID",
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "LKP_EMAIL",
+              "datatype": "string",
+              "expression": "LKP_EMAIL",
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "LKP_PHONENO",
+              "datatype": "string",
+              "expression": "LKP_PHONENO",
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "LKP_SALARY",
+              "datatype": "double",
+              "expression": "LKP_SALARY",
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "LKP_DEPID",
+              "datatype": "double",
+              "expression": "LKP_DEPID",
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "LKP_DNAME",
+              "datatype": "string",
+              "expression": "LKP_DNAME",
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "LKP_ENAME",
+              "datatype": "string",
+              "expression": "LKP_ENAME",
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "EMPID",
+              "datatype": "double",
+              "expression": "EMPID",
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "EMAIL",
+              "datatype": "string",
+              "expression": "EMAIL",
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "PHONENO",
+              "datatype": "string",
+              "expression": "PHONENO",
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "SALARY",
+              "datatype": "double",
+              "expression": "SALARY",
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "DEPID",
+              "datatype": "double",
+              "expression": "DEPID",
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "DNAME",
+              "datatype": "string",
+              "expression": "DNAME",
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "ENAME",
+              "datatype": "string",
+              "expression": "ENAME",
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "ELOC",
+              "datatype": "string",
+              "expression": "ELOC",
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "NEWRECORD_FLAG",
+              "datatype": "string",
+              "expression": "IIF( ISNULL(T_EMPID), 'TRUE',' FALSE')",
+              "port_type": "OUTPUT"
+            },
+            {
+              "name": "UPDATERECORD_FLAG",
+              "datatype": "string",
+              "expression": "IIF(ISNULL(T_EMPID), 'FALSE', 'TRUE')",
+              "port_type": "OUTPUT"
+            }
+          ],
+          "attributes": {
+            "Tracing Level": "Normal"
+          }
+        },
+        {
+          "name": "FILTRANS_INSERT",
+          "type": "Filter",
+          "fields": [
+            {
+              "name": "EMPID",
+              "datatype": "double",
+              "expression": null,
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "EMAIL",
+              "datatype": "string",
+              "expression": null,
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "PHONENO",
+              "datatype": "string",
+              "expression": null,
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "SALARY",
+              "datatype": "double",
+              "expression": null,
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "DEPID",
+              "datatype": "double",
+              "expression": null,
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "DNAME",
+              "datatype": "string",
+              "expression": null,
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "ENAME",
+              "datatype": "string",
+              "expression": null,
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "ELOC",
+              "datatype": "string",
+              "expression": null,
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "NEWRECORD_FLAG",
+              "datatype": "string",
+              "expression": null,
+              "port_type": "INPUT/OUTPUT"
+            }
+          ],
+          "attributes": {
+            "Filter Condition": "DEPID = 20",
+            "Tracing Level": "Normal"
+          }
+        },
+        {
+          "name": "FILTRANS_UPDATE",
+          "type": "Filter",
+          "fields": [
+            {
+              "name": "EMPID",
+              "datatype": "double",
+              "expression": null,
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "EMAIL",
+              "datatype": "string",
+              "expression": null,
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "PHONENO",
+              "datatype": "string",
+              "expression": null,
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "SALARY",
+              "datatype": "double",
+              "expression": null,
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "DEPID",
+              "datatype": "double",
+              "expression": null,
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "DNAME",
+              "datatype": "string",
+              "expression": null,
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "ENAME",
+              "datatype": "string",
+              "expression": null,
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "ELOC",
+              "datatype": "string",
+              "expression": null,
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "UPDATERECORD_FLAG",
+              "datatype": "string",
+              "expression": null,
+              "port_type": "INPUT/OUTPUT"
+            }
+          ],
+          "attributes": {
+            "Filter Condition": "DEPID =30",
+            "Tracing Level": "Normal"
+          }
+        },
+        {
+          "name": "UPDTRANS",
+          "type": "Update Strategy",
+          "fields": [
+            {
+              "name": "EMPID",
+              "datatype": "double",
+              "expression": null,
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "EMAIL",
+              "datatype": "string",
+              "expression": null,
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "PHONENO",
+              "datatype": "string",
+              "expression": null,
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "SALARY",
+              "datatype": "double",
+              "expression": null,
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "DEPID",
+              "datatype": "double",
+              "expression": null,
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "DNAME",
+              "datatype": "string",
+              "expression": null,
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "ENAME",
+              "datatype": "string",
+              "expression": null,
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "ELOC",
+              "datatype": "string",
+              "expression": null,
+              "port_type": "INPUT/OUTPUT"
+            },
+            {
+              "name": "UPDATERECORD_FLAG",
+              "datatype": "string",
+              "expression": null,
+              "port_type": "INPUT/OUTPUT"
+            }
+          ],
+          "attributes": {
+            "Update Strategy Expression": "DD_UPDATE",
+            "Forward Rejected Rows": "YES",
+            "Tracing Level": "Normal"
+          }
+        }
+      ],
+      "data_flow": [
+        [
+          "SQ_EMPLOYEE_DETAILS_FLAT",
+          "Union",
+          "SRTTRANS",
+          "JNRTRANS",
+          "mp_name",
+          "EXPTRANS",
+          "AGGTRANS",
+          "EMP_MAX_MIN"
+        ],
+        [
+          "SQ_EMPLOYEE_DETAILS_FLAT",
+          "Union",
+          "SRTTRANS",
+          "JNRTRANS",
+          "mp_name",
+          "EXPTRANS",
+          "AGGTRANS",
+          "EMP_MAX_MIN"
+        ],
+        [
+          "SQ_EMPLOYEE_DETAILS_FLAT",
+          "Union",
+          "SRTTRANS",
+          "JNRTRANS",
+          "mp_name",
+          "EXPTRANS",
+          "AGGTRANS",
+          "EMP_MAX_MIN"
+        ],
+        [
+          "SQ_EMPLOYEE_DETAILS_FLAT",
+          "Union",
+          "SRTTRANS",
+          "JNRTRANS",
+          "mp_name",
+          "EXPTRANS",
+          "AGGTRANS",
+          "EMP_MAX_MIN"
+        ],
+        [
+          "SQ_EMPLOYEE_DETAILS_FLAT",
+          "Union",
+          "SRTTRANS",
+          "JNRTRANS",
+          "mp_name",
+          "EXPTRANS",
+          "AGGTRANS",
+          "EMP_MAX_MIN"
+        ],
+        [
+          "SQ_EMPLOYEE_DETAILS_FLAT",
+          "Union",
+          "SRTTRANS",
+          "JNRTRANS",
+          "mp_name",
+          "EXPTRANS",
+          "AGGTRANS",
+          "EMP_MAX_MIN"
+        ],
+        [
+          "SQ_EMPLOYEE_DETAILS_FLAT",
+          "Union",
+          "SRTTRANS",
+          "JNRTRANS",
+          "mp_name",
+          "EXPTRANS",
+          "AGGTRANS",
+          "EMP_MAX_MIN"
+        ],
+        [
+          "SQ_EMPLOYEE_DETAILS_FLAT",
+          "Union",
+          "SRTTRANS",
+          "JNRTRANS",
+          "mp_name",
+          "EXPTRANS",
+          "AGGTRANS",
+          "EMP_MAX_MIN"
+        ],
+        [
+          "SQ_EMPLOYEE_DETAILS_FLAT",
+          "Union",
+          "SRTTRANS",
+          "JNRTRANS",
+          "mp_name",
+          "EXPTRANS",
+          "AGGTRANS",
+          "EMP_MAX_MIN"
+        ],
+        [
+          "SQ_EMPLOYEE_DETAILS_FLAT",
+          "Union",
+          "SRTTRANS",
+          "JNRTRANS",
+          "mp_name",
+          "EXPTRANS",
+          "AGGTRANS",
+          "EMP_MAX_MIN"
+        ],
+        [
+          "SQ_EMPLOYEE_DETAILS_FLAT",
+          "Union",
+          "SRTTRANS",
+          "JNRTRANS",
+          "mp_name",
+          "EXPTRANS",
+          "AGGTRANS",
+          "EMP_MAX_MIN"
+        ],
+        [
+          "SQ_EMPLOYEE_DETAILS_FLAT",
+          "Union",
+          "SRTTRANS",
+          "JNRTRANS",
+          "mp_name",
+          "EXPTRANS",
+          "AGGTRANS",
+          "EMP_MAX_MIN"
+        ],
+        [
+          "SQ_EMPLOYEE_DETAILS_FLAT",
+          "Union",
+          "SRTTRANS",
+          "JNRTRANS",
+          "mp_name",
+          "EXPTRANS",
+          "AGGTRANS",
+          "EMP_MAX_MIN"
+        ],
+        [
+          "SQ_EMPLOYEE_DETAILS_FLAT",
+          "Union",
+          "SRTTRANS",
+          "JNRTRANS",
+          "mp_name",
+          "EXPTRANS",
+          "AGGTRANS",
+          "EMP_MAX_MIN"
+        ],
+        [
+          "SQ_EMPLOYEE_DETAILS_FLAT",
+          "Union",
+          "SRTTRANS",
+          "JNRTRANS",
+          "mp_name",
+          "EXPTRANS",
+          "AGGTRANS",
+          "EMP_MAX_MIN"
+        ],
+        [
+          "SQ_EMPLOYEE_DETAILS_FLAT",
+          "Union",
+          "SRTTRANS",
+          "JNRTRANS",
+          "mp_name",
+          "EXPTRANS",
+          "AGGTRANS",
+          "EMP_MAX_MIN"
+        ],
+        [
+          "SQ_EMPLOYEE_DETAILS_FLAT",
+          "Union",
+          "SRTTRANS",
+          "JNRTRANS",
+          "mp_name",
+          "EXPTRANS",
+          "AGGTRANS",
+          "EMP_MAX_MIN"
+        ],
+        [
+          "SQ_EMPLOYEE_DETAILS_FLAT",
+          "Union",
+          "SRTTRANS",
+          "JNRTRANS",
+          "mp_name",
+          "EXPTRANS",
+          "AGGTRANS",
+          "EMP_MAX_MIN"
+        ],
+        [
+          "SQ_EMPLOYEE_DETAILS_FLAT",
+          "Union",
+          "SRTTRANS",
+          "JNRTRANS",
+          "mp_name",
+          "EXPTRANS",
+          "AGGTRANS",
+          "EMP_MAX_MIN"
+        ],
+        [
+          "SQ_EMPLOYEE_DETAILS_FLAT",
+          "Union",
+          "SRTTRANS",
+          "JNRTRANS",
+          "mp_name",
+          "EXPTRANS",
+          "AGGTRANS",
+          "EMP_MAX_MIN"
+        ],
+        [
+          "SQ_EMPLOYEE_DETAILS_FLAT",
+          "Union",
+          "SRTTRANS",
+          "JNRTRANS",
+          "mp_name",
+          "EXPTRANS",
+          "AGGTRANS",
+          "EMP_MAX_MIN"
+        ],
+        [
+          "SQ_EMPLOYEE_DETAILS_FLAT",
+          "Union",
+          "SRTTRANS",
+          "JNRTRANS",
+          "mp_name",
+          "EXPTRANS",
+          "AGGTRANS",
+          "EMP_MAX_MIN"
+        ],
+        [
+          "SQ_EMPLOYEE_DETAILS_FLAT",
+          "Union",
+          "SRTTRANS",
+          "JNRTRANS",
+          "mp_name",
+          "EXPTRANS",
+          "AGGTRANS",
+          "EMP_MAX_MIN"
+        ],
+        [
+          "SQ_EMPLOYEE_DETAILS_FLAT",
+          "Union",
+          "SRTTRANS",
+          "JNRTRANS",
+          "mp_name",
+          "EXPTRANS",
+          "AGGTRANS",
+          "EMP_MAX_MIN"
+        ],
+        [
+          "SQ_EMPLOYEE_DETAILS_FLAT",
+          "Union",
+          "SRTTRANS",
+          "JNRTRANS",
+          "mp_name",
+          "EXPTRANS",
+          "AGGTRANS",
+          "EMP_MAX_MIN"
+        ],
+        [
+          "SQ_EMPLOYEE_DETAILS_FLAT",
+          "Union",
+          "SRTTRANS",
+          "JNRTRANS",
+          "mp_name",
+          "EXPTRANS",
+          "AGGTRANS",
+          "EMP_MAX_MIN"
+        ],
+        [
+          "SQ_EMPLOYEE_DETAILS_FLAT",
+          "Union",
+          "SRTTRANS",
+          "JNRTRANS",
+          "mp_name",
+          "EXPTRANS",
+          "AGGTRANS",
+          "EMP_MAX_MIN"
+        ],
+        [
+          "SQ_EMPLOYEE_DETAILS_FLAT",
+          "Union",
+          "SRTTRANS",
+          "JNRTRANS",
+          "mp_name",
+          "EXPTRANS",
+          "AGGTRANS",
+          "EMP_MAX_MIN"
+        ],
+        [
+          "SQ_EMPLOYEE_DETAILS_FLAT",
+          "Union",
+          "SRTTRANS",
+          "JNRTRANS",
+          "mp_name",
+          "EXPTRANS",
+          "AGGTRANS",
+          "EMP_MAX_MIN"
+        ],
+        [
+          "SQ_EMPLOYEE_DETAILS_FLAT",
+          "Union",
+          "SRTTRANS",
+          "JNRTRANS",
+          "mp_name",
+          "EXPTRANS",
+          "AGGTRANS",
+          "EMP_MAX_MIN"
+        ],
+        [
+          "SQ_EMPLOYEE_DETAILS_FLAT",
+          "Union",
+          "SRTTRANS",
+          "JNRTRANS",
+          "mp_name",
+          "EXPTRANS",
+          "AGGTRANS",
+          "EMP_MAX_MIN"
+        ],
+        [
+          "SQ_EMPLOYEE_DETAILS_FLAT",
+          "Union",
+          "SRTTRANS",
+          "JNRTRANS",
+          "mp_name",
+          "EXPTRANS",
+          "AGGTRANS",
+          "EMP_MAX_MIN"
+        ],
+        [
+          "SQ_EMPLOYEE_DETAILS_FLAT",
+          "Union",
+          "SRTTRANS",
+          "JNRTRANS",
+          "mp_name",
+          "EXPTRANS",
+          "AGGTRANS",
+          "EMP_MAX_MIN"
+        ],
+        [
+          "SQ_EMPLOYEE_DETAILS_FLAT",
+          "Union",
+          "SRTTRANS",
+          "JNRTRANS",
+          "mp_name",
+          "EXPTRANS",
+          "AGGTRANS",
+          "EMP_MAX_MIN"
+        ],
+        [
+          "SQ_EMPLOYEE_DETAILS_FLAT",
+          "Union",
+          "SRTTRANS",
+          "JNRTRANS",
+          "mp_name",
+          "EXPTRANS",
+          "AGGTRANS",
+          "EMP_MAX_MIN"
+        ],
+        [
+          "SQ_EMPLOYEE_DETAILS_FLAT",
+          "Union",
+          "SRTTRANS",
+          "JNRTRANS",
+          "mp_name",
+          "EXPTRANS",
+          "AGGTRANS",
+          "EMP_MAX_MIN"
+        ],
+        [
+          "SQ_EMPLOYEE_DETAILS_FLAT",
+          "Union",
+          "SRTTRANS",
+          "JNRTRANS",
+          "mp_name",
+          "EXPTRANS",
+          "AGGTRANS",
+          "EMP_MAX_MIN"
+        ],
+        [
+          "SQ_EMPLOYEE_DETAILS_FLAT",
+          "Union",
+          "SRTTRANS",
+          "JNRTRANS",
+          "mp_name",
+          "EXPTRANS",
+          "AGGTRANS",
+          "EMP_MAX_MIN"
+        ],
+        [
+          "SQ_EMPLOYEE_DETAILS_FLAT",
+          "Union",
+          "SRTTRANS",
+          "JNRTRANS",
+          "mp_name",
+          "EXPTRANS",
+          "AGGTRANS",
+          "EMP_MAX_MIN"
+        ],
+        [
+          "SQ_EMPLOYEE_DETAILS_FLAT",
+          "Union",
+          "SRTTRANS",
+          "JNRTRANS",
+          "mp_name",
+          "EXPTRANS",
+          "AGGTRANS",
+          "EMP_MAX_MIN"
+        ],
+        [
+          "SQ_EMPLOYEE_DETAILS_FLAT",
+          "Union",
+          "SRTTRANS",
+          "JNRTRANS",
+          "mp_name",
+          "EXPTRANS",
+          "AGGTRANS",
+          "EMP_MAX_MIN"
+        ],
+        [
+          "SQ_EMPLOYEE_DETAILS_FLAT",
+          "Union",
+          "SRTTRANS",
+          "JNRTRANS",
+          "mp_name",
+          "EXPTRANS",
+          "AGGTRANS",
+          "EMP_MAX_MIN"
+        ],
+        [
+          "SQ_EMPLOYEE_DETAILS_FLAT",
+          "Union",
+          "SRTTRANS",
+          "JNRTRANS",
+          "mp_name",
+          "EXPTRANS",
+          "AGGTRANS",
+          "EMP_MAX_MIN"
+        ],
+        [
+          "SQ_EMPLOYEE_DETAILS_FLAT",
+          "Union",
+          "SRTTRANS",
+          "JNRTRANS",
+          "mp_name",
+          "EXPTRANS",
+          "AGGTRANS",
+          "EMP_MAX_MIN"
+        ],
+        [
+          "SQ_EMPLOYEE_DETAILS_FLAT",
+          "Union",
+          "SRTTRANS",
+          "JNRTRANS",
+          "mp_name",
+          "EXPTRANS",
+          "AGGTRANS",
+          "EMP_MAX_MIN"
+        ],
+        [
+          "SQ_EMPLOYEE_DETAILS_FLAT",
+          "Union",
+          "SRTTRANS",
+          "JNRTRANS",
+          "mp_name",
+          "EXPTRANS",
+          "AGGTRANS",
+          "EMP_MAX_MIN"
+        ],
+        [
+          "SQ_EMPLOYEE_DETAILS_FLAT",
+          "Union",
+          "SRTTRANS",
+          "JNRTRANS",
+          "mp_name",
+          "EXPTRANS",
+          "AGGTRANS",
+          "EMP_MAX_MIN"
+        ],
+        [
+          "SQ_EMPLOYEE_DETAILS_FLAT",
+          "Union",
+          "SRTTRANS",
+          "JNRTRANS",
+          "mp_name",
+          "EXPTRANS",
+          "AGGTRANS",
+          "EMP_MAX_MIN"
+        ],
+        [
+          "SQ_EMPLOYEE_DETAILS_FLAT",
+          "Union",
+          "SRTTRANS",
+          "JNRTRANS",
+          "mp_name",
+          "EXPTRANS",
+          "AGGTRANS",
+          "EMP_MAX_MIN"
+        ],
+        [
+          "SQ_EMPLOYEE_DETAILS_FLAT",
+          "Union",
+          "SRTTRANS",
+          "JNRTRANS",
+          "mp_name",
+          "EXPTRANS",
+          "AGGTRANS",
+          "EMP_MAX_MIN"
+        ],
+        [
+          "SQ_EMPLOYEE_DETAILS_FLAT",
+          "Union",
+          "SRTTRANS",
+          "JNRTRANS",
+          "mp_name",
+          "EXPTRANS",
+          "AGGTRANS",
+          "EMP_MAX_MIN"
+        ],
+        [
+          "SQ_EMPLOYEE_DETAILS_FLAT",
+          "Union",
+          "SRTTRANS",
+          "JNRTRANS",
+          "mp_name",
+          "EXPTRANS",
+          "AGGTRANS",
+          "EMP_MAX_MIN"
+        ],
+        [
+          "SQ_EMPLOYEE_DETAILS_FLAT",
+          "Union",
+          "SRTTRANS",
+          "JNRTRANS",
+          "mp_name",
+          "EXPTRANS",
+          "AGGTRANS",
+          "EMP_MAX_MIN"
+        ],
+        [
+          "SQ_EMPLOYEE_DETAILS_FLAT",
+          "Union",
+          "SRTTRANS",
+          "JNRTRANS",
+          "mp_name",
+          "EXPTRANS",
+          "AGGTRANS",
+          "EMP_MAX_MIN"
+        ],
+        [
+          "SQ_EMPLOYEE_DETAILS_FLAT",
+          "Union",
+          "SRTTRANS",
+          "JNRTRANS",
+          "mp_name",
+          "EXPTRANS",
+          "AGGTRANS",
+          "EMP_MAX_MIN"
+        ],
+        [
+          "SQ_EMPLOYEE_DETAILS_FLAT",
+          "Union",
+          "SRTTRANS",
+          "JNRTRANS",
+          "mp_name",
+          "EXPTRANS",
+          "AGGTRANS",
+          "EMP_MAX_MIN"
+        ],
+        [
+          "SQ_EMPLOYEE_DETAILS_FLAT",
+          "Union",
+          "SRTTRANS",
+          "JNRTRANS",
+          "mp_name",
+          "EXPTRANS",
+          "AGGTRANS",
+          "EMP_MAX_MIN"
+        ],
+        [
+          "SQ_EMPLOYEE_DETAILS_FLAT",
+          "Union",
+          "SRTTRANS",
+          "JNRTRANS",
+          "mp_name",
+          "EXPTRANS",
+          "AGGTRANS",
+          "EMP_MAX_MIN"
+        ],
+        [
+          "SQ_EMPLOYEE_DETAILS_FLAT",
+          "Union",
+          "SRTTRANS",
+          "JNRTRANS",
+          "mp_name",
+          "EXPTRANS",
+          "AGGTRANS",
+          "EMP_MAX_MIN"
+        ],
+        [
+          "SQ_EMPLOYEE_DETAILS_FLAT",
+          "Union",
+          "SRTTRANS",
+          "JNRTRANS",
+          "mp_name",
+          "EXPTRANS",
+          "AGGTRANS",
+          "EMP_MAX_MIN"
+        ],
+        [
+          "SQ_EMPLOYEE_DETAILS_FLAT",
+          "Union",
+          "SRTTRANS",
+          "JNRTRANS",
+          "mp_name",
+          "EXPTRANS",
+          "AGGTRANS",
+          "EMP_MAX_MIN"
+        ],
+        [
+          "SQ_EMPLOYEE_DETAILS_FLAT",
+          "Union",
+          "SRTTRANS",
+          "JNRTRANS",
+          "mp_name",
+          "EXPTRANS",
+          "AGGTRANS",
+          "EMP_MAX_MIN"
+        ],
+        [
+          "SQ_EMPLOYEE_DETAILS_FLAT",
+          "Union",
+          "SRTTRANS",
+          "JNRTRANS",
+          "mp_name",
+          "EXPTRANS",
+          "AGGTRANS",
+          "EMP_MAX_MIN"
+        ],
+        [
+          "SQ_EMPLOYEE_DETAILS_FLAT",
+          "Union",
+          "SRTTRANS",
+          "JNRTRANS",
+          "mp_name",
+          "EXPTRANS",
+          "RTRTRANS",
+          "T_EMP_DEP10"
+        ],
+        [
+          "SQ_EMPLOYEE_DETAILS_FLAT",
+          "Union",
+          "SRTTRANS",
+          "JNRTRANS",
+          "mp_name",
+          "EXPTRANS",
+          "RTRTRANS",
+          "T_EMP_DEP10"
+        ],
+        [
+          "SQ_EMPLOYEE_DETAILS_FLAT",
+          "Union",
+          "SRTTRANS",
+          "JNRTRANS",
+          "mp_name",
+          "EXPTRANS",
+          "RTRTRANS",
+          "T_EMP_DEP10"
+        ],
+        [
+          "SQ_EMPLOYEE_DETAILS_FLAT",
+          "Union",
+          "SRTTRANS",
+          "JNRTRANS",
+          "mp_name",
+          "EXPTRANS",
+          "RTRTRANS",
+          "T_EMP_DEP10"
+        ],
+        [
+          "SQ_EMPLOYEE_DETAILS_FLAT",
+          "Union",
+          "SRTTRANS",
+          "JNRTRANS",
+          "mp_name",
+          "EXPTRANS",
+          "RTRTRANS",
+          "T_EMP_DEP10"
+        ],
+        [
+          "SQ_EMPLOYEE_DETAILS_FLAT",
+          "Union",
+          "SRTTRANS",
+          "JNRTRANS",
+          "mp_name",
+          "EXPTRANS",
+          "RTRTRANS",
+          "T_EMP_DEP10"
+        ],
+        [
+          "SQ_EMPLOYEE_DETAILS_FLAT",
+          "Union",
+          "SRTTRANS",
+          "JNRTRANS",
+          "mp_name",
+          "EXPTRANS",
+          "RTRTRANS",
+          "T_DEFAULT"
+        ],
+        [
+          "SQ_EMPLOYEE_DETAILS_FLAT",
+          "Union",
+          "SRTTRANS",
+          "JNRTRANS",
+          "mp_name",
+          "EXPTRANS",
+          "RTRTRANS",
+          "T_DEFAULT"
+        ],
+        [
+          "SQ_EMPLOYEE_DETAILS_FLAT",
+          "Union",
+          "SRTTRANS",
+          "JNRTRANS",
+          "mp_name",
+          "EXPTRANS",
+          "RTRTRANS",
+          "T_DEFAULT"
+        ],
+        [
+          "SQ_EMPLOYEE_DETAILS_FLAT",
+          "Union",
+          "SRTTRANS",
+          "JNRTRANS",
+          "mp_name",
+          "EXPTRANS",
+          "RTRTRANS",
+          "T_DEFAULT"
+        ],
+        [
+          "SQ_EMPLOYEE_DETAILS_FLAT",
+          "Union",
+          "SRTTRANS",
+          "JNRTRANS",
+          "mp_name",
+          "EXPTRANS",
+          "RTRTRANS",
+          "T_DEFAULT"
+        ],
+        [
+          "SQ_EMPLOYEE_DETAILS_FLAT",
+          "Union",
+          "SRTTRANS",
+          "JNRTRANS",
+          "mp_name",
+          "EXPTRANS",
+          "RTRTRANS",
+          "T_DEFAULT"
+        ],
+        [
+          "SQ_EMPLOYEE_DETAILS_FLAT",
+          "Union",
+          "SRTTRANS",
+          "JNRTRANS",
+          "mp_name",
+          "EXPTRANS",
+          "RTRTRANS",
+          "T_EMP_DEP10"
+        ],
+        [
+          "SQ_EMPLOYEE_DETAILS_FLAT",
+          "Union",
+          "SRTTRANS",
+          "JNRTRANS",
+          "mp_name",
+          "EXPTRANS",
+          "RTRTRANS",
+          "T_EMP_DEP10"
+        ],
+        [
+          "SQ_EMPLOYEE_DETAILS_FLAT",
+          "Union",
+          "SRTTRANS",
+          "JNRTRANS",
+          "mp_name",
+          "EXPTRANS",
+          "RTRTRANS",
+          "T_EMP_DEP10"
+        ],
+        [
+          "SQ_EMPLOYEE_DETAILS_FLAT",
+          "Union",
+          "SRTTRANS",
+          "JNRTRANS",
+          "mp_name",
+          "EXPTRANS",
+          "RTRTRANS",
+          "T_EMP_DEP10"
+        ],
+        [
+          "SQ_EMPLOYEE_DETAILS_FLAT",
+          "Union",
+          "SRTTRANS",
+          "JNRTRANS",
+          "mp_name",
+          "EXPTRANS",
+          "RTRTRANS",
+          "T_EMP_DEP10"
+        ],
+        [
+          "SQ_EMPLOYEE_DETAILS_FLAT",
+          "Union",
+          "SRTTRANS",
+          "JNRTRANS",
+          "mp_name",
+          "EXPTRANS",
+          "RTRTRANS",
+          "T_EMP_DEP10"
+        ],
+        [
+          "SQ_EMPLOYEE_DETAILS_FLAT",
+          "Union",
+          "SRTTRANS",
+          "JNRTRANS",
+          "mp_name",
+          "EXPTRANS",
+          "RTRTRANS",
+          "T_DEFAULT"
+        ],
+        [
+          "SQ_EMPLOYEE_DETAILS_FLAT",
+          "Union",
+          "SRTTRANS",
+          "JNRTRANS",
+          "mp_name",
+          "EXPTRANS",
+          "RTRTRANS",
+          "T_DEFAULT"
+        ],
+        [
+          "SQ_EMPLOYEE_DETAILS_FLAT",
+          "Union",
+          "SRTTRANS",
+          "JNRTRANS",
+          "mp_name",
+          "EXPTRANS",
+          "RTRTRANS",
+          "T_DEFAULT"
+        ],
+        [
+          "SQ_EMPLOYEE_DETAILS_FLAT",
+          "Union",
+          "SRTTRANS",
+          "JNRTRANS",
+          "mp_name",
+          "EXPTRANS",
+          "RTRTRANS",
+          "T_DEFAULT"
+        ],
+        [
+          "SQ_EMPLOYEE_DETAILS_FLAT",
+          "Union",
+          "SRTTRANS",
+          "JNRTRANS",
+          "mp_name",
+          "EXPTRANS",
+          "RTRTRANS",
+          "T_DEFAULT"
+        ],
+        [
+          "SQ_EMPLOYEE_DETAILS_FLAT",
+          "Union",
+          "SRTTRANS",
+          "JNRTRANS",
+          "mp_name",
+          "EXPTRANS",
+          "RTRTRANS",
+          "T_DEFAULT"
+        ],
+        [
+          "SQ_EMPLOYEE_DETAILS_FLAT",
+          "Union",
+          "SRTTRANS",
+          "JNRTRANS",
+          "mp_name",
+          "EXPTRANS",
+          "RTRTRANS",
+          "T_EMP_DEP10"
+        ],
+        [
+          "SQ_EMPLOYEE_DETAILS_FLAT",
+          "Union",
+          "SRTTRANS",
+          "JNRTRANS",
+          "mp_name",
+          "EXPTRANS",
+          "RTRTRANS",
+          "T_EMP_DEP10"
+        ],
+        [
+          "SQ_EMPLOYEE_DETAILS_FLAT",
+          "Union",
+          "SRTTRANS",
+          "JNRTRANS",
+          "mp_name",
+          "EXPTRANS",
+          "RTRTRANS",
+          "T_EMP_DEP10"
+        ],
+        [
+          "SQ_EMPLOYEE_DETAILS_FLAT",
+          "Union",
+          "SRTTRANS",
+          "JNRTRANS",
+          "mp_name",
+          "EXPTRANS",
+          "RTRTRANS",
+          "T_EMP_DEP10"
+        ],
+        [
+          "SQ_EMPLOYEE_DETAILS_FLAT",
+          "Union",
+          "SRTTRANS",
+          "JNRTRANS",
+          "mp_name",
+          "EXPTRANS",
+          "RTRTRANS",
+          "T_EMP_DEP10"
+        ],
+        [
+          "SQ_EMPLOYEE_DETAILS_FLAT",
+          "Union",
+          "SRTTRANS",
+          "JNRTRANS",
+          "mp_name",
+          "EXPTRANS",
+          "RTRTRANS",
+          "T_EMP_DEP10"
+        ],
+        [
+          "SQ_EMPLOYEE_DETAILS_FLAT",
+          "Union",
+          "SRTTRANS",
+          "JNRTRANS",
+          "mp_name",
+          "EXPTRANS",
+          "RTRTRANS",
+          "T_DEFAULT"
+        ],
+        [
+          "SQ_EMPLOYEE_DETAILS_FLAT",
+          "Union",
+          "SRTTRANS",
+          "JNRTRANS",
+          "mp_name",
+          "EXPTRANS",
+          "RTRTRANS",
+          "T_DEFAULT"
+        ],
+        [
+          "SQ_EMPLOYEE_DETAILS_FLAT",
+          "Union",
+          "SRTTRANS",
+          "JNRTRANS",
+          "mp_name",
+          "EXPTRANS",
+          "RTRTRANS",
+          "T_DEFAULT"
+        ],
+        [
+          "SQ_EMPLOYEE_DETAILS_FLAT",
+          "Union",
+          "SRTTRANS",
+          "JNRTRANS",
+          "mp_name",
+          "EXPTRANS",
+          "RTRTRANS",
+          "T_DEFAULT"
+        ],
+        [
+          "SQ_EMPLOYEE_DETAILS_FLAT",
+          "Union",
+          "SRTTRANS",
+          "JNRTRANS",
+          "mp_name",
+          "EXPTRANS",
+          "RTRTRANS",
+          "T_DEFAULT"
+        ],
+        [
+          "SQ_EMPLOYEE_DETAILS_FLAT",
+          "Union",
+          "SRTTRANS",
+          "JNRTRANS",
+          "mp_name",
+          "EXPTRANS",
+          "RTRTRANS",
+          "T_DEFAULT"
+        ],
+        [
+          "SQ_EMPLOYEE_DETAILS_FLAT",
+          "Union",
+          "SRTTRANS",
+          "JNRTRANS",
+          "mp_name",
+          "EXPTRANS",
+          "RTRTRANS",
+          "T_EMP_DEP10"
+        ],
+        [
+          "SQ_EMPLOYEE_DETAILS_FLAT",
+          "Union",
+          "SRTTRANS",
+          "JNRTRANS",
+          "mp_name",
+          "EXPTRANS",
+          "RTRTRANS",
+          "T_EMP_DEP10"
+        ]
+      ],
+      "lookup_calls": {
+        "EXPTRANS": [
+          ":LKP.LKPTRANS1(EMPID)"
+        ]
+      }
+    }
+  ],
+  "mapplets": [
+    {
+      "name": "mp_name",
+      "input_fields": [
+        "EMPID",
+        "FIRSTNAME",
+        "LASTNAME",
+        "EMAIL",
+        "PHONENO",
+        "SALARY",
+        "DEPID",
+        "DNAME"
+      ],
+      "output_fields": [
+        "EMPID",
+        "EMAIL",
+        "PHONENO",
+        "SALARY",
+        "DEPID",
+        "DNAME",
+        "NAME"
+      ],
+      "transformations": [
+        "INPUT",
+        "OUTPUT",
+        "EXPTRANS1",
+        "mp_name"
+      ]
+    }
+  ]
+}
